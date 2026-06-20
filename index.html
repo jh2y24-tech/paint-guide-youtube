@@ -69,8 +69,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .mat-wp .mat-body { border-color:rgba(14,165,233,0.35); }
 .mat-tile .mat-title { background:rgba(45,212,191,0.08); border-color:rgba(45,212,191,0.35); color:var(--tile); }
 .mat-tile .mat-body { border-color:rgba(45,212,191,0.35); }
-.mat-twp .mat-title { background:rgba(251,146,60,0.08); border-color:rgba(251,146,60,0.35); color:var(--twp); }
-.mat-twp .mat-body { border-color:rgba(251,146,60,0.35); }
 .mat-floor .mat-title { background:rgba(192,132,252,0.08); border-color:rgba(192,132,252,0.35); color:var(--floor); }
 .mat-floor .mat-body { border-color:rgba(192,132,252,0.35); }
 
@@ -102,7 +100,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .hi-sky { color:var(--sky); font-weight:700; }
 .hi-floor { color:var(--floor); font-weight:700; }
 .hi-tile { color:var(--tile); font-weight:700; }
-.hi-twp { color:var(--twp); font-weight:700; }
 
 /* 제품 칩 */
 .product-list { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
@@ -214,8 +211,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .diag-item.dg-floor .diag-a { color:var(--floor); }
 .diag-item.dg-tile { border-color:rgba(45,212,191,0.3); }
 .diag-item.dg-tile .diag-a { color:var(--tile); }
-.diag-item.dg-twp { border-color:rgba(251,146,60,0.3); }
-.diag-item.dg-twp .diag-a { color:var(--twp); }
 
 .sp-banner {
   display:flex; align-items:center; gap:10px;
@@ -272,9 +267,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
   <a onclick="goTo('wood')">🪵 목재</a>
   <a onclick="goTo('iron')">⚙️ 철재·비철재</a>
   <a onclick="goTo('mold')">🦠 곰팡이·결로</a>
-  <a onclick="goTo('tile')">🚿 타일</a>
+  <a onclick="goTo('tile')">🚿 타일·줄눈</a>
   <a onclick="goTo('wp')">💧 옥상방수(우레탄)</a>
-  <a onclick="goTo('twp')">🔧 방수(타일·줄눈)</a>
   <a onclick="goTo('floor')">🏭 실내방진(에폭시)</a>
 </div>
 
@@ -326,8 +320,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
     <div onclick="goTo('tile')" class="diag-item dg-tile">
       <span class="diag-icon">🚿</span>
       <span class="diag-text">
-        <div class="diag-q">타일 위에 페인트 칠을 하고 싶어요</div>
-        <div class="diag-a">→ 타일 가이드</div>
+        <div class="diag-q">타일·줄눈에 페인트를 칠하거나 방수 코팅을 하고 싶어요</div>
+        <div class="diag-a">→ 타일·줄눈 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -336,14 +330,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <span class="diag-text">
         <div class="diag-q">옥상·옥외 바닥에서 물이 새거나 방수가 필요해요</div>
         <div class="diag-a">→ 옥상 방수(우레탄) 가이드</div>
-      </span>
-      <span class="diag-arrow">▶</span>
-    </div>
-    <div onclick="goTo('twp')" class="diag-item dg-twp">
-      <span class="diag-icon">🔧</span>
-      <span class="diag-text">
-        <div class="diag-q">타일·줄눈·벽에 방수 코팅이나 시공을 하고 싶어요</div>
-        <div class="diag-a">→ 방수(타일·줄눈) 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -713,7 +699,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
         </div>
         <div class="danger-box">
           ★ 약한 페인트 위에 강한 신나를 사용하는 페인트 도장 시<br>
-          <b>주름 현상 · 들뜸 현상 발생</b> — 반드시 주의
+          <b>주름 현상 · 들뜸 현상 발생</b> — 반드시 주의<br>
+          <span style="display:inline-block; margin-top:6px; font-weight:700;">에나멜 → 우레탄 → 아크릴 → 에폭시 → 락카 <span style="color:var(--muted); font-weight:500;">(약 ▶ 강)</span></span>
         </div>
       </div>
     </div>
@@ -835,8 +822,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 <div class="mat-section mat-tile" id="tile">
   <div class="mat-title">
     <span class="icon">🚿</span>
-    <span>타일 (욕실 · 주방 · 바닥)</span>
-    <span class="sub">실내 / 실외</span>
+    <span>타일 · 줄눈 (욕실 · 주방 · 바닥)</span>
+    <span class="sub">페인트 / 방수 코팅</span>
   </div>
   <div class="mat-body">
 
@@ -854,28 +841,30 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
     <div class="step-arrow">↓</div>
 
     <div class="step">
-      <div class="step-header"><span class="step-num">2</span><span class="step-label">상도 선택 — 실내 / 실외</span><span class="step-badge badge-paint">상도 (하도 불필요)</span></div>
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">목적에 맞게 선택 — 색상 변경 / 방수 코팅 / 줄눈 침투방수</span><span class="step-badge badge-paint">하도 불필요</span></div>
       <div class="step-content">
-        타일 전용 도료는 <span class="hi-tile">별도의 하도가 필요 없으며</span>, 용도에 맞게 아래 두 제품 중 선택합니다.
+        같은 타일면이라도 <span class="hi-tile">원하는 목적에 따라 제품이 달라집니다.</span> 아래 세 가지 상황 중 해당하는 곳에서 제품을 선택하세요.
 
         <div class="branch-row">
           <div class="branch-card">
-            <div class="branch-card-title" style="color:var(--water);">🏠 실내 벽면용</div>
+            <div class="branch-card-title" style="color:var(--water);">🎨 색상을 바꾸고 싶을 때</div>
             <ul>
               <li>홈스타 타일페인트 (수성)</li>
+              <li>매직탄 (유성)</li>
             </ul>
           </div>
           <div class="branch-card">
-            <div class="branch-card-title" style="color:var(--oil);">🏠🌤 실내·실외 벽면용</div>
+            <div class="branch-card-title" style="color:var(--twp);">☔ 물 침투를 막고 싶을 때</div>
             <ul>
-              <li>매직탄 (유성)</li>
+              <li>매직탄 월코트 (유성 코팅)</li>
+              <li>안심누수 (수성 침투)</li>
             </ul>
           </div>
         </div>
 
-        <!-- 홈스타 타일페인트 -->
-        <div style="margin-top:14px;">
-          <span class="product-chip chip-water">홈스타 타일페인트 (수성 · 실내 벽면)</span>
+        <!-- ① 색상 변경: 홈스타 타일페인트 -->
+        <div style="margin-top:16px;">
+          <span class="product-chip chip-water">홈스타 타일페인트 (수성 · 실내 벽면 색상 변경)</span>
           <div class="spec-grid">
             <div class="spec-item">
               <strong>혼합비 (주제 : 경화제)</strong>
@@ -903,9 +892,9 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
           </div>
         </div>
 
-        <!-- 매직탄 -->
+        <!-- ① 색상 변경: 매직탄 -->
         <div style="margin-top:16px;">
-          <span class="product-chip chip-oil">매직탄 (유성 · 실내/실외 · 벽면 추천)</span>
+          <span class="product-chip chip-oil">매직탄 (유성 · 실내/실외 색상 변경 · 벽면 추천)</span>
           <div class="spec-grid">
             <div class="spec-item">
               <strong>혼합비 (주제 : 경화제)</strong>
@@ -930,6 +919,49 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
           </div>
         </div>
 
+        <!-- ② 방수 코팅: 매직탄 월코트 -->
+        <div style="margin-top:24px; padding-top:16px; border-top:1px dashed var(--border);">
+          <span class="product-chip chip-twp">매직탄 월코트 투명 (유성 · 2액형 방수 코팅)</span>
+          <div class="note-small" style="margin-top:6px;">
+            철재·비철금속·몰탈·타일·적벽돌 등에 도장 가능한 생활방수 코팅제. 박막의 피막을 형성해 물 침투를 지연·한정시킵니다. (방수재·보행용 바닥재 용도 아님)
+          </div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1 (부피비)</span></div>
+            <div class="spec-item"><strong>가사시간 (25℃)</strong><span class="val">4시간</span></div>
+            <div class="spec-item"><strong>경화건조 (25℃)</strong><span class="val">12시간 이내</span></div>
+            <div class="spec-item"><strong>지촉건조 (25℃)</strong><span class="val">12분 이내</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">9.24㎡/L (건조도막 30㎛ 기준)</span></div>
+          </div>
+          <div class="note-small">도장횟수 2~3회 · 부피고형분 27.7% · 마감 유광/무광 선택 가능</div>
+          <div class="warn-box" style="margin-top:8px;">
+            ⚠️ 가사시간(4시간) 경과 후에는 사용 불가 — 필요한 양만 혼합하여 사용.<br>
+            알코올 성분이 함유된 신나(에폭시신나·락카신나·사제신나 등)는 건조 불량 발생, 사용 금지.
+          </div>
+        </div>
+
+        <!-- ② 방수 코팅: 안심누수 -->
+        <div style="margin-top:16px;">
+          <span class="product-chip chip-water">안심누수 (수성 · 1액형 줄눈·벽 침투방수)</span>
+          <div class="note-small" style="margin-top:6px;">
+            아크릴수지계 에멀젼 기반 침투 방수재로, 바닥 타일줄눈 및 내외부 콘크리트 벽면에 침투해 생활방수 성능을 발휘합니다. 건조가 빠르고 투명성·작업성이 우수합니다.
+          </div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>혼합/희석</strong><span class="val">미희석 원액 사용</span></div>
+            <div class="spec-item"><strong>고화건조 (25℃)</strong><span class="val">2시간 이내</span></div>
+            <div class="spec-item"><strong>재도장간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+            <div class="spec-item"><strong>도장횟수</strong><span class="val">1~2회</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">21.5㎡/L (건조도막 15㎛ 기준)</span></div>
+          </div>
+          <div class="note-small">부피고형분 33% · 마감 유광 · 색상 투명 · 포장단위 1L, 4L</div>
+          <div class="info-box" style="margin-top:8px;">
+            💡 적용 부위: 바닥 타일줄눈, 콘크리트 벽체, 베란다, 보일러실 (식수탱크·저수조탱크 등 물에 잠기는 부위는 사용 불가)
+          </div>
+          <div class="warn-box" style="margin-top:8px;">
+            ⚠️ 흡수차가 심하거나 쵸킹된 콘크리트 소지에는 부착 불량 방지를 위해 <b>수성바인다200 하도</b> 선행 필요.<br>
+            목재·철재·플라스틱 등 유성도료 도장면에는 부착 불량 — 도장 금지.
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -939,6 +971,10 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="yt-list">
         <a href="https://www.youtube.com/watch?v=qYS4wQfEfH0" target="_blank" class="yt-item">
           <img class="yt-thumb" src="https://img.youtube.com/vi/qYS4wQfEfH0/hqdefault.jpg" alt="홈스타 타일페인트 시공 영상" loading="lazy">
+          <div class="yt-play"><div class="yt-play-btn"></div></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=4eXHYGweXB4" target="_blank" class="yt-item">
+          <img class="yt-thumb" src="https://img.youtube.com/vi/4eXHYGweXB4/hqdefault.jpg" alt="안심누수 시공 참고영상" loading="lazy">
           <div class="yt-play"><div class="yt-play-btn"></div></div>
         </a>
       </div>
@@ -1069,88 +1105,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <img class="yt-thumb" src="https://img.youtube.com/vi/Pe_orlaC4yE/mqdefault.jpg" alt="우레탄방수 참고영상 3" loading="lazy">
       <div class="yt-play"><div class="yt-play-btn"></div></div>
     </a>
-  </div>
-</div>
-
-<!-- ══ 방수 (타일, 줄눈) ══ -->
-<div class="mat-section mat-twp" id="twp">
-  <div class="mat-title">
-    <span class="icon">🔧</span>
-    <span>방수 (타일 · 줄눈)</span>
-    <span class="sub">생활방수 · 코팅</span>
-  </div>
-  <div class="mat-body">
-
-    <div class="step">
-      <div class="step-header"><span class="step-num">1</span><span class="step-label">타일 위에 방수 코팅을 하고 싶어요</span><span class="step-badge badge-paint-o">유성 코팅</span></div>
-      <div class="step-content">
-        철재·비철금속·몰탈·타일·적벽돌 등 다양한 소지면에 도장 가능한 <b>2액형 생활방수 코팅제</b>입니다.<br>
-        <span class="hi-twp">박막의 피막을 형성</span>하여 소재 내부로 물이 침투되는 것을 지연·한정시킵니다.
-        <div class="danger-box" style="margin-top:8px;">
-          ⚠ 방수재·보행용 바닥재 용도로는 사용 금지 (코팅 전용 제품)
-        </div>
-
-        <div style="margin-top:14px;">
-          <span class="product-chip chip-twp">매직탄 월코트 투명 (유성 · 2액형)</span>
-          <div class="spec-grid">
-            <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1 (부피비)</span></div>
-            <div class="spec-item"><strong>가사시간 (25℃)</strong><span class="val">4시간</span></div>
-            <div class="spec-item"><strong>경화건조 (25℃)</strong><span class="val">12시간 이내</span></div>
-            <div class="spec-item"><strong>지촉건조 (25℃)</strong><span class="val">12분 이내</span></div>
-            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">9.24㎡/L (건조도막 30㎛ 기준)</span></div>
-          </div>
-          <div class="note-small">도장횟수 2~3회 · 부피고형분 27.7% · 마감 유광/무광 선택 가능</div>
-          <div class="warn-box" style="margin-top:8px;">
-            ⚠️ 가사시간(4시간) 경과 후에는 사용 불가 — 필요한 양만 혼합하여 사용.<br>
-            알코올 성분이 함유된 신나(에폭시신나·락카신나·사제신나 등)는 건조 불량 발생, 사용 금지.
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="step-arrow">↓</div>
-
-    <div class="step">
-      <div class="step-header"><span class="step-num">2</span><span class="step-label">타일 줄눈·벽 등에 방수 시공을 하고 싶어요</span><span class="step-badge badge-paint">수성 침투형</span></div>
-      <div class="step-content">
-        아크릴수지계 에멀젼 기반의 <b>1액형 수성 침투 방수재</b>로, 바닥 타일줄눈 및 내외부 콘크리트 벽면에 침투하여 생활방수 성능을 발휘합니다.<br>
-        <span class="hi-blue">건조가 빠르고 투명성·작업성이 우수</span>하며, 수성 상도재로 후속 도장도 가능합니다.
-        <div class="info-box" style="margin-top:8px;">
-          💡 적용 부위: 바닥 타일줄눈, 콘크리트 벽체, 베란다, 보일러실<br>
-          (식수탱크·저수조탱크 등 물에 잠기는 부위는 사용 불가)
-        </div>
-
-        <div style="margin-top:14px;">
-          <span class="product-chip chip-water">안심누수 (수성 · 1액형)</span>
-          <div class="spec-grid">
-            <div class="spec-item"><strong>혼합/희석</strong><span class="val">미희석 원액 사용</span></div>
-            <div class="spec-item"><strong>고화건조 (25℃)</strong><span class="val">2시간 이내</span></div>
-            <div class="spec-item"><strong>재도장간격 (25℃)</strong><span class="val">3시간 이후</span></div>
-            <div class="spec-item"><strong>도장횟수</strong><span class="val">1~2회</span></div>
-            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">21.5㎡/L (건조도막 15㎛ 기준)</span></div>
-          </div>
-          <div class="note-small">부피고형분 33% · 마감 유광 · 색상 투명 · 포장단위 1L, 4L</div>
-          <div class="warn-box" style="margin-top:8px;">
-            ⚠️ 흡수차가 심하거나 쵸킹된 콘크리트 소지에는 부착 불량 방지를 위해 <b>수성바인다200 하도</b> 선행 필요.<br>
-            목재·철재·플라스틱 등 유성도료 도장면에는 부착 불량 — 도장 금지.
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- YouTube -->
-    <div class="yt-section">
-      <div class="yt-section-label">방수(타일·줄눈) 참고영상</div>
-      <div class="yt-list">
-        <a href="https://www.youtube.com/watch?v=4eXHYGweXB4" target="_blank" class="yt-item">
-          <img class="yt-thumb" src="https://img.youtube.com/vi/4eXHYGweXB4/hqdefault.jpg" alt="안심누수 시공 참고영상" loading="lazy">
-          <div class="yt-play"><div class="yt-play-btn"></div></div>
-        </a>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -1306,45 +1260,6 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       </div>
     </div>
 
-  </div>
-</div>
-
-<!-- 재도장 간격 요약표 -->
-<div class="section-divider"><span>재도장 간격 요약표</span></div>
-
-<div style="background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 0; margin-bottom:20px;">
-  <div style="padding:0 16px 10px; font-size:14px; font-weight:800; color:var(--accent);">📋 제품별 재도장 간격 (25℃ 기준)</div>
-  <table class="recoat-table" style="margin-top:0;">
-    <thead>
-      <tr style="background:rgba(255,255,255,0.04);">
-        <th style="padding:8px 14px;">제품명</th>
-        <th>소지</th>
-        <th>재도장 간격</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td class="td-name" style="padding:8px 14px;">수성바인다200</td><td class="td-note">콘크리트·몰탈·석고보드</td><td class="td-time">3시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">고점도믹싱</td><td class="td-note">콘크리트·몰탈·석고보드</td><td class="td-time">3시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">파워젯소</td><td class="td-note">철재·비철재·목재·시트지 등</td><td class="td-time">3시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">진저 몰드킬링</td><td class="td-note">곰팡이·이끼 핀 소지</td><td class="td-time">30분 건조·1시간 후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">방청프라이머</td><td class="td-note">일반 철재</td><td class="td-time">12시간 이후 (20℃)</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">워시프라이머</td><td class="td-note">아연도금·비철재</td><td class="td-time">16시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">스피폭시FD</td><td class="td-note">철재·비철재·스텐·FRP</td><td class="td-time">6시간~3일 이내</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">수성페인트 (일반)</td><td class="td-note">콘크리트·석고보드 등</td><td class="td-time">3시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">777에나멜</td><td class="td-note">외부 목재·철재</td><td class="td-time">9시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">락카</td><td class="td-note">실내외 목재</td><td class="td-time">2시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">수성우드바니쉬</td><td class="td-note">목재 위 투명</td><td class="td-time">2시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">유성 바니쉬 (40바루스파)</td><td class="td-note">목재 위 투명</td><td class="td-time">9시간 이후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">매직탄</td><td class="td-note">철재·비철재 (우레탄)</td><td class="td-time">18시간 이상</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">스피롤탄</td><td class="td-note">철재·비철재 (우레탄)</td><td class="td-time">6시간 이상</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">방수에이스 하도</td><td class="td-note">옥상 콘크리트</td><td class="td-time">20℃ 기준 8~48시간</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">방수에이스 상도</td><td class="td-note">우레탄 중도 위</td><td class="td-time">20℃ 기준 1일~2일</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">에포코트 하도</td><td class="td-note">콘크리트 바닥</td><td class="td-time">20℃ 기준 최소 6시간 후</td></tr>
-      <tr><td class="td-name" style="padding:8px 14px;">에포코트 상도</td><td class="td-note">에포코트 하도 위</td><td class="td-time">20℃ 기준 1일~4일</td></tr>
-    </tbody>
-  </table>
-  <div style="padding:8px 14px 0; font-size:11.5px; color:rgba(139,148,158,0.6);">
-    ※ 재도장 간격·이론도포면적은 기준값. 실제 온도·습도·소지 상태에 따라 달라질 수 있음.<br>제품 스티커 및 공식 기술자료 확인 필수.
   </div>
 </div>
 
