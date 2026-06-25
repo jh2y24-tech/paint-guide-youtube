@@ -9,88 +9,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0d1117;
-  --card: #161b22;
-  --card2: #1c2230;
-  --border: rgba(255,255,255,0.08);
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --water: #58a6ff;
-  --water-bg: rgba(88,166,255,0.1);
-  --oil: #ff9500;
-  --oil-bg: rgba(255,149,0,0.1);
-  --primer-w: #3fb950;
-  --primer-w-bg: rgba(63,185,80,0.1);
-  --primer-o: #f78166;
-  --primer-o-bg: rgba(247,129,102,0.1);
-  --accent: #a371f7;
-  --accent-bg: rgba(163,113,247,0.1);
-  --warn: #f0b72f;
-  --warn-bg: rgba(240,183,47,0.1);
-  --danger: #ff6b6b;
-  --mold: #4ade80;
-  --sky: #0ea5e9;
-  --sky-bg: rgba(14,165,233,0.1);
-  --floor: #c084fc;
-  --floor-bg: rgba(192,132,252,0.1);
-  --tile: #2dd4bf;
-  --tile-bg: rgba(45,212,191,0.1);
-  --twp: #fb923c;
-  --twp-bg: rgba(251,146,60,0.1);
+  --bg: #eef1f6;
+  --card: #ffffff;
+  --card2: #f3f5f9;
+  --border: #dfe3ea;
+  --text: #15202b;
+  --muted: #57606e;
+  --water: #1463c7;
+  --water-bg: rgba(20,99,199,0.09);
+  --oil: #a35700;
+  --oil-bg: rgba(163,87,0,0.09);
+  --primer-w: #1c8a4e;
+  --primer-w-bg: rgba(28,138,78,0.09);
+  --primer-o: #c1430e;
+  --primer-o-bg: rgba(193,67,14,0.09);
+  --accent: #7c3aed;
+  --accent-bg: rgba(124,58,237,0.09);
+  --warn: #966600;
+  --warn-bg: rgba(150,102,0,0.1);
+  --danger: #d6291c;
+  --mold: #0d8a6c;
+  --sky: #0570ac;
+  --sky-bg: rgba(5,112,172,0.09);
+  --floor: #9233e0;
+  --floor-bg: rgba(146,51,224,0.09);
+  --tile: #0e8779;
+  --tile-bg: rgba(14,135,121,0.09);
+  --twp: #8a5800;
+  --twp-bg: rgba(138,88,0,0.09);
+  --shadow: 0 1px 2px rgba(21,32,43,0.05), 0 2px 7px rgba(21,32,43,0.05);
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--text); -webkit-text-size-adjust:100%; }
+body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--text); -webkit-text-size-adjust:100%; word-break:keep-all; overflow-wrap:break-word; }
 .wrap { max-width:600px; margin:0 auto; padding:16px 14px 40px; }
 
 /* HEADER */
-.header { text-align:center; padding:20px 0 18px; border-bottom:1px solid var(--border); margin-bottom:20px; }
-.store-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:1.5px; padding:4px 12px; border-radius:20px; background:var(--accent-bg); color:var(--accent); border:1px solid rgba(163,113,247,0.3); margin-bottom:10px; }
-.header h1 { font-size:22px; font-weight:900; letter-spacing:-0.5px; line-height:1.3; background:linear-gradient(90deg,var(--water),var(--accent),var(--oil)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.header p { font-size:12px; color:var(--muted); margin-top:6px; }
+.header { text-align:center; padding:22px 0 18px; border-bottom:2px solid var(--border); margin-bottom:20px; }
+.store-tag { display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:1.5px; padding:5px 13px; border-radius:20px; background:var(--accent-bg); color:var(--accent); border:1px solid rgba(124,58,237,0.3); margin-bottom:10px; }
+.header h1 { font-size:23px; font-weight:900; letter-spacing:-0.5px; line-height:1.35; background:linear-gradient(90deg,var(--water),var(--accent),var(--oil)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.header p { font-size:13px; color:var(--muted); margin-top:7px; font-weight:500; }
 
 /* 소재 섹션 */
 .mat-section { margin-bottom:28px; }
-.mat-title { display:flex; align-items:center; gap:10px; padding:14px 16px; border-radius:14px 14px 0 0; font-size:16px; font-weight:900; letter-spacing:-0.3px; border:1.5px solid; border-bottom:none; }
-.mat-title .icon { font-size:20px; }
-.mat-title .sub { font-size:11px; font-weight:500; color:var(--muted); margin-left:auto; white-space:nowrap; }
-.mat-body { border:1.5px solid; border-top:none; border-radius:0 0 14px 14px; overflow:hidden; }
+.mat-title { display:flex; align-items:center; gap:10px; padding:14px 16px; border-radius:14px 14px 0 0; font-size:16.5px; font-weight:900; letter-spacing:-0.3px; border:1.5px solid; border-bottom:none; }
+.mat-title .icon { font-size:21px; }
+.mat-title .sub { font-size:11.5px; font-weight:600; color:var(--muted); margin-left:auto; white-space:nowrap; }
+.mat-body { background:var(--card); border:1.5px solid; border-top:none; border-radius:0 0 14px 14px; overflow:hidden; box-shadow:var(--shadow); }
 
-.mat-concrete .mat-title { background:rgba(88,166,255,0.08); border-color:rgba(88,166,255,0.35); color:var(--water); }
-.mat-concrete .mat-body { border-color:rgba(88,166,255,0.35); }
-.mat-silk .mat-title { background:rgba(247,129,102,0.08); border-color:rgba(247,129,102,0.35); color:var(--primer-o); }
-.mat-silk .mat-body { border-color:rgba(247,129,102,0.35); }
-.mat-wood .mat-title { background:rgba(255,149,0,0.08); border-color:rgba(255,149,0,0.35); color:var(--oil); }
-.mat-wood .mat-body { border-color:rgba(255,149,0,0.35); }
-.mat-iron .mat-title { background:rgba(240,183,47,0.08); border-color:rgba(240,183,47,0.35); color:var(--warn); }
-.mat-iron .mat-body { border-color:rgba(240,183,47,0.35); }
-.mat-mold .mat-title { background:rgba(74,222,128,0.08); border-color:rgba(74,222,128,0.35); color:var(--mold); }
-.mat-mold .mat-body { border-color:rgba(74,222,128,0.35); }
-.mat-wp .mat-title { background:rgba(14,165,233,0.08); border-color:rgba(14,165,233,0.35); color:var(--sky); }
-.mat-wp .mat-body { border-color:rgba(14,165,233,0.35); }
-.mat-tile .mat-title { background:rgba(45,212,191,0.08); border-color:rgba(45,212,191,0.35); color:var(--tile); }
-.mat-tile .mat-body { border-color:rgba(45,212,191,0.35); }
-.mat-floor .mat-title { background:rgba(192,132,252,0.08); border-color:rgba(192,132,252,0.35); color:var(--floor); }
-.mat-floor .mat-body { border-color:rgba(192,132,252,0.35); }
+.mat-concrete .mat-title { background:rgba(20,99,199,0.08); border-color:rgba(20,99,199,0.4); color:var(--water); }
+.mat-concrete .mat-body { border-color:rgba(20,99,199,0.4); }
+.mat-silk .mat-title { background:rgba(193,67,14,0.08); border-color:rgba(193,67,14,0.4); color:var(--primer-o); }
+.mat-silk .mat-body { border-color:rgba(193,67,14,0.4); }
+.mat-wood .mat-title { background:rgba(163,87,0,0.08); border-color:rgba(163,87,0,0.4); color:var(--oil); }
+.mat-wood .mat-body { border-color:rgba(163,87,0,0.4); }
+.mat-iron .mat-title { background:rgba(150,102,0,0.08); border-color:rgba(150,102,0,0.4); color:var(--warn); }
+.mat-iron .mat-body { border-color:rgba(150,102,0,0.4); }
+.mat-mold .mat-title { background:rgba(13,138,108,0.08); border-color:rgba(13,138,108,0.4); color:var(--mold); }
+.mat-mold .mat-body { border-color:rgba(13,138,108,0.4); }
+.mat-wp .mat-title { background:rgba(5,112,172,0.08); border-color:rgba(5,112,172,0.4); color:var(--sky); }
+.mat-wp .mat-body { border-color:rgba(5,112,172,0.4); }
+.mat-tile .mat-title { background:rgba(14,135,121,0.08); border-color:rgba(14,135,121,0.4); color:var(--tile); }
+.mat-tile .mat-body { border-color:rgba(14,135,121,0.4); }
+.mat-floor .mat-title { background:rgba(146,51,224,0.08); border-color:rgba(146,51,224,0.4); color:var(--floor); }
+.mat-floor .mat-body { border-color:rgba(146,51,224,0.4); }
 
 /* STEP */
 .step { padding:14px 16px; border-bottom:1px solid var(--border); }
 .step:last-child { border-bottom:none; }
 .step-header { display:flex; align-items:center; margin-bottom:10px; }
-.step-num { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; font-size:11px; font-weight:800; background:var(--card2); color:var(--muted); border:1.5px solid var(--border); flex-shrink:0; margin-right:8px; }
-.step-label { font-size:13px; font-weight:800; color:var(--text); }
-.step-badge { display:inline-block; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; margin-left:8px; }
-.badge-prep { background:rgba(240,183,47,0.15); color:var(--warn); }
-.badge-primer { background:rgba(63,185,80,0.15); color:var(--primer-w); }
-.badge-primer-o { background:rgba(247,129,102,0.15); color:var(--primer-o); }
-.badge-paint { background:rgba(88,166,255,0.15); color:var(--water); }
-.badge-paint-o { background:rgba(255,149,0,0.15); color:var(--oil); }
-.badge-recoat { background:rgba(163,113,247,0.15); color:var(--accent); }
-.badge-wp { background:rgba(14,165,233,0.15); color:var(--sky); }
-.badge-ep { background:rgba(192,132,252,0.15); color:var(--floor); }
+.step-num { display:inline-flex; align-items:center; justify-content:center; width:23px; height:23px; border-radius:50%; font-size:11.5px; font-weight:800; background:var(--card2); color:var(--text); border:1.5px solid var(--border); flex-shrink:0; margin-right:8px; }
+.step-label { font-size:13.5px; font-weight:800; color:var(--text); }
+.step-badge { display:inline-block; font-size:10.5px; font-weight:700; padding:2px 9px; border-radius:20px; margin-left:8px; }
+.badge-prep { background:rgba(150,102,0,0.13); color:var(--warn); }
+.badge-primer { background:rgba(28,138,78,0.13); color:var(--primer-w); }
+.badge-primer-o { background:rgba(193,67,14,0.13); color:var(--primer-o); }
+.badge-paint { background:rgba(20,99,199,0.13); color:var(--water); }
+.badge-paint-o { background:rgba(163,87,0,0.13); color:var(--oil); }
+.badge-recoat { background:rgba(124,58,237,0.13); color:var(--accent); }
+.badge-wp { background:rgba(5,112,172,0.13); color:var(--sky); }
+.badge-ep { background:rgba(146,51,224,0.13); color:var(--floor); }
 
 .step-arrow { text-align:center; color:var(--water); font-size:14px; padding:3px 0 5px; font-weight:700; }
 
-.step-content { background:var(--card2); border-radius:10px; padding:11px 13px; font-size:13.5px; line-height:1.65; color:var(--text); border:1px solid var(--border); }
+.step-content { background:var(--card2); border-radius:10px; padding:12px 14px; font-size:14.5px; line-height:1.8; color:var(--text); border:1px solid var(--border); }
 .step-content b { color:var(--warn); font-weight:700; }
 .hi-blue { color:var(--water); font-weight:700; }
 .hi-green { color:var(--primer-w); font-weight:700; }
@@ -103,64 +104,77 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
 /* 제품 칩 */
 .product-list { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
-.product-chip { display:inline-block; font-size:12px; font-weight:600; padding:4px 10px; border-radius:20px; border:1px solid; }
-.chip-water { background:var(--water-bg); color:var(--water); border-color:rgba(88,166,255,0.3); }
-.chip-oil { background:var(--oil-bg); color:var(--oil); border-color:rgba(255,149,0,0.3); }
-.chip-tile { background:var(--tile-bg); color:var(--tile); border-color:rgba(45,212,191,0.3); }
-.chip-twp { background:var(--twp-bg); color:var(--twp); border-color:rgba(251,146,60,0.3); }
-.chip-primer { background:var(--primer-w-bg); color:var(--primer-w); border-color:rgba(63,185,80,0.3); }
-.chip-primer-o { background:var(--primer-o-bg); color:var(--primer-o); border-color:rgba(247,129,102,0.3); }
-.chip-acc { background:var(--accent-bg); color:var(--accent); border-color:rgba(163,113,247,0.3); }
-.chip-mold { background:rgba(74,222,128,0.1); color:var(--mold); border-color:rgba(74,222,128,0.3); }
-.chip-wp { background:var(--sky-bg); color:var(--sky); border-color:rgba(14,165,233,0.3); }
-.chip-floor { background:var(--floor-bg); color:var(--floor); border-color:rgba(192,132,252,0.3); }
+.product-chip { display:inline-block; font-size:12.5px; font-weight:700; padding:5px 11px; border-radius:20px; border:1px solid; }
+.chip-water { background:var(--water-bg); color:var(--water); border-color:rgba(20,99,199,0.3); }
+.chip-oil { background:var(--oil-bg); color:var(--oil); border-color:rgba(163,87,0,0.3); }
+.chip-tile { background:var(--tile-bg); color:var(--tile); border-color:rgba(14,135,121,0.3); }
+.chip-twp { background:var(--twp-bg); color:var(--twp); border-color:rgba(138,88,0,0.3); }
+.chip-primer { background:var(--primer-w-bg); color:var(--primer-w); border-color:rgba(28,138,78,0.3); }
+.chip-primer-o { background:var(--primer-o-bg); color:var(--primer-o); border-color:rgba(193,67,14,0.3); }
+.chip-acc { background:var(--accent-bg); color:var(--accent); border-color:rgba(124,58,237,0.3); }
+.chip-mold { background:rgba(13,138,108,0.1); color:var(--mold); border-color:rgba(13,138,108,0.3); }
+.chip-wp { background:var(--sky-bg); color:var(--sky); border-color:rgba(5,112,172,0.3); }
+.chip-floor { background:var(--floor-bg); color:var(--floor); border-color:rgba(146,51,224,0.3); }
 
 /* 분기 카드 */
 .branch-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
-.branch-card { background:var(--card); border-radius:10px; padding:10px 12px; border:1px solid var(--border); }
-.branch-card-title { font-size:12px; font-weight:800; margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid var(--border); }
+.branch-card { background:var(--card); border-radius:10px; padding:10px 12px; border:1px solid var(--border); box-shadow:var(--shadow); }
+.branch-card-title { font-size:12.5px; font-weight:800; margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid var(--border); }
 .bc-in .branch-card-title { color:var(--primer-w); }
 .bc-out .branch-card-title { color:var(--oil); }
-.branch-card ul { list-style:none; padding:0; font-size:12px; line-height:1.8; color:var(--muted); }
+.branch-card ul { list-style:none; padding:0; font-size:13px; line-height:1.95; color:var(--muted); }
 .branch-card ul li::before { content:"· "; }
 
-/* 테이블 */
-.recoat-table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:8px; border-radius:10px; overflow:hidden; }
-.recoat-table th { background:rgba(255,255,255,0.05); color:var(--muted); font-weight:700; padding:7px 10px; text-align:left; border-bottom:1px solid var(--border); }
-.recoat-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.04); vertical-align:top; }
+/* 테이블 (구형, 미사용 시 유지만) */
+.recoat-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; border-radius:10px; overflow:hidden; }
+.recoat-table th { background:rgba(21,32,43,0.04); color:var(--muted); font-weight:700; padding:7px 10px; text-align:left; border-bottom:1px solid var(--border); }
+.recoat-table td { padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
 .recoat-table tr:last-child td { border-bottom:none; }
-.recoat-table tr:nth-child(even) td { background:rgba(255,255,255,0.02); }
+.recoat-table tr:nth-child(even) td { background:rgba(21,32,43,0.02); }
 .td-name { font-weight:700; color:var(--text); }
 .td-time { color:var(--water); font-weight:600; }
 .td-note { color:var(--muted); }
 
+/* 반응형 데이터 카드 — 좁은 화면에서 글자가 깨지는 표를 대체 */
+.rtable { display:flex; flex-direction:column; gap:8px; margin-top:8px; }
+.rtable-row { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px 13px; box-shadow:var(--shadow); }
+.rtable-name { font-size:14.5px; font-weight:800; color:var(--text); margin-bottom:9px; padding-bottom:9px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; gap:6px; flex-wrap:wrap; }
+.rtable-name .sub { font-size:11.5px; font-weight:600; color:var(--muted); }
+.rtable-fields { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.rtable-field { font-size:13px; line-height:1.55; }
+.rtable-field.full { grid-column:1/-1; }
+.rtable-field .rf-label { display:block; font-size:11.5px; color:var(--muted); font-weight:700; margin-bottom:2px; letter-spacing:0.2px; }
+.rtable-field .rf-val { font-weight:700; color:var(--text); }
+.rtable-field .rf-val.danger { color:var(--danger); }
+.rtable-field .rf-val.time { color:var(--water); }
+
 /* 알림 박스 */
-.warn-box { background:rgba(240,183,47,0.07); border:1px solid rgba(240,183,47,0.3); border-radius:9px; padding:9px 12px; font-size:12.5px; color:var(--warn); font-weight:600; margin-top:8px; line-height:1.6; }
+.warn-box { background:rgba(150,102,0,0.08); border:1px solid rgba(150,102,0,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--warn); font-weight:700; margin-top:8px; line-height:1.75; }
 .warn-box .wr { color:var(--danger); }
-.info-box { background:rgba(88,166,255,0.06); border:1px solid rgba(88,166,255,0.25); border-radius:9px; padding:9px 12px; font-size:12.5px; color:var(--water); font-weight:600; margin-top:8px; line-height:1.6; }
-.danger-box { background:rgba(255,107,107,0.07); border:1px solid rgba(255,107,107,0.3); border-radius:9px; padding:9px 12px; font-size:12.5px; color:var(--danger); font-weight:600; margin-top:8px; line-height:1.6; }
-.star-box { background:rgba(163,113,247,0.07); border:1px solid rgba(163,113,247,0.3); border-radius:9px; padding:9px 12px; font-size:12.5px; color:var(--accent); font-weight:600; margin-top:8px; line-height:1.6; }
-.green-box { background:rgba(63,185,80,0.07); border:1px solid rgba(63,185,80,0.3); border-radius:9px; padding:9px 12px; font-size:12.5px; color:var(--primer-w); font-weight:600; margin-top:8px; line-height:1.6; }
+.info-box { background:rgba(20,99,199,0.07); border:1px solid rgba(20,99,199,0.3); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--water); font-weight:700; margin-top:8px; line-height:1.75; }
+.danger-box { background:rgba(214,41,28,0.08); border:1px solid rgba(214,41,28,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--danger); font-weight:700; margin-top:8px; line-height:1.75; }
+.star-box { background:rgba(124,58,237,0.08); border:1px solid rgba(124,58,237,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--accent); font-weight:700; margin-top:8px; line-height:1.75; }
+.green-box { background:rgba(28,138,78,0.08); border:1px solid rgba(28,138,78,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--primer-w); font-weight:700; margin-top:8px; line-height:1.75; }
 
 /* 스펙 그리드 */
 .spec-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px; }
-.spec-item { background:var(--card); border-radius:9px; padding:9px 11px; border:1px solid var(--border); font-size:12.5px; line-height:1.5; }
-.spec-item strong { display:block; font-size:11px; color:var(--muted); font-weight:700; margin-bottom:3px; letter-spacing:0.3px; }
+.spec-item { background:var(--card); border-radius:9px; padding:10px 12px; border:1px solid var(--border); font-size:13.5px; line-height:1.6; box-shadow:var(--shadow); }
+.spec-item strong { display:block; font-size:11.5px; color:var(--muted); font-weight:700; margin-bottom:3px; letter-spacing:0.3px; }
 .spec-item .val { font-weight:700; color:var(--text); }
 .spec-item.full { grid-column:1/-1; }
 
 /* 상도 호환표 */
-.paint-compat { background:var(--card); border-radius:10px; border:1px solid var(--border); overflow:hidden; margin-top:8px; }
-.compat-row { display:grid; grid-template-columns:100px 1fr; border-bottom:1px solid var(--border); }
+.paint-compat { background:var(--card); border-radius:10px; border:1px solid var(--border); overflow:hidden; margin-top:8px; box-shadow:var(--shadow); }
+.compat-row { display:grid; grid-template-columns:104px 1fr; border-bottom:1px solid var(--border); }
 .compat-row:last-child { border-bottom:none; }
-.compat-primer { padding:10px 12px; font-size:12px; font-weight:800; border-right:1px solid var(--border); display:flex; align-items:center; line-height:1.3; }
-.compat-top { padding:10px 12px; font-size:12.5px; }
+.compat-primer { padding:10px 12px; font-size:12px; font-weight:800; border-right:1px solid var(--border); display:flex; align-items:center; line-height:1.3; background:var(--card2); }
+.compat-top { padding:10px 12px; font-size:13.5px; }
 .compat-top .ct { font-weight:700; color:var(--text); margin-bottom:2px; }
-.compat-top .cn { color:var(--muted); font-size:11.5px; }
+.compat-top .cn { color:var(--muted); font-size:12.5px; }
 
 /* 흐름 단계 */
 .flow-steps { display:flex; align-items:center; gap:4px; margin-top:8px; flex-wrap:wrap; }
-.flow-step { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:6px 10px; font-size:12px; font-weight:700; text-align:center; line-height:1.3; white-space:nowrap; }
+.flow-step { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:6px 10px; font-size:12px; font-weight:700; text-align:center; line-height:1.3; white-space:nowrap; }
 .flow-arrow { color:var(--muted); font-size:13px; flex-shrink:0; }
 
 /* 구분선 */
@@ -169,8 +183,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .section-divider span { font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--muted); white-space:nowrap; }
 
 /* 공통 조건 */
-.common-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; }
-.common-box-title { font-size:14px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:8px; color:var(--warn); }
+.common-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.common-box-title { font-size:14.5px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:8px; color:var(--warn); }
 .cond-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
 .cond-item { background:var(--card2); border-radius:9px; padding:9px 11px; border:1px solid var(--border); font-size:12.5px; line-height:1.6; }
 .cond-item strong { display:block; font-size:12px; font-weight:800; margin-bottom:2px; }
@@ -181,72 +195,93 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
 /* 빠른 이동 */
 .mat-nav { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
-.mat-nav a { display:inline-block; font-size:12px; font-weight:700; padding:6px 12px; border-radius:20px; text-decoration:none; background:var(--card2); color:var(--muted); border:1px solid var(--border); cursor:pointer; }
+.mat-nav a { display:inline-block; font-size:12.5px; font-weight:700; padding:7px 13px; border-radius:20px; text-decoration:none; background:var(--card); color:var(--text); border:1.5px solid var(--border); cursor:pointer; box-shadow:var(--shadow); }
+
+/* 증상・소재 검색 */
+.search-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.search-box-title { font-size:14.5px; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:8px; color:var(--text); }
+.search-box-sub { font-size:13.5px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
+.search-input-row { display:flex; gap:8px; }
+.search-input { flex:1; min-width:0; background:var(--card2); border:1.5px solid var(--border); border-radius:10px; padding:11px 13px; font-size:14px; color:var(--text); font-family:inherit; }
+.search-input::placeholder { color:var(--muted); }
+.search-input:focus { outline:none; border-color:var(--accent); }
+.search-btn { flex-shrink:0; background:var(--accent); color:#fff; border:none; border-radius:10px; padding:0 18px; font-size:14px; font-weight:700; cursor:pointer; }
+.search-btn:active { opacity:0.8; }
+.search-result { margin-top:10px; font-size:13.5px; line-height:1.5; padding:10px 12px; border-radius:10px; display:none; }
+.search-result.show { display:block; }
+.search-result.found { background:var(--accent-bg); border:1px solid rgba(124,58,237,0.3); color:var(--text); }
+.search-result.found b { color:var(--accent); }
+.search-result.notfound { background:rgba(214,41,28,0.08); border:1px solid rgba(214,41,28,0.3); color:var(--danger); }
 
 /* 증상별 빠른 진단 */
-.diag-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; }
-.diag-box-title { font-size:14px; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:8px; color:var(--text); }
-.diag-box-sub { font-size:11.5px; color:var(--muted); margin-bottom:12px; line-height:1.5; }
+.diag-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.diag-box-title { font-size:14.5px; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:8px; color:var(--text); }
+.diag-box-sub { font-size:13.5px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
 .diag-list { display:flex; flex-direction:column; gap:8px; }
 .diag-item { display:flex; align-items:center; gap:10px; background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; text-decoration:none; transition:border-color 0.15s, background 0.15s; cursor:pointer; }
-.diag-item:active { background:rgba(255,255,255,0.05); }
+.diag-item:active { background:rgba(21,32,43,0.06); }
 .diag-icon { font-size:18px; flex-shrink:0; width:28px; text-align:center; }
 .diag-text { flex:1; }
-.diag-q { font-size:13px; font-weight:700; color:var(--text); line-height:1.4; }
-.diag-a { font-size:11.5px; color:var(--muted); margin-top:2px; line-height:1.4; }
+.diag-q { font-size:13px; font-weight:700; color:var(--text); line-height:1.45; }
+.diag-a { font-size:13.5px; color:var(--muted); margin-top:2px; line-height:1.5; font-weight:600; }
 .diag-arrow { font-size:13px; color:var(--muted); flex-shrink:0; }
-.diag-item.dg-concrete { border-color:rgba(88,166,255,0.3); }
+.diag-item.dg-concrete { border-color:rgba(20,99,199,0.35); }
 .diag-item.dg-concrete .diag-a { color:var(--water); }
-.diag-item.dg-silk { border-color:rgba(247,129,102,0.3); }
+.diag-item.dg-silk { border-color:rgba(193,67,14,0.35); }
 .diag-item.dg-silk .diag-a { color:var(--primer-o); }
-.diag-item.dg-wood { border-color:rgba(255,149,0,0.3); }
+.diag-item.dg-wood { border-color:rgba(163,87,0,0.35); }
 .diag-item.dg-wood .diag-a { color:var(--oil); }
-.diag-item.dg-iron { border-color:rgba(240,183,47,0.3); }
+.diag-item.dg-iron { border-color:rgba(150,102,0,0.35); }
 .diag-item.dg-iron .diag-a { color:var(--warn); }
-.diag-item.dg-mold { border-color:rgba(74,222,128,0.3); }
+.diag-item.dg-mold { border-color:rgba(13,138,108,0.35); }
 .diag-item.dg-mold .diag-a { color:var(--mold); }
-.diag-item.dg-wp { border-color:rgba(14,165,233,0.3); }
+.diag-item.dg-wp { border-color:rgba(5,112,172,0.35); }
 .diag-item.dg-wp .diag-a { color:var(--sky); }
-.diag-item.dg-floor { border-color:rgba(192,132,252,0.3); }
+.diag-item.dg-floor { border-color:rgba(146,51,224,0.35); }
 .diag-item.dg-floor .diag-a { color:var(--floor); }
-.diag-item.dg-tile { border-color:rgba(45,212,191,0.3); }
+.diag-item.dg-tile { border-color:rgba(14,135,121,0.35); }
 .diag-item.dg-tile .diag-a { color:var(--tile); }
 
 .sp-banner {
   display:flex; align-items:center; gap:10px;
-  background:linear-gradient(135deg,#1a0c05,#150a04);
-  border:1.5px solid rgba(253,74,0,0.4);
+  background:linear-gradient(135deg,#fff5ec,#fff0e3);
+  border:1.5px solid rgba(216,75,0,0.4);
   border-radius:11px; padding:10px 14px;
   text-decoration:none; cursor:pointer;
   transition:border-color 0.2s, box-shadow 0.2s;
   margin-bottom:0;
+  box-shadow:var(--shadow);
 }
-.sp-banner:hover { border-color:rgba(253,74,0,0.8); box-shadow:0 0 16px rgba(253,74,0,0.25); }
+.sp-banner:hover { border-color:rgba(216,75,0,0.7); box-shadow:0 0 14px rgba(216,75,0,0.18); }
 .sp-banner-left { display:flex; flex-direction:column; align-items:center; flex-shrink:0; gap:3px; }
-.sp-banner-label { font-size:7.5px; font-weight:700; color:rgba(253,74,0,0.7); letter-spacing:0.5px; }
+.sp-banner-label { font-size:9.5px; font-weight:700; color:#b03f00; letter-spacing:0.5px; }
 .sp-banner-mid { flex:1; }
-.sp-banner-title { font-size:10.5px; font-weight:800; color:var(--text); margin-bottom:4px; }
-.sp-banner-sub { font-size:9px; color:rgba(253,74,0,0.9); font-weight:600; }
+.sp-banner-title { font-size:12.5px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.sp-banner-sub { font-size:11px; color:#b03f00; font-weight:700; }
 .sp-banner-qr { flex-shrink:0; text-align:center; }
 
-.note-small { font-size:11.5px; color:var(--muted); margin-top:6px; line-height:1.6; }
-.footer { text-align:center; font-size:11px; color:rgba(139,148,158,0.45); margin-top:30px; padding-top:16px; border-top:1px solid var(--border); }
+.note-small { font-size:13.5px; color:var(--muted); margin-top:6px; line-height:1.75; }
+.footer { text-align:center; font-size:11.5px; color:var(--muted); margin-top:30px; padding-top:16px; border-top:1px solid var(--border); }
 
 /* YouTube 영상 */
 .yt-section { padding:14px 16px; border-top:1px solid var(--border); }
 .yt-section-label { font-size:11px; font-weight:800; color:var(--muted); letter-spacing:1px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
-.yt-section-label::before { content:'▶'; color:#ff0000; font-size:10px; }
+.yt-section-label::before { content:'▶'; color:#e02020; font-size:10px; }
 .yt-list { display:flex; flex-direction:column; gap:10px; }
 .yt-item { position:relative; border-radius:10px; overflow:hidden; display:block; background:#000; border:1px solid var(--border); text-decoration:none; }
-.yt-thumb { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; opacity:0.82; }
+.yt-thumb { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; opacity:0.9; }
 .yt-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
-.yt-play-btn { width:56px; height:40px; background:rgba(255,0,0,0.92); border-radius:10px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(0,0,0,0.5); }
+.yt-play-btn { width:56px; height:40px; background:rgba(224,32,32,0.95); border-radius:10px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(0,0,0,0.35); }
 .yt-play-btn::after { content:''; border-style:solid; border-width:10px 0 10px 20px; border-color:transparent transparent transparent #fff; margin-left:4px; }
 
 @media(max-width:480px){
   .cond-grid,.branch-row,.spec-grid { grid-template-columns:1fr; }
   .spec-item.full { grid-column:1; }
-  .compat-row { grid-template-columns:90px 1fr; }
+  .compat-row { grid-template-columns:1fr; }
+  .compat-primer { border-right:none; border-bottom:1px solid var(--border); }
+  .flow-steps { flex-direction:column; align-items:stretch; }
+  .flow-step { width:100%; }
+  .flow-arrow { text-align:center; transform:rotate(90deg); padding:2px 0; }
 }
 </style>
 </head>
@@ -264,12 +299,23 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 <div class="mat-nav">
   <a onclick="goTo('concrete')">🧱 콘크리트·석고보드</a>
   <a onclick="goTo('silk')">🖼 실크벽지·시트지</a>
-  <a onclick="goTo('wood')">🪵 목재</a>
+  <a onclick="goTo('wood')">🪑 목재</a>
   <a onclick="goTo('iron')">⚙️ 철재·비철재</a>
   <a onclick="goTo('mold')">🦠 곰팡이·결로</a>
   <a onclick="goTo('tile')">🚿 타일·줄눈</a>
   <a onclick="goTo('wp')">💧 옥상방수(우레탄)</a>
   <a onclick="goTo('floor')">🏭 실내방진(에폭시)</a>
+</div>
+
+<!-- 증상・소재 검색 -->
+<div class="search-box">
+  <div class="search-box-title">🔎 증상・소재 검색</div>
+  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시처럼 증상이나 소재를 입력해보세요.</div>
+  <div class="search-input-row">
+    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 에폭시..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
+    <button class="search-btn" onclick="searchSymptom()">검색</button>
+  </div>
+  <div id="searchResult" class="search-result"></div>
 </div>
 
 <!-- 증상별 빠른 진단 -->
@@ -302,7 +348,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <span class="diag-arrow">▶</span>
     </div>
     <div onclick="goTo('wood')" class="diag-item dg-wood">
-      <span class="diag-icon">🪵</span>
+      <span class="diag-icon">🪑</span>
       <span class="diag-text">
         <div class="diag-q">나무 데크·가구·문틀을 칠하거나 색을 살리고 싶어요</div>
         <div class="diag-a">→ 목재 가이드</div>
@@ -391,7 +437,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
         아래 두 가지 중 소지 상태에 맞게 선택하세요.<br><br>
 
         <span class="product-chip chip-primer">수성바인다200</span>
-        <div style="margin:7px 0; font-size:12.5px; color:var(--muted);">
+        <div style="margin:7px 0; font-size:13.5px; color:var(--muted);">
           피도면 침투·접착력 증가·구도막 보강<br>
           <span class="hi-blue">원액 그대로 사용</span><br>
           재도장 간격: 25℃ 기준 <b>3시간 이후</b><br>
@@ -399,7 +445,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
         </div>
 
         <span class="product-chip chip-primer" style="margin-top:6px; display:inline-block;">고점도 믹싱</span>
-        <div style="margin:7px 0; font-size:12.5px; color:var(--muted);">
+        <div style="margin:7px 0; font-size:13.5px; color:var(--muted);">
           고점도 필러형 · 도막 밀착력·충전성 향상<br>
           <span class="hi-blue">물 3 : 고점도믹싱 1</span> 비율로 희석 후 사용<br>
           재도장 간격: 25℃ 기준 <b>3시간 이후</b><br>
@@ -467,6 +513,53 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       </div>
     </div>
 
+    <div class="step-arrow">↓ 상도 마감 완료 후 (선택 적용)</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">보호 도장 (선택) — 오염 방지 마감</span><span class="step-badge badge-paint">수성크리어PLUS</span></div>
+      <div class="step-content">
+        수성페인트 상도 위에 <b>오염방지·광택 보강</b>을 원할 경우, 투명 보호코팅인 <b>수성크리어PLUS</b>를 추가로 도장합니다. 다채무늬 도료 마감 후 보호용 상도로도 사용하는 제품으로, <span class="hi-blue">생략 가능한 선택 공정</span>입니다.<br><br>
+
+        <div style="font-size:13px; font-weight:800; color:var(--water); margin-bottom:8px;">✨ 수성크리어PLUS 유광</div>
+        <span class="product-chip chip-water">수성크리어PLUS 유광</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 유광 마감 — 다채무늬 도료·수성 내부도료 오염방지 상도용</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
+          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+          <div class="spec-item"><strong>부피고형분</strong><span class="val">33%</span></div>
+          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 16.5㎡/ℓ</span></div>
+        </div>
+
+        <div style="margin:16px 0 8px; font-size:13px; font-weight:800; color:var(--water);">🌫 수성크리어PLUS 무광</div>
+        <span class="product-chip chip-water">수성크리어PLUS 무광</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 무광 마감 — 원래 도장면의 무광 질감을 살리며 보호</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
+          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+          <div class="spec-item"><strong>부피고형분</strong><span class="val">29.2%</span></div>
+          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 15㎡/ℓ</span></div>
+        </div>
+
+        <div class="info-box">
+          💡 <b>유광 vs 무광 선택 기준</b><br>
+          유광 — 광택감을 살려 깔끔하고 입체감 있는 마감을 원할 때<br>
+          무광 — 원래 도장면(특히 무광 수성페인트)의 질감을 그대로 유지하고 싶을 때
+        </div>
+
+        <div class="warn-box">
+          ⚠ 고화건조(25℃ 기준) <b>2시간 이내</b> · 5℃ 미만 보관 시 동결되면 재사용 불가합니다.<br>
+          비 오는 날·고습도(85% 이상)·저온(5℃ 이하)에는 도장을 피하세요. 도막 균열·부착 불량의 원인이 됩니다.<br>
+          타 도료와 혼합 사용 금지, 저장기간은 12개월(5~35℃ 실내 보관 기준)입니다.
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -493,7 +586,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 — 파워젯소</span><span class="step-badge badge-primer">수성 젯소</span></div>
       <div class="step-content">
         <span class="product-chip chip-primer">파워젯소</span>
-        <div style="margin-top:8px; font-size:12.5px; color:var(--muted);">
+        <div style="margin-top:8px; font-size:13.5px; color:var(--muted);">
           적용 소지: <span class="hi-green">철재 · 비철재 · 목재 · 시트지 · 실크벽지 · 유성도막 위</span><br>
           희석: 물 10% 이내<br>
           재도장 간격: 25℃ 기준 <b>3시간 이후</b> 상도 도장 가능<br>
@@ -527,7 +620,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 <!-- ══ 3. 목재 ══ -->
 <div class="mat-section mat-wood" id="wood">
   <div class="mat-title">
-    <span class="icon">🪵</span>
+    <span class="icon">🪑</span>
     <span>목재</span>
     <span class="sub">데크·원목·합판·MDF</span>
   </div>
@@ -553,23 +646,24 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
           <div style="font-size:13px; font-weight:800; color:var(--oil); margin-bottom:6px;">
             🌿 결 살리기 · 착색 · 방부 · 방충 · 햇빛에 의한 부식 방지 → 스테인
           </div>
-          <table class="recoat-table">
-            <thead><tr><th>제품</th><th>환경</th><th>재도장 (25℃)</th><th>이론도포면적</th></tr></thead>
-            <tbody>
-              <tr>
-                <td class="td-name">수성 스테인</td>
-                <td class="td-note">실내외</td>
-                <td class="td-time">3시간 이후</td>
-                <td class="td-note">약 12㎡/ℓ</td>
-              </tr>
-              <tr>
-                <td class="td-name">오일 스테인<br><span style="font-size:11px;color:var(--muted);">(월드스테인마스터)</span></td>
-                <td class="td-note">실외 전용<br><span style="color:var(--danger);font-size:11px;">실내 사용 금지</span></td>
-                <td class="td-time">3시간 이후</td>
-                <td class="td-note">약 7㎡/ℓ</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="rtable">
+            <div class="rtable-row">
+              <div class="rtable-name">수성 스테인</div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">환경</span><span class="rf-val">실내외</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">3시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 12㎡/ℓ</span></div>
+              </div>
+            </div>
+            <div class="rtable-row">
+              <div class="rtable-name">오일 스테인 <span class="sub">(월드스테인마스터)</span></div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">환경</span><span class="rf-val">실외 전용 · <span class="rf-val danger">실내 사용 금지</span></span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">3시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 7㎡/ℓ</span></div>
+              </div>
+            </div>
+          </div>
           <div class="note-small">원액 사용 · 충분히 교반 필수</div>
         </div>
 
@@ -590,23 +684,24 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
         <!-- 투명 보호 -->
         <div>
           <div style="font-size:13px; font-weight:800; color:var(--accent); margin-bottom:6px;">✨ 투명 보호 마감 원할 때 → 바니쉬 (=니스)</div>
-          <table class="recoat-table">
-            <thead><tr><th>제품</th><th>희석</th><th>재도장 (25℃)</th><th>이론도포면적</th></tr></thead>
-            <tbody>
-              <tr>
-                <td class="td-name">수성우드바니쉬</td>
-                <td class="td-note">원액 또는 물 5~10%</td>
-                <td class="td-time">2시간 이후</td>
-                <td class="td-note">약 7㎡/ℓ</td>
-              </tr>
-              <tr>
-                <td class="td-name">유성 바니쉬<br><span style="font-size:11px;color:var(--muted);">(40바루스파)</span></td>
-                <td class="td-note">에나멜신나 30% 이내</td>
-                <td class="td-time">9시간 이후<br><span style="color:var(--danger);font-size:11px;">⚠ 환기 필요</span></td>
-                <td class="td-note">약 12㎡/ℓ</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="rtable">
+            <div class="rtable-row">
+              <div class="rtable-name">수성우드바니쉬</div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">원액 또는 물 5~10%</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">2시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 7㎡/ℓ</span></div>
+              </div>
+            </div>
+            <div class="rtable-row">
+              <div class="rtable-name">유성 바니쉬 <span class="sub">(40바루스파)</span></div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">에나멜신나 30% 이내</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">9시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 12㎡/ℓ · <span class="rf-val danger">⚠ 환기 필요</span></span></div>
+              </div>
+            </div>
+          </div>
           <div class="info-box" style="margin-top:6px;">💡 바니쉬 = 니스 : 동일 제품 (색상 없는 투명 도료)</div>
         </div>
 
@@ -637,29 +732,32 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
     <div class="step">
       <div class="step-header"><span class="step-num">2</span><span class="step-label">소지 유형별 프라이머 선택</span><span class="step-badge badge-primer-o">유성 프라이머</span></div>
       <div class="step-content">
-        <table class="recoat-table">
-          <thead><tr><th>소지</th><th>프라이머</th><th>희석</th><th>재도장 가능 시점</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="td-note">일반 철재</td>
-              <td class="td-name">방청프라이머</td>
-              <td class="td-note">에나멜신나 30% 이내</td>
-              <td class="td-time">20℃ 기준 12시간 이후</td>
-            </tr>
-            <tr>
-              <td class="td-note">아연도금 · 비철재</td>
-              <td class="td-name">워시프라이머</td>
-              <td class="td-note">신나395 15% 이내</td>
-              <td class="td-time">25℃ 기준 16시간 이후</td>
-            </tr>
-            <tr>
-              <td class="td-note">철재·비철재·스텐·FRP 범용</td>
-              <td class="td-name">스피폭시FD 프라이머</td>
-              <td class="td-note">신나395 10% 이내</td>
-              <td class="td-time">25℃ 기준 6시간~3일 이내</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="rtable">
+          <div class="rtable-row">
+            <div class="rtable-name">방청프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">일반 철재</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">에나멜신나 30% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">20℃ 기준 12시간 이후</span></div>
+            </div>
+          </div>
+          <div class="rtable-row">
+            <div class="rtable-name">워시프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">아연도금 · 비철재</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">신나395 15% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">25℃ 기준 16시간 이후</span></div>
+            </div>
+          </div>
+          <div class="rtable-row">
+            <div class="rtable-name">스피폭시FD 프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">철재 · 비철재 · 스텐 · FRP 범용</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">신나395 10% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">25℃ 기준 6시간~3일 이내</span></div>
+            </div>
+          </div>
+        </div>
         <div class="note-small">※ 스피폭시FD는 재도장 가능 시간 범위 엄수 (3일 초과 시 재샌딩 필요)</div>
       </div>
     </div>
@@ -743,7 +841,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
         <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--border);">
           <span class="product-chip chip-water">아이럭스 올코팅</span>
-          <div style="margin-top:7px; font-size:12.5px; color:var(--muted);">
+          <div style="margin-top:7px; font-size:13.5px; color:var(--muted);">
             수성 제품이나 유성 도막 위 도장이 가능하게 설계된 친환경 수성페인트<br>
             <span style="color:var(--warn); font-weight:600;">(단 부착성 이상 유무 사전점검 필요)</span>
           </div>
@@ -777,7 +875,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 — 진저 몰드킬링 프라이머</span><span class="step-badge badge-primer">항균 프라이머</span></div>
       <div class="step-content">
         <span class="product-chip chip-mold">진저 몰드킬링 프라이머</span>
-        <div style="margin:8px 0; font-size:12.5px; color:var(--muted);">
+        <div style="margin:8px 0; font-size:13.5px; color:var(--muted);">
           · EPA 등록 항균 성분 — 곰팡이·세균·이끼 동시 사멸<br>
           · 잔류 곰팡이 얼룩 커버 보조<br>
           · 수성 타입 — <span class="hi-green">원액 그대로 사용</span><br>
@@ -1009,7 +1107,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">2</span><span class="step-label">방수에이스 하도</span><span class="step-badge badge-wp">우레탄 하도</span></div>
       <div class="step-content">
         <span class="product-chip chip-wp">방수에이스 하도</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">콘크리트 소지와 중도 우레탄의 접착력을 높이는 침투형 하도</div>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">콘크리트 소지와 중도 우레탄의 접착력을 높이는 침투형 하도</div>
         <div class="spec-grid">
           <div class="spec-item"><strong>신규 도장</strong><span class="val">원액 사용</span></div>
           <div class="spec-item"><strong>구도막 재도장</strong><span class="val">우레탄1000신나 1:1 희석 후 최대한 얇게 도장</span></div>
@@ -1070,7 +1168,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">4</span><span class="step-label">방수에이스 상도</span><span class="step-badge badge-wp">우레탄 상도</span></div>
       <div class="step-content">
         <span class="product-chip chip-wp">방수에이스 상도</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
           중도 우레탄 방수층을 자외선·물리적 충격에서 보호하는 최종 코팅 역할
         </div>
         <div class="spec-grid">
@@ -1090,7 +1188,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 </div>
 
 <!-- 옥상방수 영상 -->
-<div class="yt-section" style="background:var(--card); border:1.5px solid rgba(14,165,233,0.25); border-radius:14px; margin-bottom:28px; padding:14px 16px;">
+<div class="yt-section" style="background:var(--card); border:1.5px solid rgba(5,112,172,0.3); border-radius:14px; margin-bottom:28px; padding:14px 16px; box-shadow:var(--shadow);">
   <div class="yt-section-label">우레탄방수 참고영상</div>
   <div class="yt-list">
     <a class="yt-item" href="https://www.youtube.com/watch?v=eKdvjkhsfwY" target="_blank">
@@ -1131,7 +1229,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">2</span><span class="step-label">에포코트 하도</span><span class="step-badge badge-ep">에폭시 하도</span></div>
       <div class="step-content">
         <span class="product-chip chip-floor">에포코트 하도</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">콘크리트 소지 침투·접착력 향상 전용 에폭시 프라이머</div>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">콘크리트 소지 침투·접착력 향상 전용 에폭시 프라이머</div>
         <div class="spec-grid">
           <div class="spec-item"><strong>신규 도장</strong><span class="val">원액 사용</span></div>
           <div class="spec-item"><strong>구도막 재도장</strong><span class="val">에포코트1000신나 1:1 희석 후 얇게 도장</span></div>
@@ -1149,7 +1247,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">3</span><span class="step-label">에포코트 상도</span><span class="step-badge badge-ep">에폭시 상도</span></div>
       <div class="step-content">
         <span class="product-chip chip-floor">에포코트 상도</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">내마모·방진·내약품성이 우수한 에폭시 마감재</div>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">내마모·방진·내약품성이 우수한 에폭시 마감재</div>
         <div class="spec-grid">
           <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">2.7 : 1</span></div>
           <div class="spec-item"><strong>희석</strong><span class="val">에포코트1000신나 5% 미만</span></div>
@@ -1167,7 +1265,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">4</span><span class="step-label">컬러데코라이닝</span><span class="step-badge badge-ep">옵션</span></div>
       <div class="step-content">
         <span class="product-chip chip-floor">컬러데코라이닝</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">공장, 사무실, 전시실, 매장 등의 실내 방진 바닥용. 에포코트보다 내구성이 우수하며, 신나를 사용하지 않는 무용제 제품.</div>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">공장, 사무실, 전시실, 매장 등의 실내 방진 바닥용. 에포코트보다 내구성이 우수하며, 신나를 사용하지 않는 무용제 제품.</div>
         <div class="spec-grid">
           <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1</span></div>
           <div class="spec-item"><strong>가사시간 (20℃)</strong><span class="val">25분</span></div>
@@ -1191,7 +1289,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <div class="step-header"><span class="step-num">5</span><span class="step-label">A플로어투명 (1액형 · 외부 코팅 가능)</span><span class="step-badge badge-ep">1액형 대안</span></div>
       <div class="step-content">
         <span class="product-chip chip-floor">A플로어투명</span>
-        <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
           하도를 사용하지 않는 1액형 바닥 코팅제.<br>
           외부 코팅을 원하는 경우에도 사용 가능.
         </div>
@@ -1215,7 +1313,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
         <div style="margin-bottom:14px;">
           <span class="product-chip chip-floor">에포코트아쿠아 하도</span>
-          <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">수성 에폭시 시스템의 침투형 하도. 소지에 도포하여 상도 접착력 확보.</div>
+          <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">수성 에폭시 시스템의 침투형 하도. 소지에 도포하여 상도 접착력 확보.</div>
           <div class="spec-grid">
             <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">1 : 1</span></div>
             <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
@@ -1228,7 +1326,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
         <div>
           <span class="product-chip chip-floor">에포코트아쿠아 코팅 (상도)</span>
-          <div style="margin:8px 0 10px; font-size:12.5px; color:var(--muted);">수성 에폭시 마감재. 내마모·방진성 확보.</div>
+          <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">수성 에폭시 마감재. 내마모·방진성 확보.</div>
           <div class="spec-grid">
             <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">1 : 1</span></div>
             <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
@@ -1275,7 +1373,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
     </div>
     <div class="sp-banner-qr">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARQAAAEUCAYAAADqcMl5AAAGOUlEQVR4nO3dQY7bRhBA0TjwAQbexFfJ/Re5irMxfANllY09kwaGv1NNzXtLGUORlPzRgArNT4/H4/EbQOD36RMAnoegABlBATKCAmQ+v/biy5ev//d5ADfz4/u3X16zQgEyggJkBAXICAqQERQgIyhARlCAjKAAGUEBMoICZAQFyAgKkBEUICMoQEZQgIygAJlXN1gq/Pjz712HPsLLX3/8579fvf6rx1/9/VXTn++zX99uu+6fFQqQERQgIyhARlCAjKAAGUEBMoICZLbNoazsniO4avccybRnn5PZ7fTzn5qjsUIBMoICZAQFyAgKkBEUICMoQEZQgMzYHMrK7t/RT99PY/f5XZ0juXp9V+dUTr+/d//+vpcVCpARFCAjKEBGUICMoAAZQQEyggJkjp1DuburcwK75zSunt/u65ueU+F9rFCAjKAAGUEBMoICZAQFyAgKkBEUIGMOZcjd9xO5+v533++E11mhABlBATKCAmQEBcgICpARFCAjKEDm2DmUu88RTM+JrOzez+Sq6f1krrr79/e9rFCAjKAAGUEBMoICZAQFyAgKkBEUIDM2h+K5Kdfsfi7P3f9+N9/f11mhABlBATKCAmQEBcgICpARFCAjKEBm2xzK9JzAtOnr3/3+03MYp+/H8lFZoQAZQQEyggJkBAXICAqQERQgIyhAZtscyt33w7g653D6HMPu65u+f7vnVHZ/P+/6/8cKBcgICpARFCAjKEBGUICMoAAZQQEyH/a5PLt/55+e85ieg7n7c3umv5+753x2sUIBMoICZAQFyAgKkBEUICMoQEZQgMzYHMr0fhFXj3/V6XMiK9P7new2fX9WTp1TsUIBMoICZAQFyAgKkBEUICMoQEZQgMynx+Px+PnFly9fLx94ej+Qq8df2b2fx8r0+Z9u+v6uPMP9//H92y+vWaEAGUEBMoICZAQFyAgKkBEUICMoQGbbfijT+0lMv//K9HN/djt9zmJ6TuhZ51ysUICMoAAZQQEyggJkBAXICAqQERQgM/Zcnrvvl7J7TmT6+lZ2z8GcPmcz7dT7Y4UCZAQFyAgKkBEUICMoQEZQgIygAJmx5/JcnbOY3k9iZfccyel2f77Tf3+6/+P6PJcH2EpQgIygABlBATKCAmQEBcgICpA5dg5l+vjTpucspvdbWTn9/D4CcyjAVoICZAQFyAgKkBEUICMoQEZQgMy2OZSrpudYVqbf/+6m51Sefb8U+6EAtycoQEZQgIygABlBATKCAmQEBch8nj6Bt0w/1+bu7z99/lftPr+rxz99TmqKFQqQERQgIyhARlCAjKAAGUEBMoICZLbNoUz/jj49B3B1DmR6zmVl+vNdmb6+j7rfjhUKkBEUICMoQEZQgIygABlBATKCAmS2zaE8+3NLpucwdp/f1c/v7p//yunXN3V+VihARlCAjKAAGUEBMoICZAQFyAgKkPmw+6FMP/fm9DmGuzv9uT4rd/1+WaEAGUEBMoICZAQFyAgKkBEUICMoQObD7oeycvr5n76fx/T5Tc9p7H6uz6lzKlYoQEZQgIygABlBATKCAmQEBcgICpB52v1Qdts9J3H6+6+cPsezsnuO4+735y1WKEBGUICMoAAZQQEyggJkBAXICAqQ2TaHsnL67/AffU7k7vuJXHX69/NUVihARlCAjKAAGUEBMoICZAQFyAgKkBmbQ1mZnsPYbXrOYvdzY1ZW9//qnMzK6fd/9/XvYoUCZAQFyAgKkBEUICMoQEZQgIygAJlj51A+ut37qZw+5zB9/tP3Z/r638sKBcgICpARFCAjKEBGUICMoAAZQQEy5lA22f1cm93HP/25PSunz6mc/tym97JCATKCAmQEBcgICpARFCAjKEBGUIDMsXMo03MMV+2eU5i+P9NzGCunz4Hc/fN/ixUKkBEUICMoQEZQgIygABlBATKCAmTG5lBO3c+hcvocxKnPdfnX9PntPv7d53DeYoUCZAQFyAgKkBEUICMoQEZQgIygAJlPj8fj8fOLL1++TpwLcCM/vn/75TUrFCAjKEBGUICMoAAZQQEyggJkBAXICAqQERQgIyhARlCAjKAAGUEBMoICZAQFyAgKkHl1gyWA97BCATKCAmQEBcgICpD5B/ZUO7L7EN59AAAAAElFTkSuQmCC" alt="QR" style="width:58px;height:58px;border-radius:4px;display:block;">
-      <div style="font-size:7px;color:rgba(253,74,0,0.7);text-align:center;margin-top:2px;">QR 스캔</div>
+      <div style="font-size:9.5px;color:#b03f00;font-weight:600;text-align:center;margin-top:3px;">QR 스캔</div>
     </div>
   </a>
 
@@ -1287,6 +1385,69 @@ function goTo(id) {
   var el = document.getElementById(id);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/* 증상・소재 검색 — 키워드는 각 섹션 제목에 실제로 쓰인 단어를 기준으로 구성 */
+var SYMPTOM_MAP = {
+  mold:     { label: '🦠 곰팡이・결로 가이드',          keywords: ['곰팡이','결로','이끼'] },
+  concrete: { label: '🧱 콘크리트・석고보드 가이드',     keywords: ['콘크리트','시멘트','몰탈','석고보드','내벽','외벽','수성페인트'] },
+  silk:     { label: '🖼 실크벽지・시트지 가이드',       keywords: ['실크벽지','벽지','시트지','mdf','플라스틱'] },
+  wood:     { label: '🪑 목재 가이드',                  keywords: ['목재','데크','원목','합판','오일스테인','수성스테인','스테인'] },
+  iron:     { label: '⚙️ 철재・비철재 가이드',          keywords: ['철재','비철재','스텐','frp','철대문','철재난간','아연각관','유성페인트'] },
+  tile:     { label: '🚿 타일・줄눈 가이드',             keywords: ['타일','줄눈','욕실','주방','방수코팅'] },
+  wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄'] },
+  floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] }
+};
+
+function normalizeKo(s) {
+  return s.replace(/\s+/g, '').toLowerCase();
+}
+
+function matchSymptom(raw) {
+  var q = normalizeKo(raw || '');
+  if (!q) return null;
+  var best = null, bestLen = 0;
+  for (var section in SYMPTOM_MAP) {
+    var kws = SYMPTOM_MAP[section].keywords;
+    for (var i = 0; i < kws.length; i++) {
+      var kw = normalizeKo(kws[i]);
+      if ((q.indexOf(kw) !== -1 || kw.indexOf(q) !== -1) && kw.length > bestLen) {
+        bestLen = kw.length;
+        best = { section: section, keyword: kws[i] };
+      }
+    }
+  }
+  return best;
+}
+
+function previewSymptom() {
+  var raw = document.getElementById('symptomSearch').value.trim();
+  var box = document.getElementById('searchResult');
+  if (!raw) { box.className = 'search-result'; box.innerHTML = ''; return; }
+  var hit = matchSymptom(raw);
+  if (hit) {
+    box.className = 'search-result show found';
+    box.innerHTML = '✅ <b>"' + hit.keyword + '"</b> → ' + SYMPTOM_MAP[hit.section].label + ' &nbsp;(검색 또는 Enter를 누르면 이동합니다)';
+  } else {
+    box.className = 'search-result show notfound';
+    box.innerHTML = '❌ 일치하는 가이드를 찾지 못했습니다. 다른 단어로 검색해보세요.';
+  }
+}
+
+function searchSymptom() {
+  var raw = document.getElementById('symptomSearch').value.trim();
+  var box = document.getElementById('searchResult');
+  var hit = matchSymptom(raw);
+  if (hit) {
+    box.className = 'search-result show found';
+    box.innerHTML = '✅ <b>"' + hit.keyword + '"</b> → ' + SYMPTOM_MAP[hit.section].label + '로 이동합니다';
+    goTo(hit.section);
+  } else {
+    box.className = 'search-result show notfound';
+    box.innerHTML = raw
+      ? '❌ 일치하는 가이드를 찾지 못했습니다. 다른 단어로 검색해보세요.'
+      : '🔎 검색어를 입력해주세요.';
   }
 }
 </script>
