@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소재별 도장 순서 가이드 | 형제상사</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eef1f6;
+  --card: #ffffff;
+  --card2: #f3f5f9;
+  --border: #dfe3ea;
+  --text: #15202b;
+  --muted: #57606e;
+  --water: #1463c7;
+  --water-bg: rgba(20,99,199,0.09);
+  --oil: #a35700;
+  --oil-bg: rgba(163,87,0,0.09);
+  --primer-w: #1c8a4e;
+  --primer-w-bg: rgba(28,138,78,0.09);
+  --primer-o: #c1430e;
+  --primer-o-bg: rgba(193,67,14,0.09);
+  --accent: #7c3aed;
+  --accent-bg: rgba(124,58,237,0.09);
+  --warn: #966600;
+  --warn-bg: rgba(150,102,0,0.1);
+  --danger: #d6291c;
+  --mold: #0d8a6c;
+  --sky: #0570ac;
+  --sky-bg: rgba(5,112,172,0.09);
+  --floor: #9233e0;
+  --floor-bg: rgba(146,51,224,0.09);
+  --tile: #0e8779;
+  --tile-bg: rgba(14,135,121,0.09);
+  --roof: #b23a3a;
+  --roof-bg: rgba(178,58,58,0.09);
+  --twp: #8a5800;
+  --twp-bg: rgba(138,88,0,0.09);
+  --shadow: 0 1px 2px rgba(21,32,43,0.05), 0 2px 7px rgba(21,32,43,0.05);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--text); -webkit-text-size-adjust:100%; word-break:keep-all; overflow-wrap:break-word; }
+.wrap { max-width:600px; margin:0 auto; padding:16px 14px 40px; }
+
+/* HEADER */
+.header { text-align:center; padding:22px 0 18px; border-bottom:2px solid var(--border); margin-bottom:20px; }
+.store-tag { display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:1.5px; padding:5px 13px; border-radius:20px; background:var(--accent-bg); color:var(--accent); border:1px solid rgba(124,58,237,0.3); margin-bottom:10px; }
+.header h1 { font-size:23px; font-weight:900; letter-spacing:-0.5px; line-height:1.35; background:linear-gradient(90deg,var(--water),var(--accent),var(--oil)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.header p { font-size:13px; color:var(--muted); margin-top:7px; font-weight:500; }
+
+/* 소재 섹션 */
+.mat-section { margin-bottom:28px; }
+.mat-title { display:flex; align-items:center; gap:10px; padding:14px 16px; border-radius:14px 14px 0 0; font-size:16.5px; font-weight:900; letter-spacing:-0.3px; border:1.5px solid; border-bottom:none; }
+.mat-title .icon { font-size:21px; }
+.mat-title .sub { font-size:11.5px; font-weight:600; color:var(--muted); margin-left:auto; white-space:nowrap; }
+.mat-body { background:var(--card); border:1.5px solid; border-top:none; border-radius:0 0 14px 14px; overflow:hidden; box-shadow:var(--shadow); }
+
+.mat-concrete .mat-title { background:rgba(20,99,199,0.08); border-color:rgba(20,99,199,0.4); color:var(--water); }
+.mat-concrete .mat-body { border-color:rgba(20,99,199,0.4); }
+.mat-silk .mat-title { background:rgba(193,67,14,0.08); border-color:rgba(193,67,14,0.4); color:var(--primer-o); }
+.mat-silk .mat-body { border-color:rgba(193,67,14,0.4); }
+.mat-wood .mat-title { background:rgba(163,87,0,0.08); border-color:rgba(163,87,0,0.4); color:var(--oil); }
+.mat-wood .mat-body { border-color:rgba(163,87,0,0.4); }
+.mat-iron .mat-title { background:rgba(150,102,0,0.08); border-color:rgba(150,102,0,0.4); color:var(--warn); }
+.mat-iron .mat-body { border-color:rgba(150,102,0,0.4); }
+.mat-mold .mat-title { background:rgba(13,138,108,0.08); border-color:rgba(13,138,108,0.4); color:var(--mold); }
+.mat-mold .mat-body { border-color:rgba(13,138,108,0.4); }
+.mat-wp .mat-title { background:rgba(5,112,172,0.08); border-color:rgba(5,112,172,0.4); color:var(--sky); }
+.mat-wp .mat-body { border-color:rgba(5,112,172,0.4); }
+.mat-tile .mat-title { background:rgba(14,135,121,0.08); border-color:rgba(14,135,121,0.4); color:var(--tile); }
+.mat-tile .mat-body { border-color:rgba(14,135,121,0.4); }
+.mat-roof .mat-title { background:rgba(178,58,58,0.08); border-color:rgba(178,58,58,0.4); color:var(--roof); }
+.mat-roof .mat-body { border-color:rgba(178,58,58,0.4); }
+.mat-floor .mat-title { background:rgba(146,51,224,0.08); border-color:rgba(146,51,224,0.4); color:var(--floor); }
+.mat-floor .mat-body { border-color:rgba(146,51,224,0.4); }
+
+/* STEP */
+.step { padding:14px 16px; border-bottom:1px solid var(--border); }
+.step:last-child { border-bottom:none; }
+.step-header { display:flex; align-items:center; margin-bottom:10px; }
+.step-num { display:inline-flex; align-items:center; justify-content:center; width:23px; height:23px; border-radius:50%; font-size:11.5px; font-weight:800; background:var(--card2); color:var(--text); border:1.5px solid var(--border); flex-shrink:0; margin-right:8px; }
+.step-label { font-size:13.5px; font-weight:800; color:var(--text); }
+.step-badge { display:inline-block; font-size:10.5px; font-weight:700; padding:2px 9px; border-radius:20px; margin-left:8px; }
+.badge-prep { background:rgba(150,102,0,0.13); color:var(--warn); }
+.badge-primer { background:rgba(28,138,78,0.13); color:var(--primer-w); }
+.badge-primer-o { background:rgba(193,67,14,0.13); color:var(--primer-o); }
+.badge-paint { background:rgba(20,99,199,0.13); color:var(--water); }
+.badge-paint-o { background:rgba(163,87,0,0.13); color:var(--oil); }
+.badge-recoat { background:rgba(124,58,237,0.13); color:var(--accent); }
+.badge-wp { background:rgba(5,112,172,0.13); color:var(--sky); }
+.badge-ep { background:rgba(146,51,224,0.13); color:var(--floor); }
+.badge-roof { background:rgba(178,58,58,0.13); color:var(--roof); }
+
+.step-arrow { text-align:center; color:var(--water); font-size:14px; padding:3px 0 5px; font-weight:700; }
+
+.step-content { background:var(--card2); border-radius:10px; padding:12px 14px; font-size:14.5px; line-height:1.8; color:var(--text); border:1px solid var(--border); }
+.step-content b { color:var(--warn); font-weight:700; }
+.hi-blue { color:var(--water); font-weight:700; }
+.hi-green { color:var(--primer-w); font-weight:700; }
+.hi-orange { color:var(--oil); font-weight:700; }
+.hi-red { color:var(--danger); font-weight:700; }
+.hi-acc { color:var(--accent); font-weight:700; }
+.hi-sky { color:var(--sky); font-weight:700; }
+.hi-floor { color:var(--floor); font-weight:700; }
+.hi-tile { color:var(--tile); font-weight:700; }
+.hi-roof { color:var(--roof); font-weight:700; }
+
+/* 제품 칩 */
+.product-list { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
+.product-chip { display:inline-block; font-size:12.5px; font-weight:700; padding:5px 11px; border-radius:20px; border:1px solid; }
+.chip-water { background:var(--water-bg); color:var(--water); border-color:rgba(20,99,199,0.3); }
+.chip-oil { background:var(--oil-bg); color:var(--oil); border-color:rgba(163,87,0,0.3); }
+.chip-tile { background:var(--tile-bg); color:var(--tile); border-color:rgba(14,135,121,0.3); }
+.chip-roof { background:var(--roof-bg); color:var(--roof); border-color:rgba(178,58,58,0.3); }
+.chip-twp { background:var(--twp-bg); color:var(--twp); border-color:rgba(138,88,0,0.3); }
+.chip-primer { background:var(--primer-w-bg); color:var(--primer-w); border-color:rgba(28,138,78,0.3); }
+.chip-primer-o { background:var(--primer-o-bg); color:var(--primer-o); border-color:rgba(193,67,14,0.3); }
+.chip-acc { background:var(--accent-bg); color:var(--accent); border-color:rgba(124,58,237,0.3); }
+.chip-mold { background:rgba(13,138,108,0.1); color:var(--mold); border-color:rgba(13,138,108,0.3); }
+.chip-wp { background:var(--sky-bg); color:var(--sky); border-color:rgba(5,112,172,0.3); }
+.chip-floor { background:var(--floor-bg); color:var(--floor); border-color:rgba(146,51,224,0.3); }
+
+/* 분기 카드 */
+.branch-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+.branch-card { background:var(--card); border-radius:10px; padding:10px 12px; border:1px solid var(--border); box-shadow:var(--shadow); }
+.branch-card-title { font-size:12.5px; font-weight:800; margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid var(--border); }
+.bc-in .branch-card-title { color:var(--primer-w); }
+.bc-out .branch-card-title { color:var(--oil); }
+.branch-card ul { list-style:none; padding:0; font-size:13px; line-height:1.95; color:var(--muted); }
+.branch-card ul li::before { content:"· "; }
+
+/* 테이블 (구형, 미사용 시 유지만) */
+.recoat-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; border-radius:10px; overflow:hidden; }
+.recoat-table th { background:rgba(21,32,43,0.04); color:var(--muted); font-weight:700; padding:7px 10px; text-align:left; border-bottom:1px solid var(--border); }
+.recoat-table td { padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+.recoat-table tr:last-child td { border-bottom:none; }
+.recoat-table tr:nth-child(even) td { background:rgba(21,32,43,0.02); }
+.td-name { font-weight:700; color:var(--text); }
+.td-time { color:var(--water); font-weight:600; }
+.td-note { color:var(--muted); }
+
+/* 반응형 데이터 카드 — 좁은 화면에서 글자가 깨지는 표를 대체 */
+.rtable { display:flex; flex-direction:column; gap:8px; margin-top:8px; }
+.rtable-row { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px 13px; box-shadow:var(--shadow); }
+.rtable-name { font-size:14.5px; font-weight:800; color:var(--text); margin-bottom:9px; padding-bottom:9px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; gap:6px; flex-wrap:wrap; }
+.rtable-name .sub { font-size:11.5px; font-weight:600; color:var(--muted); }
+.rtable-fields { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.rtable-field { font-size:13px; line-height:1.55; }
+.rtable-field.full { grid-column:1/-1; }
+.rtable-field .rf-label { display:block; font-size:11.5px; color:var(--muted); font-weight:700; margin-bottom:2px; letter-spacing:0.2px; }
+.rtable-field .rf-val { font-weight:700; color:var(--text); }
+.rtable-field .rf-val.danger { color:var(--danger); }
+.rtable-field .rf-val.time { color:var(--water); }
+
+/* 알림 박스 */
+.warn-box { background:rgba(150,102,0,0.08); border:1px solid rgba(150,102,0,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--warn); font-weight:700; margin-top:8px; line-height:1.75; }
+.warn-box .wr { color:var(--danger); }
+.info-box { background:rgba(20,99,199,0.07); border:1px solid rgba(20,99,199,0.3); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--water); font-weight:700; margin-top:8px; line-height:1.75; }
+.danger-box { background:rgba(214,41,28,0.08); border:1px solid rgba(214,41,28,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--danger); font-weight:700; margin-top:8px; line-height:1.75; }
+.star-box { background:rgba(124,58,237,0.08); border:1px solid rgba(124,58,237,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--accent); font-weight:700; margin-top:8px; line-height:1.75; }
+.green-box { background:rgba(28,138,78,0.08); border:1px solid rgba(28,138,78,0.35); border-radius:9px; padding:10px 13px; font-size:13.5px; color:var(--primer-w); font-weight:700; margin-top:8px; line-height:1.75; }
+
+/* 스펙 그리드 */
+.spec-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:8px; }
+.spec-item { background:var(--card); border-radius:9px; padding:10px 12px; border:1px solid var(--border); font-size:13.5px; line-height:1.6; box-shadow:var(--shadow); }
+.spec-item strong { display:block; font-size:11.5px; color:var(--muted); font-weight:700; margin-bottom:3px; letter-spacing:0.3px; }
+.spec-item .val { font-weight:700; color:var(--text); }
+.spec-item.full { grid-column:1/-1; }
+
+/* 상도 호환표 */
+.paint-compat { background:var(--card); border-radius:10px; border:1px solid var(--border); overflow:hidden; margin-top:8px; box-shadow:var(--shadow); }
+.compat-row { display:grid; grid-template-columns:104px 1fr; border-bottom:1px solid var(--border); }
+.compat-row:last-child { border-bottom:none; }
+.compat-primer { padding:10px 12px; font-size:12px; font-weight:800; border-right:1px solid var(--border); display:flex; align-items:center; line-height:1.3; background:var(--card2); }
+.compat-top { padding:10px 12px; font-size:13.5px; }
+.compat-top .ct { font-weight:700; color:var(--text); margin-bottom:2px; }
+.compat-top .cn { color:var(--muted); font-size:12.5px; }
+
+/* 흐름 단계 */
+.flow-steps { display:flex; align-items:center; gap:4px; margin-top:8px; flex-wrap:wrap; }
+.flow-step { background:var(--card); border:1.5px solid var(--border); border-radius:8px; padding:6px 10px; font-size:12px; font-weight:700; text-align:center; line-height:1.3; white-space:nowrap; }
+.flow-arrow { color:var(--muted); font-size:13px; flex-shrink:0; }
+
+/* 구분선 */
+.section-divider { display:flex; align-items:center; gap:10px; margin:28px 0 20px; }
+.section-divider::before,.section-divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); }
+.section-divider span { font-size:11px; font-weight:700; letter-spacing:1.5px; color:var(--muted); white-space:nowrap; }
+
+/* 공통 조건 */
+.common-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.common-box-title { font-size:14.5px; font-weight:800; margin-bottom:12px; display:flex; align-items:center; gap:8px; color:var(--warn); }
+.cond-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.cond-item { background:var(--card2); border-radius:9px; padding:9px 11px; border:1px solid var(--border); font-size:12.5px; line-height:1.6; }
+.cond-item strong { display:block; font-size:12px; font-weight:800; margin-bottom:2px; }
+.cond-item.danger strong { color:var(--danger); }
+.cond-item.ok strong { color:var(--primer-w); }
+.cond-item.note strong { color:var(--warn); }
+.cond-item.tool strong { color:var(--accent); }
+
+/* 빠른 이동 */
+.mat-nav { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
+.mat-nav a { display:inline-block; font-size:12.5px; font-weight:700; padding:7px 13px; border-radius:20px; text-decoration:none; background:var(--card); color:var(--text); border:1.5px solid var(--border); cursor:pointer; box-shadow:var(--shadow); }
+
+/* 증상・소재 검색 */
+.search-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.search-box-title { font-size:14.5px; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:8px; color:var(--text); }
+.search-box-sub { font-size:13.5px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
+.search-input-row { display:flex; gap:8px; }
+.search-input { flex:1; min-width:0; background:var(--card2); border:1.5px solid var(--border); border-radius:10px; padding:11px 13px; font-size:14px; color:var(--text); font-family:inherit; }
+.search-input::placeholder { color:var(--muted); }
+.search-input:focus { outline:none; border-color:var(--accent); }
+.search-btn { flex-shrink:0; background:var(--accent); color:#fff; border:none; border-radius:10px; padding:0 18px; font-size:14px; font-weight:700; cursor:pointer; }
+.search-btn:active { opacity:0.8; }
+.search-result { margin-top:10px; font-size:13.5px; line-height:1.5; padding:10px 12px; border-radius:10px; display:none; }
+.search-result.show { display:block; }
+.search-result.found { background:var(--accent-bg); border:1px solid rgba(124,58,237,0.3); color:var(--text); }
+.search-result.found b { color:var(--accent); }
+.search-result.notfound { background:rgba(214,41,28,0.08); border:1px solid rgba(214,41,28,0.3); color:var(--danger); }
+
+/* 증상별 빠른 진단 */
+.diag-box { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 15px; margin-bottom:20px; box-shadow:var(--shadow); }
+.diag-box-title { font-size:14.5px; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:8px; color:var(--text); }
+.diag-box-sub { font-size:13.5px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
+.diag-list { display:flex; flex-direction:column; gap:8px; }
+.diag-item { display:flex; align-items:center; gap:10px; background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; text-decoration:none; transition:border-color 0.15s, background 0.15s; cursor:pointer; }
+.diag-item:active { background:rgba(21,32,43,0.06); }
+.diag-icon { font-size:18px; flex-shrink:0; width:28px; text-align:center; }
+.diag-text { flex:1; }
+.diag-q { font-size:13px; font-weight:700; color:var(--text); line-height:1.45; }
+.diag-a { font-size:13.5px; color:var(--muted); margin-top:2px; line-height:1.5; font-weight:600; }
+.diag-arrow { font-size:13px; color:var(--muted); flex-shrink:0; }
+.diag-item.dg-concrete { border-color:rgba(20,99,199,0.35); }
+.diag-item.dg-concrete .diag-a { color:var(--water); }
+.diag-item.dg-silk { border-color:rgba(193,67,14,0.35); }
+.diag-item.dg-silk .diag-a { color:var(--primer-o); }
+.diag-item.dg-wood { border-color:rgba(163,87,0,0.35); }
+.diag-item.dg-wood .diag-a { color:var(--oil); }
+.diag-item.dg-iron { border-color:rgba(150,102,0,0.35); }
+.diag-item.dg-iron .diag-a { color:var(--warn); }
+.diag-item.dg-mold { border-color:rgba(13,138,108,0.35); }
+.diag-item.dg-mold .diag-a { color:var(--mold); }
+.diag-item.dg-wp { border-color:rgba(5,112,172,0.35); }
+.diag-item.dg-wp .diag-a { color:var(--sky); }
+.diag-item.dg-floor { border-color:rgba(146,51,224,0.35); }
+.diag-item.dg-floor .diag-a { color:var(--floor); }
+.diag-item.dg-tile { border-color:rgba(14,135,121,0.35); }
+.diag-item.dg-tile .diag-a { color:var(--tile); }
+.diag-item.dg-roof { border-color:rgba(178,58,58,0.35); }
+.diag-item.dg-roof .diag-a { color:var(--roof); }
+
+.sp-banner {
+  display:flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg,#fff5ec,#fff0e3);
+  border:1.5px solid rgba(216,75,0,0.4);
+  border-radius:11px; padding:10px 14px;
+  text-decoration:none; cursor:pointer;
+  transition:border-color 0.2s, box-shadow 0.2s;
+  margin-bottom:0;
+  box-shadow:var(--shadow);
+}
+.sp-banner:hover { border-color:rgba(216,75,0,0.7); box-shadow:0 0 14px rgba(216,75,0,0.18); }
+.sp-banner-left { display:flex; flex-direction:column; align-items:center; flex-shrink:0; gap:3px; }
+.sp-banner-label { font-size:9.5px; font-weight:700; color:#b03f00; letter-spacing:0.5px; }
+.sp-banner-mid { flex:1; }
+.sp-banner-title { font-size:12.5px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.sp-banner-sub { font-size:11px; color:#b03f00; font-weight:700; }
+.sp-banner-qr { flex-shrink:0; text-align:center; }
+
+.note-small { font-size:13.5px; color:var(--muted); margin-top:6px; line-height:1.75; }
+.footer { text-align:center; font-size:11.5px; color:var(--muted); margin-top:30px; padding-top:16px; border-top:1px solid var(--border); }
+
+/* 맨 위로 버튼 */
+.to-top { position:fixed; right:16px; bottom:20px; width:44px; height:44px; border-radius:50%; border:1.5px solid var(--border); background:var(--card); color:var(--text); font-size:19px; font-weight:800; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 3px 12px rgba(21,32,43,0.18); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, transform .25s, visibility .25s; z-index:100; -webkit-tap-highlight-color:transparent; }
+.to-top.show { opacity:1; visibility:visible; transform:translateY(0); }
+.to-top:active { transform:scale(0.92); }
+
+/* YouTube 영상 */
+.yt-section { padding:14px 16px; border-top:1px solid var(--border); }
+.yt-section-label { font-size:11px; font-weight:800; color:var(--muted); letter-spacing:1px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+.yt-section-label::before { content:'▶'; color:#e02020; font-size:10px; }
+.yt-list { display:flex; flex-direction:column; gap:10px; }
+.yt-item { position:relative; border-radius:10px; overflow:hidden; display:block; background:#000; border:1px solid var(--border); text-decoration:none; }
+.yt-thumb { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; opacity:0.9; }
+.yt-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.yt-play-btn { width:56px; height:40px; background:rgba(224,32,32,0.95); border-radius:10px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(0,0,0,0.35); }
+.yt-play-btn::after { content:''; border-style:solid; border-width:10px 0 10px 20px; border-color:transparent transparent transparent #fff; margin-left:4px; }
+
+@media(max-width:480px){
+  .cond-grid,.branch-row,.spec-grid { grid-template-columns:1fr; }
+  .spec-item.full { grid-column:1; }
+  .compat-row { grid-template-columns:1fr; }
+  .compat-primer { border-right:none; border-bottom:1px solid var(--border); }
+  .flow-steps { flex-direction:column; align-items:stretch; }
+  .flow-step { width:100%; }
+  .flow-arrow { text-align:center; transform:rotate(90deg); padding:2px 0; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="store-tag">🏪 형제상사 도장 가이드</div>
+  <h1>소재별 도장 순서<br>완전 정복</h1>
+  <p>소재 선택 → 전처리 → 하도 → 상도까지 한 번에</p>
+</div>
+
+<!-- 빠른 이동 -->
+<div class="mat-nav">
+  <a onclick="goTo('concrete')">🧱 콘크리트·석고보드</a>
+  <a onclick="goTo('silk')">🖼 실크벽지·시트지</a>
+  <a onclick="goTo('wood')">🪑 목재</a>
+  <a onclick="goTo('iron')">⚙️ 철재·비철재</a>
+  <a onclick="goTo('mold')">🦠 곰팡이·결로</a>
+  <a onclick="goTo('tile')">🚿 타일·줄눈</a>
+  <a onclick="goTo('roof')">🏠 기와·슬레이트</a>
+  <a onclick="goTo('wp')">💧 옥상방수(우레탄)</a>
+  <a onclick="goTo('floor')">🏭 실내방진(에폭시)</a>
+</div>
+
+<!-- 증상・소재 검색 -->
+<div class="search-box">
+  <div class="search-box-title">🔎 증상・소재 검색</div>
+  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시처럼 증상이나 소재를 입력해보세요.</div>
+  <div class="search-input-row">
+    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 에폭시..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
+    <button class="search-btn" onclick="searchSymptom()">검색</button>
+  </div>
+  <div id="searchResult" class="search-result"></div>
+</div>
+
+<!-- 증상별 빠른 진단 -->
+<div class="diag-box">
+  <div class="diag-box-title">🔍 우리 집은 어떤 경우일까요?</div>
+  <div class="diag-box-sub">증상을 누르면 해당 소재 가이드로 바로 이동합니다.</div>
+  <div class="diag-list">
+    <div onclick="goTo('mold')" class="diag-item dg-mold">
+      <span class="diag-icon">🦠</span>
+      <span class="diag-text">
+        <div class="diag-q">벽에 곰팡이·검은 얼룩이 생겼어요</div>
+        <div class="diag-a">→ 곰팡이·결로 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('concrete')" class="diag-item dg-concrete">
+      <span class="diag-icon">🧱</span>
+      <span class="diag-text">
+        <div class="diag-q">콘크리트·시멘트·석고보드 벽을 새로 칠하고 싶어요</div>
+        <div class="diag-a">→ 콘크리트·석고보드 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('silk')" class="diag-item dg-silk">
+      <span class="diag-icon">🖼</span>
+      <span class="diag-text">
+        <div class="diag-q">벽지·시트지 위에 그대로 페인트를 칠하고 싶어요</div>
+        <div class="diag-a">→ 실크벽지·시트지 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('wood')" class="diag-item dg-wood">
+      <span class="diag-icon">🪑</span>
+      <span class="diag-text">
+        <div class="diag-q">나무 데크·가구·문틀을 칠하거나 색을 살리고 싶어요</div>
+        <div class="diag-a">→ 목재 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('iron')" class="diag-item dg-iron">
+      <span class="diag-icon">⚙️</span>
+      <span class="diag-text">
+        <div class="diag-q">철재 대문·난간·새시에 녹이 생겼거나 칠이 벗겨졌어요</div>
+        <div class="diag-a">→ 철재·비철재 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('tile')" class="diag-item dg-tile">
+      <span class="diag-icon">🚿</span>
+      <span class="diag-text">
+        <div class="diag-q">타일·줄눈에 페인트를 칠하거나 방수 코팅을 하고 싶어요</div>
+        <div class="diag-a">→ 타일·줄눈 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('roof')" class="diag-item dg-roof">
+      <span class="diag-icon">🏠</span>
+      <span class="diag-text">
+        <div class="diag-q">기와·슬레이트가 오래돼서 새것처럼 칠하고 싶어요</div>
+        <div class="diag-a">→ 기와·슬레이트(지붕) 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('wp')" class="diag-item dg-wp">
+      <span class="diag-icon">💧</span>
+      <span class="diag-text">
+        <div class="diag-q">옥상·옥외 바닥에서 물이 새거나 방수가 필요해요</div>
+        <div class="diag-a">→ 옥상 방수(우레탄) 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('floor')" class="diag-item dg-floor">
+      <span class="diag-icon">🏭</span>
+      <span class="diag-text">
+        <div class="diag-q">창고·주차장·작업장 바닥을 먼지 없이 깔끔하게 만들고 싶어요</div>
+        <div class="diag-a">→ 실내 방진 도료(에폭시) 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+  </div>
+</div>
+
+<!-- 공통 조건 -->
+<div class="common-box">
+  <div class="common-box-title">⚠️ 도장 전 공통 필수 확인</div>
+  <div class="cond-grid">
+    <div class="cond-item ok">
+      <strong>✅ 도장 가능 조건</strong>
+      기온 5℃ ~ 35℃<br>상대습도 85% 이하
+    </div>
+    <div class="cond-item danger">
+      <strong>🚫 도장 절대 금지</strong>
+      비 오는 날 / 습도 85% 이상<br>기온 5℃ 이하<br>→ 균열·부착 불량 발생
+    </div>
+    <div class="cond-item note">
+      <strong>⚠️ 소지 전처리 필수</strong>
+      먼지·유분·수분·녹<br>노후 구도막 완전 제거 후 도장
+    </div>
+    <div class="cond-item tool">
+      <strong>🛠 도구 선택 기준</strong>
+      붓: 좁은 면·모서리·터치업<br>롤러: 넓은 벽·천장·바닥
+    </div>
+  </div>
+</div>
+
+<!-- ══ 1. 콘크리트·시멘트·몰탈·석고보드 ══ -->
+<div class="mat-section mat-concrete" id="concrete">
+  <div class="mat-title">
+    <span class="icon">🧱</span>
+    <span>콘크리트 · 시멘트 · 몰탈 · 석고보드 벽</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        <b>먼지 · 유분 · 수분</b>을 완전히 제거합니다.<br>
+        틈새·균열은 퍼티 처리 후 샌딩, 비산먼지 완전 제거 후 진행합니다.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 선택</span><span class="step-badge badge-primer">수성 프라이머</span></div>
+      <div class="step-content">
+        아래 두 가지 중 소지 상태에 맞게 선택하세요.<br><br>
+
+        <span class="product-chip chip-primer">수성바인다200</span>
+        <div style="margin:7px 0; font-size:13.5px; color:var(--muted);">
+          피도면 침투·접착력 증가·구도막 보강<br>
+          <span class="hi-blue">원액 그대로 사용</span><br>
+          재도장 간격: 25℃ 기준 <b>3시간 이후</b><br>
+          이론도포면적: 약 7~10㎡/ℓ (소지 상태에 따라 상이)
+        </div>
+
+        <span class="product-chip chip-primer" style="margin-top:6px; display:inline-block;">고점도 믹싱</span>
+        <div style="margin:7px 0; font-size:13.5px; color:var(--muted);">
+          고점도 필러형 · 도막 밀착력·충전성 향상<br>
+          <span class="hi-blue">물 3 : 고점도믹싱 1</span> 비율로 희석 후 사용<br>
+          재도장 간격: 25℃ 기준 <b>3시간 이후</b><br>
+          이론도포면적: 약 5~8㎡/ℓ (희석 후 기준)
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 25℃ 기준 3시간 경과 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 선택 — 실내 / 실외 구분</span><span class="step-badge badge-paint">수성페인트</span></div>
+      <div class="step-content">
+        <div class="branch-row">
+          <div class="branch-card bc-in">
+            <div class="branch-card-title">🏠 실내</div>
+            <ul>
+              <li>수성내부</li>
+              <li>아이생각 원코트</li>
+              <li>수성아크론</li>
+              <li>홈스타파스텔OK플러스</li>
+              <li>아이럭스 멀티플랫</li>
+              <li>아이럭스 멀티에그쉘</li>
+              <li>아이럭스 올코팅</li>
+              <li>아이럭스 듀로X</li>
+              <li>아이럭스 결로스탑규조토</li>
+            </ul>
+          </div>
+          <div class="branch-card bc-out">
+            <div class="branch-card-title">🌤 실외</div>
+            <ul>
+              <li>수성외부</li>
+              <li>아이생각 원코트</li>
+              <li>수성아크론</li>
+              <li>아크로외부</li>
+              <li>아이럭스 올코팅</li>
+            </ul>
+          </div>
+        </div>
+        <div class="warn-box">
+          <span class="wr">⚠ 수성페인트 도장 후 최소 24시간 우천 노출 금지</span><br>
+          희석: 물 10% 이내 (과희석 시 도막 품질 저하)<br>
+          이론도포면적: 대략 6㎡/ℓ (제품별 상이)
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">재도장 (2회 이상 도장 시)</span><span class="step-badge badge-recoat">재도장 간격</span></div>
+      <div class="step-content">
+        <div class="flow-steps">
+          <div class="flow-step" style="color:var(--primer-w);">하도 도장</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--accent);">3시간 대기</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--water);">상도 1회</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--accent);">3시간 대기</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--oil);">재도장</div>
+        </div>
+        <div class="note-small">25℃ 기준 각 단계 3시간 이후 다음 단계 진행. 온도 낮을수록 건조 시간이 길어집니다.</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 상도 마감 완료 후 (선택 적용)</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">보호 도장 (선택) — 오염 방지 마감</span><span class="step-badge badge-paint">수성크리어PLUS</span></div>
+      <div class="step-content">
+        수성페인트 상도 위에 <b>오염방지·광택 보강</b>을 원할 경우, 투명 보호코팅인 <b>수성크리어PLUS</b>를 추가로 도장합니다. 다채무늬 도료 마감 후 보호용 상도로도 사용하는 제품으로, <span class="hi-blue">생략 가능한 선택 공정</span>입니다.<br><br>
+
+        <div style="font-size:13px; font-weight:800; color:var(--water); margin-bottom:8px;">✨ 수성크리어PLUS 유광</div>
+        <span class="product-chip chip-water">수성크리어PLUS 유광</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 유광 마감 — 다채무늬 도료·수성 내부도료 오염방지 상도용</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
+          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+          <div class="spec-item"><strong>부피고형분</strong><span class="val">33%</span></div>
+          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 16.5㎡/ℓ</span></div>
+        </div>
+
+        <div style="margin:16px 0 8px; font-size:13px; font-weight:800; color:var(--water);">🌫 수성크리어PLUS 무광</div>
+        <span class="product-chip chip-water">수성크리어PLUS 무광</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 무광 마감 — 원래 도장면의 무광 질감을 살리며 보호</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
+          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+          <div class="spec-item"><strong>부피고형분</strong><span class="val">29.2%</span></div>
+          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 15㎡/ℓ</span></div>
+        </div>
+
+        <div class="info-box">
+          💡 <b>유광 vs 무광 선택 기준</b><br>
+          유광 — 광택감을 살려 깔끔하고 입체감 있는 마감을 원할 때<br>
+          무광 — 원래 도장면(특히 무광 수성페인트)의 질감을 그대로 유지하고 싶을 때
+        </div>
+
+        <div class="warn-box">
+          ⚠ 고화건조(25℃ 기준) <b>2시간 이내</b> · 5℃ 미만 보관 시 동결되면 재사용 불가합니다.<br>
+          비 오는 날·고습도(85% 이상)·저온(5℃ 이하)에는 도장을 피하세요. 도막 균열·부착 불량의 원인이 됩니다.<br>
+          타 도료와 혼합 사용 금지, 저장기간은 12개월(5~35℃ 실내 보관 기준)입니다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 2. 실크벽지·시트지 ══ -->
+<div class="mat-section mat-silk" id="silk">
+  <div class="mat-title">
+    <span class="icon">🖼</span>
+    <span>실크벽지 · 시트지 · 접착 어려운 소지</span>
+    <span class="sub">철재·비철재 포함</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        표면의 <b>유분·먼지·들뜬 부분</b>을 제거합니다.<br>
+        실크벽지·시트지는 들뜬 부분 접착 후 이음새 퍼티 처리.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 — 파워젯소</span><span class="step-badge badge-primer">수성 젯소</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-primer">파워젯소</span>
+        <div style="margin-top:8px; font-size:13.5px; color:var(--muted);">
+          적용 소지: <span class="hi-green">철재 · 비철재 · 목재 · 시트지 · 실크벽지 · 유성도막 위</span><br>
+          희석: 물 10% 이내<br>
+          재도장 간격: 25℃ 기준 <b>3시간 이후</b> 상도 도장 가능<br>
+          이론도포면적: 약 10~12㎡/ℓ
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 25℃ 기준 3시간 경과 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 선택</span><span class="step-badge badge-paint">수성페인트</span></div>
+      <div class="step-content">
+        파워젯소 하도가 칠해진 면에 아래 제품 적용 가능합니다.
+        <div class="product-list">
+          <span class="product-chip chip-water">홈스타파스텔OK플러스</span>
+          <span class="product-chip chip-water">아이럭스 멀티에그쉘</span>
+          <span class="product-chip chip-water">아이럭스 듀로X</span>
+          <span class="product-chip chip-water">아이럭스 올코팅</span>
+        </div>
+        <div class="info-box" style="margin-top:10px;">
+          💡 <b>아이럭스 올코팅</b>은 콘크리트는 물론 철재, 목재, 유성 도막 위에 사용 가능하며 젯소를 바르지 않아도 접착력이 뛰어난 제품입니다.
+        </div>
+        <div class="note-small">1회 칠 후 25℃ 기준 3시간 이후 재도장 가능</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 3. 목재 ══ -->
+<div class="mat-section mat-wood" id="wood">
+  <div class="mat-title">
+    <span class="icon">🪑</span>
+    <span>목재</span>
+    <span class="sub">데크·원목·합판·MDF</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        <b>기존 도막 제거, 수분 완전 건조</b> 확인 후 시작.<br>
+        표면 샌딩 후 비산먼지 제거.<br>
+        <span class="hi-orange">스테인은 반드시 칠 없는 목재 전용</span> — 기존 도막 위 사용 불가.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">목적별 도료 선택</span><span class="step-badge badge-paint">도료 선택</span></div>
+      <div class="step-content">
+
+        <!-- 스테인 -->
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px; font-weight:800; color:var(--oil); margin-bottom:6px;">
+            🌿 결 살리기 · 착색 · 방부 · 방충 · 햇빛에 의한 부식 방지 → 스테인
+          </div>
+          <div class="rtable">
+            <div class="rtable-row">
+              <div class="rtable-name">수성 스테인</div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">환경</span><span class="rf-val">실내외</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">3시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 12㎡/ℓ</span></div>
+              </div>
+            </div>
+            <div class="rtable-row">
+              <div class="rtable-name">오일 스테인 <span class="sub">(월드스테인마스터)</span></div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">환경</span><span class="rf-val">실외 전용 · <span class="rf-val danger">실내 사용 금지</span></span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">3시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 7㎡/ℓ</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="note-small">원액 사용 · 충분히 교반 필수</div>
+        </div>
+
+        <!-- 색상 도장 -->
+        <div style="margin-bottom:14px;">
+          <div style="font-size:13px; font-weight:800; color:var(--water); margin-bottom:6px;">🎨 색상 도장 원할 때</div>
+          <div class="product-list">
+            <span class="product-chip chip-oil">777에나멜 (실내외)</span>
+            <span class="product-chip chip-oil">락카 (빠른 건조·환기 필수)</span>
+            <span class="product-chip chip-water">아이럭스 올코팅 (실내외)</span>
+          </div>
+          <div class="warn-box" style="margin-top:6px;">
+            777에나멜: 에나멜신나 50% 이내 · 재도장 9시간 이후 · 이론도포면적 약 8~11㎡/ℓ<br>
+            락카: 재도장 2시간 이후 · <span class="wr">반드시 환기</span> · 이론도포면적 약 10~14㎡/ℓ
+          </div>
+        </div>
+
+        <!-- 투명 보호 -->
+        <div>
+          <div style="font-size:13px; font-weight:800; color:var(--accent); margin-bottom:6px;">✨ 투명 보호 마감 원할 때 → 바니쉬 (=니스)</div>
+          <div class="rtable">
+            <div class="rtable-row">
+              <div class="rtable-name">수성우드바니쉬</div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">원액 또는 물 5~10%</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">2시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 7㎡/ℓ</span></div>
+              </div>
+            </div>
+            <div class="rtable-row">
+              <div class="rtable-name">유성 바니쉬 <span class="sub">(40바루스파)</span></div>
+              <div class="rtable-fields">
+                <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">에나멜신나 30% 이내</span></div>
+                <div class="rtable-field"><span class="rf-label">재도장 (25℃)</span><span class="rf-val time">9시간 이후</span></div>
+                <div class="rtable-field full"><span class="rf-label">이론도포면적</span><span class="rf-val">약 12㎡/ℓ · <span class="rf-val danger">⚠ 환기 필요</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="info-box" style="margin-top:6px;">💡 바니쉬 = 니스 : 동일 제품 (색상 없는 투명 도료)</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 4. 철재·비철재 ══ -->
+<div class="mat-section mat-iron" id="iron">
+  <div class="mat-title">
+    <span class="icon">⚙️</span>
+    <span>철재 · 비철재 · 스텐 · FRP</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        <b>녹·이물질·유분</b>을 와이어브러시·샌딩으로 완전 제거.<br>
+        철재 특성상 수분 잔류 시 하도 접착 불량 및 재발청 위험.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">소지 유형별 프라이머 선택</span><span class="step-badge badge-primer-o">유성 프라이머</span></div>
+      <div class="step-content">
+        <div class="rtable">
+          <div class="rtable-row">
+            <div class="rtable-name">방청프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">일반 철재</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">에나멜신나 30% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">20℃ 기준 12시간 이후</span></div>
+            </div>
+          </div>
+          <div class="rtable-row">
+            <div class="rtable-name">워시프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">아연도금 · 비철재</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">신나395 15% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">25℃ 기준 16시간 이후</span></div>
+            </div>
+          </div>
+          <div class="rtable-row">
+            <div class="rtable-name">스피폭시FD 프라이머</div>
+            <div class="rtable-fields">
+              <div class="rtable-field full"><span class="rf-label">적용 소지</span><span class="rf-val">철재 · 비철재 · 스텐 · FRP 범용</span></div>
+              <div class="rtable-field"><span class="rf-label">희석</span><span class="rf-val">신나395 10% 이내</span></div>
+              <div class="rtable-field"><span class="rf-label">재도장 가능 시점</span><span class="rf-val time">25℃ 기준 6시간~3일 이내</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="note-small">※ 스피폭시FD는 재도장 가능 시간 범위 엄수 (3일 초과 시 재샌딩 필요)</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">프라이머별 사용 가능한 상도</span><span class="step-badge badge-paint-o">상도 호환표</span></div>
+      <div class="step-content">
+        <div class="paint-compat">
+          <div class="compat-row">
+            <div class="compat-primer" style="color:var(--primer-o);">방청프라이머</div>
+            <div class="compat-top">
+              <div class="ct">777에나멜만 도장 가능</div>
+              <div class="cn">이론도포면적: 약 11㎡/ℓ</div>
+            </div>
+          </div>
+          <div class="compat-row">
+            <div class="compat-primer" style="color:var(--warn);">워시프라이머</div>
+            <div class="compat-top">
+              <div class="ct">777에나멜, 매직탄, 스피롤탄</div>
+              <div class="cn">이론도포면적: 약 15㎡/ℓ</div>
+            </div>
+          </div>
+          <div class="compat-row">
+            <div class="compat-primer" style="color:var(--accent);">스피폭시FD</div>
+            <div class="compat-top">
+              <div class="ct">777에나멜, 매직탄, 스피롤탄</div>
+              <div class="cn">이론도포면적: 약 6㎡/ℓ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="star-box">
+          ★ 에나멜 도장 위에 우레탄 도장을 원하는 경우<br>
+          → <b>슈퍼폭시360 알루미늄</b>을 실러로 도장 후 우레탄 도장 가능
+        </div>
+        <div class="danger-box">
+          ★ 약한 페인트 위에 강한 신나를 사용하는 페인트 도장 시<br>
+          <b>주름 현상 · 들뜸 현상 발생</b> — 반드시 주의<br>
+          <span style="display:inline-block; margin-top:6px; font-weight:700;">에나멜 → 우레탄 → 아크릴 → 에폭시 → 락카 <span style="color:var(--muted); font-weight:500;">(약 ▶ 강)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 각 프라이머별 재도장 간격 경과 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">상도 선택</span><span class="step-badge badge-paint-o">상도</span></div>
+      <div class="step-content">
+
+        <div style="font-size:13px; font-weight:800; color:var(--oil); margin-bottom:8px;">777에나멜</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>희석</strong><span class="val">에나멜신나 50% 이내</span></div>
+          <div class="spec-item"><strong>재도장 (25℃)</strong><span class="val">9시간 이후</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 7㎡/ℓ</span></div>
+        </div>
+
+        <div style="font-size:13px; font-weight:800; color:var(--accent); margin:14px 0 8px;">매직탄 (우레탄 · 내구성 우수)</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1</span></div>
+          <div class="spec-item"><strong>가사시간 (25℃)</strong><span class="val">5시간 이내</span></div>
+          <div class="spec-item"><strong>재도장 (25℃)</strong><span class="val">18시간 이상</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">유니올신나 30% 이내</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 7~8㎡/ℓ (소지 상태에 따라 상이)</span></div>
+        </div>
+
+        <div style="font-size:13px; font-weight:800; color:var(--accent); margin:14px 0 8px;">스피롤탄 (우레탄 · 내구성 우수)</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">5 : 1</span></div>
+          <div class="spec-item"><strong>가사시간 (25℃)</strong><span class="val">6시간</span></div>
+          <div class="spec-item"><strong>재도장 (25℃)</strong><span class="val">6시간 이상</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">유니올신나 20% 이내</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 6~9㎡/ℓ (소지 상태에 따라 상이)</span></div>
+        </div>
+
+        <div class="warn-box" style="margin-top:10px;">
+          ⚠️ 2액형 우레탄(매직탄·스피롤탄)은 주제·경화제 혼합 비율 반드시 준수.<br>
+          잘못된 신나(락카신나·에폭시신나 등) 사용 시 경화 불량 발생.
+        </div>
+
+        <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--border);">
+          <span class="product-chip chip-water">아이럭스 올코팅</span>
+          <div style="margin-top:7px; font-size:13.5px; color:var(--muted);">
+            수성 제품이나 유성 도막 위 도장이 가능하게 설계된 친환경 수성페인트<br>
+            <span style="color:var(--warn); font-weight:600;">(단 부착성 이상 유무 사전점검 필요)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 5. 곰팡이·결로 ══ -->
+<div class="mat-section mat-mold" id="mold">
+  <div class="mat-title">
+    <span class="icon">🦠</span>
+    <span>곰팡이 · 결로 · 이끼 핀 소지</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">선행 조치 — 누수 원인 제거</span><span class="step-badge badge-prep">먼저 확인</span></div>
+      <div class="step-content">
+        <span class="hi-red">누수·결로 원인 먼저 해결 후 도장</span><br>
+        원인 미해결 시 재발 가능성 높음.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 — 진저 몰드킬링 프라이머</span><span class="step-badge badge-primer">항균 프라이머</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-mold">진저 몰드킬링 프라이머</span>
+        <div style="margin:8px 0; font-size:13.5px; color:var(--muted);">
+          · EPA 등록 항균 성분 — 곰팡이·세균·이끼 동시 사멸<br>
+          · 잔류 곰팡이 얼룩 커버 보조<br>
+          · 수성 타입 — <span class="hi-green">원액 그대로 사용</span><br>
+          · 재도장 간격: 30분 건조 → 1시간 경과 후 상도 가능<br>
+          · 이론도포면적: 약 8~12㎡/ℓ
+        </div>
+        <div class="flow-steps">
+          <div class="flow-step" style="color:var(--mold);">몰드킬링 도장</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--accent);">30분 건조</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--water);">1시간 후 상도 가능</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 1시간 경과 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 — 결로·곰팡이 억제 제품 선택</span><span class="step-badge badge-paint">상도</span></div>
+      <div class="step-content">
+        <div class="product-list">
+          <span class="product-chip chip-water">아이럭스 결로스탑규조토</span>
+          <span class="product-chip chip-water">아이럭스 멀티플랫</span>
+          <span class="product-chip chip-water">아이생각 원코트</span>
+          <span class="product-chip chip-water">홈스타파스텔OK플러스</span>
+          <span class="product-chip chip-water">아이럭스 멀티에그쉘</span>
+          <span class="product-chip chip-water">아이럭스 듀로X</span>
+        </div>
+        <div class="note-small">25℃ 기준 3시간 이후 재도장 가능</div>
+        <div class="warn-box" style="margin-top:8px;">
+          💡 결로가 심한 경우 <b>결로스탑규조토</b>를 우선 권장합니다.<br>
+          소지·제품 선택 고민 시 담당 직원에게 문의하세요.
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+
+<!-- ══ 타일 ══ -->
+<div class="mat-section mat-tile" id="tile">
+  <div class="mat-title">
+    <span class="icon">🚿</span>
+    <span>타일 · 줄눈 (욕실 · 주방 · 바닥)</span>
+    <span class="sub">페인트 / 방수 코팅</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        타일면이 <b>완전 건조된 상태</b>에서 부착 증진을 위해 <b>샌드페이퍼로 샌딩 처리</b> 후 표면을 깨끗이 정리합니다.<br><br>
+        <span class="hi-red">방수 처리된 줄눈 부위</span>에 도장 시 박리 등의 문제가 발생할 수 있습니다.
+        <div class="warn-box">
+          <span class="wr">⚠ 본 도장 전, 일부 부위에 부착력 테스트 후 전체 도장 진행</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">목적에 맞게 선택 — 색상 변경 / 방수 코팅 / 줄눈 침투방수</span><span class="step-badge badge-paint">하도 불필요</span></div>
+      <div class="step-content">
+        같은 타일면이라도 <span class="hi-tile">원하는 목적에 따라 제품이 달라집니다.</span> 아래 세 가지 상황 중 해당하는 곳에서 제품을 선택하세요.
+
+        <div class="branch-row">
+          <div class="branch-card">
+            <div class="branch-card-title" style="color:var(--water);">🎨 색상을 바꾸고 싶을 때</div>
+            <ul>
+              <li>홈스타 타일페인트 (수성)</li>
+              <li>매직탄 (유성)</li>
+            </ul>
+          </div>
+          <div class="branch-card">
+            <div class="branch-card-title" style="color:var(--twp);">☔ 물 침투를 막고 싶을 때</div>
+            <ul>
+              <li>매직탄 월코트 (유성 코팅)</li>
+              <li>안심누수 (수성 침투)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ① 색상 변경: 홈스타 타일페인트 -->
+        <div style="margin-top:16px;">
+          <span class="product-chip chip-water">홈스타 타일페인트 (수성 · 실내 벽면 색상 변경)</span>
+          <div class="spec-grid">
+            <div class="spec-item">
+              <strong>혼합비 (주제 : 경화제)</strong>
+              <span class="val">1 : 2</span>
+            </div>
+            <div class="spec-item">
+              <strong>가사시간 (25℃)</strong>
+              <span class="val">1시간 30분 이내</span>
+            </div>
+            <div class="spec-item">
+              <strong>재도장 (25℃)</strong>
+              <span class="val">24시간 이후</span>
+            </div>
+            <div class="spec-item">
+              <strong>희석</strong>
+              <span class="val">물 30% 이내</span>
+            </div>
+            <div class="spec-item full">
+              <strong>이론도포면적</strong>
+              <span class="val">6.64㎡ / L</span> (소지 상태에 따라 상이)
+            </div>
+          </div>
+          <div class="info-box">
+            💡 24시간 경과 후 사용 가능하나, <b>완전 경화를 위해 72시간 동안 과도한 물과의 접촉은 피해주세요.</b>
+          </div>
+        </div>
+
+        <!-- ① 색상 변경: 매직탄 -->
+        <div style="margin-top:16px;">
+          <span class="product-chip chip-oil">매직탄 (유성 · 실내/실외 색상 변경 · 벽면 추천)</span>
+          <div class="spec-grid">
+            <div class="spec-item">
+              <strong>혼합비 (주제 : 경화제)</strong>
+              <span class="val">3 : 1</span>
+            </div>
+            <div class="spec-item">
+              <strong>가사시간 (25℃)</strong>
+              <span class="val">5시간 이내</span>
+            </div>
+            <div class="spec-item">
+              <strong>재도장 (25℃)</strong>
+              <span class="val">18시간 이상</span>
+            </div>
+            <div class="spec-item">
+              <strong>희석</strong>
+              <span class="val">유니올신나 30% 이내</span>
+            </div>
+            <div class="spec-item full">
+              <strong>이론도포면적</strong>
+              <span class="val">약 7~8㎡/ℓ</span> (소지 상태에 따라 상이)
+            </div>
+          </div>
+        </div>
+
+        <!-- ② 방수 코팅: 매직탄 월코트 -->
+        <div style="margin-top:24px; padding-top:16px; border-top:1px dashed var(--border);">
+          <span class="product-chip chip-twp">매직탄 월코트 투명 (유성 · 2액형 방수 코팅)</span>
+          <div class="note-small" style="margin-top:6px;">
+            철재·비철금속·몰탈·타일·적벽돌 등에 도장 가능한 생활방수 코팅제. 박막의 피막을 형성해 물 침투를 지연·한정시킵니다. (방수재·보행용 바닥재 용도 아님)
+          </div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1 (부피비)</span></div>
+            <div class="spec-item"><strong>가사시간 (25℃)</strong><span class="val">4시간</span></div>
+            <div class="spec-item"><strong>경화건조 (25℃)</strong><span class="val">12시간 이내</span></div>
+            <div class="spec-item"><strong>지촉건조 (25℃)</strong><span class="val">12분 이내</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">9.24㎡/L (건조도막 30㎛ 기준)</span></div>
+          </div>
+          <div class="note-small">도장횟수 2~3회 · 부피고형분 27.7% · 마감 유광/무광 선택 가능</div>
+          <div class="warn-box" style="margin-top:8px;">
+            ⚠️ 가사시간(4시간) 경과 후에는 사용 불가 — 필요한 양만 혼합하여 사용.<br>
+            알코올 성분이 함유된 신나(에폭시신나·락카신나·사제신나 등)는 건조 불량 발생, 사용 금지.
+          </div>
+        </div>
+
+        <!-- ② 방수 코팅: 안심누수 -->
+        <div style="margin-top:16px;">
+          <span class="product-chip chip-water">안심누수 (수성 · 1액형 줄눈·벽 침투방수)</span>
+          <div class="note-small" style="margin-top:6px;">
+            아크릴수지계 에멀젼 기반 침투 방수재로, 바닥 타일줄눈 및 내외부 콘크리트 벽면에 침투해 생활방수 성능을 발휘합니다. 건조가 빠르고 투명성·작업성이 우수합니다.
+          </div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>혼합/희석</strong><span class="val">미희석 원액 사용</span></div>
+            <div class="spec-item"><strong>고화건조 (25℃)</strong><span class="val">2시간 이내</span></div>
+            <div class="spec-item"><strong>재도장간격 (25℃)</strong><span class="val">3시간 이후</span></div>
+            <div class="spec-item"><strong>도장횟수</strong><span class="val">1~2회</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">21.5㎡/L (건조도막 15㎛ 기준)</span></div>
+          </div>
+          <div class="note-small">부피고형분 33% · 마감 유광 · 색상 투명 · 포장단위 1L, 4L</div>
+          <div class="info-box" style="margin-top:8px;">
+            💡 적용 부위: 바닥 타일줄눈, 콘크리트 벽체, 베란다, 보일러실 (식수탱크·저수조탱크 등 물에 잠기는 부위는 사용 불가)
+          </div>
+          <div class="warn-box" style="margin-top:8px;">
+            ⚠️ 흡수차가 심하거나 쵸킹된 콘크리트 소지에는 부착 불량 방지를 위해 <b>수성바인다200 하도</b> 선행 필요.<br>
+            목재·철재·플라스틱 등 유성도료 도장면에는 부착 불량 — 도장 금지.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- YouTube -->
+    <div class="yt-section">
+      <div class="yt-section-label">관련 영상</div>
+      <div class="yt-list">
+        <a href="https://www.youtube.com/watch?v=qYS4wQfEfH0" target="_blank" class="yt-item">
+          <img class="yt-thumb" src="https://img.youtube.com/vi/qYS4wQfEfH0/hqdefault.jpg" alt="홈스타 타일페인트 시공 영상" loading="lazy">
+          <div class="yt-play"><div class="yt-play-btn"></div></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=4eXHYGweXB4" target="_blank" class="yt-item">
+          <img class="yt-thumb" src="https://img.youtube.com/vi/4eXHYGweXB4/hqdefault.jpg" alt="안심누수 시공 참고영상" loading="lazy">
+          <div class="yt-play"><div class="yt-play-btn"></div></div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 기와·슬레이트 ══ -->
+<div class="mat-section mat-roof" id="roof">
+  <div class="mat-title">
+    <span class="icon">🏠</span>
+    <span>기와 · 슬레이트 (지붕)</span>
+    <span class="sub">유성 아크릴 상도</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        피도면의 <b>시멘트가루·모래·흙·유분·수분</b>을 깨끗이 제거합니다. 레이턴스(초벌시멘트 분리층)도 제거 대상입니다.<br>
+        틈새나 홈은 <b>퍼티로 메꾸어</b> 표면 조정 후 도장합니다.<br><br>
+        <span class="hi-red">수성도료가 칠해져 있는 면에는 도장 금지</span> — 부실한 구도막은 완전 제거 후 도장하세요.<br>
+        <span class="hi-roof">세라믹처럼 기공이 없는 소재</span>는 부착 불량이 발생하므로 도장 금지.
+        <div class="warn-box">
+          ⚠ 신축 시멘트 소재는 <b>28일 이상 양생</b>(25℃·습도 50% 기준) 후 도장 — 함수율 10% 이하, pH 7~9 확인.<br>
+          구도막 위 보수 도장 시 구도막과의 적합성 확인 후 사용. (대리점 또는 소비자상담실 문의)
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">노후 · 쵸킹 심한 소지 — 희석 선도장</span><span class="step-badge badge-prep">해당 시</span></div>
+      <div class="step-content">
+        기와·슬레이트가 오래되어 <b>쵸킹(분말화)이 심하거나 노후된 경우</b>, 본 도장 전에 도료를 <span class="hi-roof">묽게 희석하여 1회 선도장</span>한 뒤 본 도장을 진행합니다.
+        <div class="flow-steps">
+          <div class="flow-step" style="color:var(--roof);">묽게 희석 1회 도장</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--accent);">건조</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--oil);">본 도장 2회</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 — KSM 6020 4종 아크릴도료</span><span class="step-badge badge-roof">하도 불필요</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-roof">KSM 6020 4종 아크릴도료 (유성 · 1액형)</span>
+        <div style="margin:8px 0; font-size:13.5px; color:var(--muted);">
+          아크릴수지와 내후성 좋은 안료가 주성분인 슬레이트·기와용 도료. 접착력·내구력이 강하고 내약품성·내후성·내수성이 우수하며 <b>고광택의 매끈한 도막</b>이 형성됩니다. 별도의 하도 없이 상도만으로 마감합니다.
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <strong>희석제 / 희석률</strong>
+            <span class="val">AC신나 3000 · 50% 이내</span> (도료무게비)
+          </div>
+          <div class="spec-item">
+            <strong>도장횟수</strong>
+            <span class="val">2~3회</span>
+          </div>
+          <div class="spec-item">
+            <strong>고화건조 (25℃)</strong>
+            <span class="val">2시간 이내</span>
+          </div>
+          <div class="spec-item">
+            <strong>재도장간격 (25℃)</strong>
+            <span class="val">5시간 이후</span>
+          </div>
+          <div class="spec-item full">
+            <strong>이론도포면적</strong>
+            <span class="val">9.30 ~ 12.30㎡ / L</span> (건조도막 40㎛ 기준 · 손실량과 표면상태 고려)
+          </div>
+        </div>
+        <div class="note-small">부피고형분 47.19~49.19% · 마감 유광 · 색상 남색·녹색·오렌지·갈색·청기와색 등 · 포장단위 4L, 18L</div>
+        <div class="note-small">도장기구: 붓 · 롤러 · 에어스프레이 / 저장기간 12개월 이내 (5~35℃ 실내보관 기준)</div>
+        <div class="info-box" style="margin-top:8px;">
+          💡 재도장은 25℃ 기준 <b>5시간 경과 후</b> 같은 방법으로 추가 도장하여 마감합니다.
+        </div>
+        <div class="warn-box" style="margin-top:8px;">
+          ⚠️ <b>콘크리트·몰탈의 바닥재 용도로 사용 금지</b> (지붕 전용).<br>
+          규정 도막두께 이상 과도막 도장 시 기포꽈리 발생 가능.<br>
+          피도물 온도 35℃ 이상에서는 접착력 저하 — 도장 금지.<br>
+          타 도료와 혼합 사용 금지. 동일 LOT·동일 도장용구로 작업해야 이색현상을 줄일 수 있습니다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 6. 옥상 방수 (우레탄) ══ -->
+<div class="mat-section mat-wp" id="wp">
+  <div class="mat-title">
+    <span class="icon">💧</span>
+    <span>옥상 방수 (우레탄)</span>
+    <span class="sub">노출형 우레탄방수</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        <b>함수율 확인 필수</b> — 콘크리트 함수율 <span class="hi-red">6% 이하</span> 확인 후 작업 시작.<br>
+        레이턴스(초벌시멘트 분리층)를 연마기·샌딩으로 완전 제거.<br>
+        <b>청소 상태 확인</b>: 먼지·기름·이물질·들뜬 구도막 완전 제거.<br>
+        균열·신축줄눈은 <b>V-cutting 후 우레탄실란트 등으로 씰링</b> 후 도장.<br>
+        <span class="hi-sky">수분이 있는 상태에서 우레탄 시공 시 부풀음·박리 발생 위험.</span>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">방수에이스 하도</span><span class="step-badge badge-wp">우레탄 하도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-wp">방수에이스 하도</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">콘크리트 소지와 중도 우레탄의 접착력을 높이는 침투형 하도</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>신규 도장</strong><span class="val">원액 사용</span></div>
+          <div class="spec-item"><strong>구도막 재도장</strong><span class="val">우레탄1000신나 1:1 희석 후 최대한 얇게 도장</span></div>
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>재도장 간격 (20℃)</strong><span class="val">8~48시간</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 6~7㎡/ℓ (소지 흡수량에 따라 상이)</span></div>
+        </div>
+        <div class="warn-box">
+          ⚠️ 하도는 소지가 완전히 흡수하도록 롤러로 얇게 충분히 도포.<br>
+          과도한 도포 시 표면 막 형성 → 중도 접착 불량 가능성 ▲
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 경화 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">중도 선택 — 2액형 또는 1액형</span><span class="step-badge badge-wp">우레탄 중도</span></div>
+      <div class="step-content">
+
+        <div style="font-size:13px; font-weight:800; color:var(--sky); margin-bottom:8px;">🔵 방수에이스 중도 (2액형) — 표준 사양</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">16.6 : 3.4</span></div>
+          <div class="spec-item"><strong>가사시간</strong><span class="val">20℃ 기준 30분 / 30℃ 기준 20분</span></div>
+          <div class="spec-item"><strong>권장 도막 두께</strong><span class="val hi-sky">3mm</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">무희석 / 필요 시 우레탄1000신나 소량</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">3mm 시 약 3.3평 / 4.86kg/㎡</span></div>
+        </div>
+        <div class="info-box">
+          🔧 <b>시공 방법</b><br>
+          주제·경화제를 <b>2분 이상 충분히 교반</b> → 바로 바닥에 붓고 레이키(레기)로 펼치며 시공<br>
+          1회 초벌 후 20℃ 기준 24~48시간 이후 본도장으로 총 두께 3mm 확보
+        </div>
+        <div class="warn-box">
+          ⚠️ 2액형은 주제·경화제 혼합 비율 오류 시 경화 불량 발생.<br>
+          가사시간 초과 후 도장 절대 금지.
+        </div>
+
+        <div style="margin:16px 0 8px; font-size:13px; font-weight:800; color:var(--primer-w);">🟢 원샷탄 (1액형 중도) — 초보자 권장</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>혼합 방식</strong><span class="val">경화제 불필요 — 교반 후 바로 사용</span></div>
+          <div class="spec-item"><strong>가사시간</strong><span class="val">제한 없음</span></div>
+          <div class="spec-item"><strong>권장 도막 두께</strong><span class="val">1mm</span></div>
+          <div class="spec-item"><strong>시공 도구</strong><span class="val">붓 · 롤러</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">1mm 시 약 3.3평 / 1.6kg/㎡</span></div>
+        </div>
+        <div class="green-box">
+          💡 경화제 혼합 불필요 → 주경비 오류 없음<br>
+          가사시간 압박 없이 여유롭게 시공 가능 → <b>초보자에게 권장</b>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 20℃ 기준 24~48시간 이후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">방수에이스 상도</span><span class="step-badge badge-wp">우레탄 상도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-wp">방수에이스 상도</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          중도 우레탄 방수층을 자외선·물리적 충격에서 보호하는 최종 코팅 역할
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">6.3 : 1</span></div>
+          <div class="spec-item"><strong>가사시간 (20℃)</strong><span class="val">3시간</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">우레탄1000신나 5% 미만</span></div>
+          <div class="spec-item"><strong>재도장 간격 (20℃)</strong><span class="val">1일 ~ 2일</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 11㎡/ℓ (1회 기준)</span></div>
+        </div>
+        <div class="warn-box">
+          ⚠️ 상도 희석 최소화 (5% 미만) — 과희석 시 보호 성능 저하.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 옥상방수 영상 -->
+<div class="yt-section" style="background:var(--card); border:1.5px solid rgba(5,112,172,0.3); border-radius:14px; margin-bottom:28px; padding:14px 16px; box-shadow:var(--shadow);">
+  <div class="yt-section-label">우레탄방수 참고영상</div>
+  <div class="yt-list">
+    <a class="yt-item" href="https://www.youtube.com/watch?v=eKdvjkhsfwY" target="_blank">
+      <img class="yt-thumb" src="https://img.youtube.com/vi/eKdvjkhsfwY/mqdefault.jpg" alt="우레탄방수 참고영상 1" loading="lazy">
+      <div class="yt-play"><div class="yt-play-btn"></div></div>
+    </a>
+    <a class="yt-item" href="https://www.youtube.com/watch?v=tvofFPe4-RY" target="_blank">
+      <img class="yt-thumb" src="https://img.youtube.com/vi/tvofFPe4-RY/mqdefault.jpg" alt="우레탄방수 참고영상 2" loading="lazy">
+      <div class="yt-play"><div class="yt-play-btn"></div></div>
+    </a>
+    <a class="yt-item" href="https://www.youtube.com/watch?v=Pe_orlaC4yE" target="_blank">
+      <img class="yt-thumb" src="https://img.youtube.com/vi/Pe_orlaC4yE/mqdefault.jpg" alt="우레탄방수 참고영상 3" loading="lazy">
+      <div class="yt-play"><div class="yt-play-btn"></div></div>
+    </a>
+  </div>
+</div>
+
+<!-- ══ 7. 실내 방진 도료 (에폭시) ══ -->
+<div class="mat-section mat-floor" id="floor">
+  <div class="mat-title">
+    <span class="icon">🏭</span>
+    <span>실내 방진 도료 (에폭시)</span>
+    <span class="sub">바닥·주차장·창고</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        바닥면의 <b>유분·먼지·레이턴스</b>(초벌시멘트 분리층)를 연마기·샌딩으로 완전 제거.<br>
+        균열·파손부는 에폭시 퍼티 처리 후 연마.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">에포코트 하도</span><span class="step-badge badge-ep">에폭시 하도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-floor">에포코트 하도</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">콘크리트 소지 침투·접착력 향상 전용 에폭시 프라이머</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>신규 도장</strong><span class="val">원액 사용</span></div>
+          <div class="spec-item"><strong>구도막 재도장</strong><span class="val">에포코트1000신나 1:1 희석 후 얇게 도장</span></div>
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">1 : 1</span></div>
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>재도장 간격 (20℃)</strong><span class="val">최소 6시간 경과 후</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 6㎡/ℓ (소지 흡수량에 따라 상이)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 하도 건조 후</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">에포코트 상도</span><span class="step-badge badge-ep">에폭시 상도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-floor">에포코트 상도</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">내마모·방진·내약품성이 우수한 에폭시 마감재</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">2.7 : 1</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">에포코트1000신나 5% 미만</span></div>
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>재도장 간격 (20℃)</strong><span class="val">1일 ~ 4일</span></div>
+          <div class="spec-item"><strong>이론도포면적 (투명)</strong><span class="val">약 9㎡/ℓ</span></div>
+          <div class="spec-item"><strong>이론도포면적 (유색)</strong><span class="val">약 6~12㎡/ℓ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 선택 사양</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">컬러데코라이닝</span><span class="step-badge badge-ep">옵션</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-floor">컬러데코라이닝</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">공장, 사무실, 전시실, 매장 등의 실내 방진 바닥용. 에포코트보다 내구성이 우수하며, 신나를 사용하지 않는 무용제 제품.</div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">3 : 1</span></div>
+          <div class="spec-item"><strong>가사시간 (20℃)</strong><span class="val">25분</span></div>
+          <div class="spec-item"><strong>가사시간 (30℃)</strong><span class="val">20분</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">무용제 (신나 사용 불가)</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">권장 두께 2mm 시 약 2.1평 / 2.17kg/㎡</span></div>
+        </div>
+        <div class="danger-box">
+          ⚠️ <b>겔화 주의</b>: 주제·경화제 혼합 후 가사시간 내 도장 완료 필요.<br>
+          겔화(젤처럼 굳어지는 현상) 시작 후 도장 절대 금지.<br>
+          외부 햇빛에 노출되어 제품 온도가 상승되어 있을 경우 <b>가사시간이 급격히 짧아짐</b> — 그늘진 곳에서 혼합 후 사용.<br>
+          → 삼화페인트 기술자료의 가사시간 확인 후 작업량 계획.
+        </div>
+        <div class="info-box">💡 정확한 혼합비·겔화 시간은 삼화페인트 공식 기술자료 반드시 확인.</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 대안 선택 사양</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">A플로어투명 (1액형 · 외부 코팅 가능)</span><span class="step-badge badge-ep">1액형 대안</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-floor">A플로어투명</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          하도를 사용하지 않는 1액형 바닥 코팅제.<br>
+          외부 코팅을 원하는 경우에도 사용 가능.
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1회</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">AC신나4000 50% 이내</span></div>
+          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 40평 / 8.6㎡/ℓ</span></div>
+        </div>
+        <div class="warn-box">
+          ⚠️ 에포코트(에폭시 2액형)에 비해 내구성이 낮습니다.<br>
+          내마모·내약품성이 중요한 환경에는 에포코트 권장.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 수성 에폭시 대안</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">6</span><span class="step-label">에포코트아쿠아 (수성 에폭시)</span><span class="step-badge badge-ep">수성 대안</span></div>
+      <div class="step-content">
+
+        <div style="margin-bottom:14px;">
+          <span class="product-chip chip-floor">에포코트아쿠아 하도</span>
+          <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">수성 에폭시 시스템의 침투형 하도. 소지에 도포하여 상도 접착력 확보.</div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">1 : 1</span></div>
+            <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+            <div class="spec-item"><strong>희석</strong><span class="val">물 10% 이내</span></div>
+            <div class="spec-item"><strong>가사시간 (20℃)</strong><span class="val">70분</span></div>
+            <div class="spec-item"><strong>재도장 간격</strong><span class="val">1일 ~ 3일</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 6.4㎡/ℓ</span></div>
+          </div>
+        </div>
+
+        <div>
+          <span class="product-chip chip-floor">에포코트아쿠아 코팅 (상도)</span>
+          <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">수성 에폭시 마감재. 내마모·방진성 확보.</div>
+          <div class="spec-grid">
+            <div class="spec-item"><strong>주제 : 경화제</strong><span class="val">1 : 1</span></div>
+            <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+            <div class="spec-item"><strong>희석</strong><span class="val">물 10% 이내</span></div>
+            <div class="spec-item"><strong>가사시간 (20℃)</strong><span class="val">40분</span></div>
+            <div class="spec-item"><strong>재도장 간격 (20℃)</strong><span class="val">1일 ~ 3일</span></div>
+            <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 9.5㎡/ℓ</span></div>
+          </div>
+        </div>
+
+        <div class="info-box" style="margin-top:10px;">
+          💡 에포코트아쿠아는 냄새가 적고 독한 환경이면 안 되는 장소에 유리한 제품입니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 에폭시 영상 -->
+    <div class="yt-section">
+      <div class="yt-section-label">에폭시바닥 시공 참고영상</div>
+      <div class="yt-list">
+        <a class="yt-item" href="https://www.youtube.com/watch?v=SXPrFsu18sQ" target="_blank">
+          <img class="yt-thumb" src="https://img.youtube.com/vi/SXPrFsu18sQ/mqdefault.jpg" alt="에폭시바닥 참고영상 1" loading="lazy">
+          <div class="yt-play"><div class="yt-play-btn"></div></div>
+        </a>
+        <a class="yt-item" href="https://www.youtube.com/watch?v=PTQcbaKZMt4" target="_blank">
+          <img class="yt-thumb" src="https://img.youtube.com/vi/PTQcbaKZMt4/mqdefault.jpg" alt="에폭시바닥 참고영상 2" loading="lazy">
+          <div class="yt-play"><div class="yt-play-btn"></div></div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SP삼화 배너 -->
+<a href="https://spsamhwa.com/paints/search" target="_blank" class="sp-banner">
+    <div class="sp-banner-left">
+      <img src="data:image/png;base64,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" alt="SP SAMHWA" style="height:52px;display:block;">
+      <div class="sp-banner-label">공식 홈페이지</div>
+    </div>
+    <div class="sp-banner-mid">
+      <div class="sp-banner-title">제품 상세정보 · 기술자료 바로 확인</div>
+      <div class="sp-banner-sub">👆 터치하면 SP삼화 제품 검색 페이지로 이동합니다</div>
+    </div>
+    <div class="sp-banner-qr">
+      <img src="data:image/png;base64,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" alt="QR" style="width:58px;height:58px;border-radius:4px;display:block;">
+      <div style="font-size:9.5px;color:#b03f00;font-weight:600;text-align:center;margin-top:3px;">QR 스캔</div>
+    </div>
+  </a>
+
+<div class="footer">소재별 도장 순서 가이드 · 형제상사 페인트파트<br>SP삼화 · 던에드워드 · 대로방수화학</div>
+
+</div>
+
+<button type="button" class="to-top" id="toTopBtn" onclick="scrollToTop()" aria-label="맨 위로">▲</button>
+
+<script>
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+(function () {
+  var btn = document.getElementById('toTopBtn');
+  function onScroll() {
+    if (window.scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+function goTo(id) {
+  var el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/* 증상・소재 검색 — 키워드는 각 섹션 제목에 실제로 쓰인 단어를 기준으로 구성 */
+var SYMPTOM_MAP = {
+  mold:     { label: '🦠 곰팡이・결로 가이드',          keywords: ['곰팡이','결로','이끼'] },
+  concrete: { label: '🧱 콘크리트・석고보드 가이드',     keywords: ['콘크리트','시멘트','몰탈','석고보드','내벽','외벽','수성페인트'] },
+  silk:     { label: '🖼 실크벽지・시트지 가이드',       keywords: ['실크벽지','벽지','시트지','mdf','플라스틱'] },
+  wood:     { label: '🪑 목재 가이드',                  keywords: ['목재','데크','원목','합판','오일스테인','수성스테인','스테인'] },
+  iron:     { label: '⚙️ 철재・비철재 가이드',          keywords: ['철재','비철재','스텐','frp','철대문','철재난간','아연각관','유성페인트'] },
+  tile:     { label: '🚿 타일・줄눈 가이드',             keywords: ['타일','줄눈','욕실','주방','방수코팅'] },
+  roof:     { label: '🏠 기와・슬레이트(지붕) 가이드',    keywords: ['기와','슬레이트','지붕','기와페인트','슬레이트지붕','청기와','아크릴도료'] },
+  wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄'] },
+  floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] }
+};
+
+function normalizeKo(s) {
+  return s.replace(/\s+/g, '').toLowerCase();
+}
+
+function matchSymptom(raw) {
+  var q = normalizeKo(raw || '');
+  if (!q) return null;
+  var best = null, bestLen = 0;
+  for (var section in SYMPTOM_MAP) {
+    var kws = SYMPTOM_MAP[section].keywords;
+    for (var i = 0; i < kws.length; i++) {
+      var kw = normalizeKo(kws[i]);
+      if ((q.indexOf(kw) !== -1 || kw.indexOf(q) !== -1) && kw.length > bestLen) {
+        bestLen = kw.length;
+        best = { section: section, keyword: kws[i] };
+      }
+    }
+  }
+  return best;
+}
+
+function previewSymptom() {
+  var raw = document.getElementById('symptomSearch').value.trim();
+  var box = document.getElementById('searchResult');
+  if (!raw) { box.className = 'search-result'; box.innerHTML = ''; return; }
+  var hit = matchSymptom(raw);
+  if (hit) {
+    box.className = 'search-result show found';
+    box.innerHTML = '✅ <b>"' + hit.keyword + '"</b> → ' + SYMPTOM_MAP[hit.section].label + ' &nbsp;(검색 또는 Enter를 누르면 이동합니다)';
+  } else {
+    box.className = 'search-result show notfound';
+    box.innerHTML = '❌ 일치하는 가이드를 찾지 못했습니다. 다른 단어로 검색해보세요.';
+  }
+}
+
+function searchSymptom() {
+  var raw = document.getElementById('symptomSearch').value.trim();
+  var box = document.getElementById('searchResult');
+  var hit = matchSymptom(raw);
+  if (hit) {
+    box.className = 'search-result show found';
+    box.innerHTML = '✅ <b>"' + hit.keyword + '"</b> → ' + SYMPTOM_MAP[hit.section].label + '로 이동합니다';
+    goTo(hit.section);
+  } else {
+    box.className = 'search-result show notfound';
+    box.innerHTML = raw
+      ? '❌ 일치하는 가이드를 찾지 못했습니다. 다른 단어로 검색해보세요.'
+      : '🔎 검색어를 입력해주세요.';
+  }
+}
+</script>
+</body>
+</html>
