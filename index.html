@@ -35,6 +35,8 @@
   --floor-bg: rgba(146,51,224,0.09);
   --tile: #0e8779;
   --tile-bg: rgba(14,135,121,0.09);
+  --roof: #b23a3a;
+  --roof-bg: rgba(178,58,58,0.09);
   --twp: #8a5800;
   --twp-bg: rgba(138,88,0,0.09);
   --shadow: 0 1px 2px rgba(21,32,43,0.05), 0 2px 7px rgba(21,32,43,0.05);
@@ -70,6 +72,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .mat-wp .mat-body { border-color:rgba(5,112,172,0.4); }
 .mat-tile .mat-title { background:rgba(14,135,121,0.08); border-color:rgba(14,135,121,0.4); color:var(--tile); }
 .mat-tile .mat-body { border-color:rgba(14,135,121,0.4); }
+.mat-roof .mat-title { background:rgba(178,58,58,0.08); border-color:rgba(178,58,58,0.4); color:var(--roof); }
+.mat-roof .mat-body { border-color:rgba(178,58,58,0.4); }
 .mat-floor .mat-title { background:rgba(146,51,224,0.08); border-color:rgba(146,51,224,0.4); color:var(--floor); }
 .mat-floor .mat-body { border-color:rgba(146,51,224,0.4); }
 
@@ -88,6 +92,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .badge-recoat { background:rgba(124,58,237,0.13); color:var(--accent); }
 .badge-wp { background:rgba(5,112,172,0.13); color:var(--sky); }
 .badge-ep { background:rgba(146,51,224,0.13); color:var(--floor); }
+.badge-roof { background:rgba(178,58,58,0.13); color:var(--roof); }
 
 .step-arrow { text-align:center; color:var(--water); font-size:14px; padding:3px 0 5px; font-weight:700; }
 
@@ -101,6 +106,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .hi-sky { color:var(--sky); font-weight:700; }
 .hi-floor { color:var(--floor); font-weight:700; }
 .hi-tile { color:var(--tile); font-weight:700; }
+.hi-roof { color:var(--roof); font-weight:700; }
 
 /* 제품 칩 */
 .product-list { margin-top:8px; display:flex; flex-wrap:wrap; gap:5px; }
@@ -108,6 +114,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .chip-water { background:var(--water-bg); color:var(--water); border-color:rgba(20,99,199,0.3); }
 .chip-oil { background:var(--oil-bg); color:var(--oil); border-color:rgba(163,87,0,0.3); }
 .chip-tile { background:var(--tile-bg); color:var(--tile); border-color:rgba(14,135,121,0.3); }
+.chip-roof { background:var(--roof-bg); color:var(--roof); border-color:rgba(178,58,58,0.3); }
 .chip-twp { background:var(--twp-bg); color:var(--twp); border-color:rgba(138,88,0,0.3); }
 .chip-primer { background:var(--primer-w-bg); color:var(--primer-w); border-color:rgba(28,138,78,0.3); }
 .chip-primer-o { background:var(--primer-o-bg); color:var(--primer-o); border-color:rgba(193,67,14,0.3); }
@@ -241,6 +248,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 .diag-item.dg-floor .diag-a { color:var(--floor); }
 .diag-item.dg-tile { border-color:rgba(14,135,121,0.35); }
 .diag-item.dg-tile .diag-a { color:var(--tile); }
+.diag-item.dg-roof { border-color:rgba(178,58,58,0.35); }
+.diag-item.dg-roof .diag-a { color:var(--roof); }
 
 .sp-banner {
   display:flex; align-items:center; gap:10px;
@@ -262,6 +271,11 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 
 .note-small { font-size:13.5px; color:var(--muted); margin-top:6px; line-height:1.75; }
 .footer { text-align:center; font-size:11.5px; color:var(--muted); margin-top:30px; padding-top:16px; border-top:1px solid var(--border); }
+
+/* 맨 위로 버튼 */
+.to-top { position:fixed; right:16px; bottom:20px; width:44px; height:44px; border-radius:50%; border:1.5px solid var(--border); background:var(--card); color:var(--text); font-size:19px; font-weight:800; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 3px 12px rgba(21,32,43,0.18); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, transform .25s, visibility .25s; z-index:100; -webkit-tap-highlight-color:transparent; }
+.to-top.show { opacity:1; visibility:visible; transform:translateY(0); }
+.to-top:active { transform:scale(0.92); }
 
 /* YouTube 영상 */
 .yt-section { padding:14px 16px; border-top:1px solid var(--border); }
@@ -303,6 +317,7 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
   <a onclick="goTo('iron')">⚙️ 철재·비철재</a>
   <a onclick="goTo('mold')">🦠 곰팡이·결로</a>
   <a onclick="goTo('tile')">🚿 타일·줄눈</a>
+  <a onclick="goTo('roof')">🏠 기와·슬레이트</a>
   <a onclick="goTo('wp')">💧 옥상방수(우레탄)</a>
   <a onclick="goTo('floor')">🏭 실내방진(에폭시)</a>
 </div>
@@ -368,6 +383,14 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
       <span class="diag-text">
         <div class="diag-q">타일·줄눈에 페인트를 칠하거나 방수 코팅을 하고 싶어요</div>
         <div class="diag-a">→ 타일·줄눈 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('roof')" class="diag-item dg-roof">
+      <span class="diag-icon">🏠</span>
+      <span class="diag-text">
+        <div class="diag-q">기와·슬레이트가 오래돼서 새것처럼 칠하고 싶어요</div>
+        <div class="diag-a">→ 기와·슬레이트(지붕) 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -1081,6 +1104,93 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
   </div>
 </div>
 
+<!-- ══ 기와·슬레이트 ══ -->
+<div class="mat-section mat-roof" id="roof">
+  <div class="mat-title">
+    <span class="icon">🏠</span>
+    <span>기와 · 슬레이트 (지붕)</span>
+    <span class="sub">유성 아크릴 상도</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        피도면의 <b>시멘트가루·모래·흙·유분·수분</b>을 깨끗이 제거합니다. 레이턴스(초벌시멘트 분리층)도 제거 대상입니다.<br>
+        틈새나 홈은 <b>퍼티로 메꾸어</b> 표면 조정 후 도장합니다.<br><br>
+        <span class="hi-red">수성도료가 칠해져 있는 면에는 도장 금지</span> — 부실한 구도막은 완전 제거 후 도장하세요.<br>
+        <span class="hi-roof">세라믹처럼 기공이 없는 소재</span>는 부착 불량이 발생하므로 도장 금지.
+        <div class="warn-box">
+          ⚠ 신축 시멘트 소재는 <b>28일 이상 양생</b>(25℃·습도 50% 기준) 후 도장 — 함수율 10% 이하, pH 7~9 확인.<br>
+          구도막 위 보수 도장 시 구도막과의 적합성 확인 후 사용. (대리점 또는 소비자상담실 문의)
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">노후 · 쵸킹 심한 소지 — 희석 선도장</span><span class="step-badge badge-prep">해당 시</span></div>
+      <div class="step-content">
+        기와·슬레이트가 오래되어 <b>쵸킹(분말화)이 심하거나 노후된 경우</b>, 본 도장 전에 도료를 <span class="hi-roof">묽게 희석하여 1회 선도장</span>한 뒤 본 도장을 진행합니다.
+        <div class="flow-steps">
+          <div class="flow-step" style="color:var(--roof);">묽게 희석 1회 도장</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--accent);">건조</div>
+          <div class="flow-arrow">▶</div>
+          <div class="flow-step" style="color:var(--oil);">본 도장 2회</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 — KSM 6020 4종 아크릴도료</span><span class="step-badge badge-roof">하도 불필요</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-roof">KSM 6020 4종 아크릴도료 (유성 · 1액형)</span>
+        <div style="margin:8px 0; font-size:13.5px; color:var(--muted);">
+          아크릴수지와 내후성 좋은 안료가 주성분인 슬레이트·기와용 도료. 접착력·내구력이 강하고 내약품성·내후성·내수성이 우수하며 <b>고광택의 매끈한 도막</b>이 형성됩니다. 별도의 하도 없이 상도만으로 마감합니다.
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <strong>희석제 / 희석률</strong>
+            <span class="val">AC신나 3000 · 50% 이내</span> (도료무게비)
+          </div>
+          <div class="spec-item">
+            <strong>도장횟수</strong>
+            <span class="val">2~3회</span>
+          </div>
+          <div class="spec-item">
+            <strong>고화건조 (25℃)</strong>
+            <span class="val">2시간 이내</span>
+          </div>
+          <div class="spec-item">
+            <strong>재도장간격 (25℃)</strong>
+            <span class="val">5시간 이후</span>
+          </div>
+          <div class="spec-item full">
+            <strong>이론도포면적</strong>
+            <span class="val">9.30 ~ 12.30㎡ / L</span> (건조도막 40㎛ 기준 · 손실량과 표면상태 고려)
+          </div>
+        </div>
+        <div class="note-small">부피고형분 47.19~49.19% · 마감 유광 · 색상 남색·녹색·오렌지·갈색·청기와색 등 · 포장단위 4L, 18L</div>
+        <div class="note-small">도장기구: 붓 · 롤러 · 에어스프레이 / 저장기간 12개월 이내 (5~35℃ 실내보관 기준)</div>
+        <div class="info-box" style="margin-top:8px;">
+          💡 재도장은 25℃ 기준 <b>5시간 경과 후</b> 같은 방법으로 추가 도장하여 마감합니다.
+        </div>
+        <div class="warn-box" style="margin-top:8px;">
+          ⚠️ <b>콘크리트·몰탈의 바닥재 용도로 사용 금지</b> (지붕 전용).<br>
+          규정 도막두께 이상 과도막 도장 시 기포꽈리 발생 가능.<br>
+          피도물 온도 35℃ 이상에서는 접착력 저하 — 도장 금지.<br>
+          타 도료와 혼합 사용 금지. 동일 LOT·동일 도장용구로 작업해야 이색현상을 줄일 수 있습니다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ══ 6. 옥상 방수 (우레탄) ══ -->
 <div class="mat-section mat-wp" id="wp">
   <div class="mat-title">
@@ -1380,7 +1490,23 @@ body { font-family:'Noto Sans KR',sans-serif; background:var(--bg); color:var(--
 <div class="footer">소재별 도장 순서 가이드 · 형제상사 페인트파트<br>SP삼화 · 던에드워드 · 대로방수화학</div>
 
 </div>
+
+<button type="button" class="to-top" id="toTopBtn" onclick="scrollToTop()" aria-label="맨 위로">▲</button>
+
 <script>
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+(function () {
+  var btn = document.getElementById('toTopBtn');
+  function onScroll() {
+    if (window.scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
 function goTo(id) {
   var el = document.getElementById(id);
   if (el) {
@@ -1396,6 +1522,7 @@ var SYMPTOM_MAP = {
   wood:     { label: '🪑 목재 가이드',                  keywords: ['목재','데크','원목','합판','오일스테인','수성스테인','스테인'] },
   iron:     { label: '⚙️ 철재・비철재 가이드',          keywords: ['철재','비철재','스텐','frp','철대문','철재난간','아연각관','유성페인트'] },
   tile:     { label: '🚿 타일・줄눈 가이드',             keywords: ['타일','줄눈','욕실','주방','방수코팅'] },
+  roof:     { label: '🏠 기와・슬레이트(지붕) 가이드',    keywords: ['기와','기와지붕','슬레이트','쓰레트','석면','지붕','기와페인트','슬레이트지붕','청기와','아크릴도료'] },
   wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄'] },
   floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] }
 };
