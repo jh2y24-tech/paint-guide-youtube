@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>형제상사 자료 모음</title>
+<style>
+  :root{--brand:#0e3f36;--bg:#f4f6f5;--card:#fff;--border:#e2e6e4;--text:#1c2624;--muted:#6b7b76}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,'Pretendard',sans-serif;background:var(--bg);color:var(--text)}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 20px}
+  h1{font-size:22px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .list{display:flex;flex-direction:column;gap:12px}
+  a.card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border);
+    border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--text);transition:.15s}
+  a.card:hover{border-color:var(--brand);transform:translateX(2px)}
+  .ico{font-size:22px;flex-shrink:0}
+  .name{font-weight:700;font-size:15px}
+  .desc{font-size:13px;color:var(--muted);margin-top:2px}
+  .arrow{margin-left:auto;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>형제상사 자료 모음</h1>
+  <div class="sub">원하는 페이지를 선택하세요.</div>
+  <div class="list">
+    <a class="card" href="index.html">
+      <span class="ico">🎨</span>
+      <span>
+        <div class="name">소재별 도장 순서 가이드</div>
+        <div class="desc">전처리 · 하도 · 상도 · 제품 물성 — 직원용 시공 가이드</div>
+      </span>
+      <span class="arrow">▶</span>
+    </a>
+
+    <!-- 새 페이지를 추가할 때는 이 형식으로 카드 하나만 복사해서 붙이면 됩니다 -->
+    <!--
+    <a class="card" href="파일이름.html">
+      <span class="ico">📄</span>
+      <span>
+        <div class="name">페이지 제목</div>
+        <div class="desc">한 줄 설명</div>
+      </span>
+      <span class="arrow">▶</span>
+    </a>
+    -->
+  </div>
+</div>
+</body>
+</html>
