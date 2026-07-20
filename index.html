@@ -29,6 +29,7 @@
   --tile:#0E857A;--tile-bg:rgba(14,133,122,.07);
   --roof:#B03A3A;--roof-bg:rgba(176,58,58,.07);
   --twp:#8A5A10;--twp-bg:rgba(138,90,16,.07);
+  --road:#3F5461;--road-bg:rgba(63,84,97,.07);
   --shadow:0 1px 2px rgba(10,40,44,.045),0 3px 10px rgba(10,40,44,.045);
   --shadow-lg:0 10px 26px rgba(0,45,50,.13);
   --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -40,18 +41,15 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-text
 a{color:var(--brand);text-decoration:none}
 .wrap{max-width:620px;margin:0 auto;padding:18px 16px 48px}
 
-.hero-wrap{margin:4px 0 26px;background:linear-gradient(160deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,45,50,.5);position:relative}
-.hero-wrap::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--amber)}
-.hero-lockup{display:flex;align-items:center;gap:12px;padding:15px 20px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
-.hero-lockup img{height:26px;width:auto;display:block}
-.hero-lockup .lk-div{width:1px;height:18px;background:rgba(255,255,255,.22);flex-shrink:0}
-.hero-lockup .lk-store{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);white-space:nowrap}
-.hero-lockup .lk-badge{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.01em;color:#fff;background:var(--amber);padding:5px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 8px rgba(201,112,26,.4)}
-.hero-main{padding:26px 22px 30px;position:relative}
-.hero-main::before{content:"";position:absolute;right:-50px;top:-70px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(201,112,26,.22),transparent 68%);pointer-events:none}
-.hero-eyebrow{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;position:relative}
-.hero-main h1{font-family:var(--display);font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1.24;color:#fff;position:relative}
-.hero-main p{font-size:13.5px;color:rgba(255,255,255,.76);margin-top:12px;line-height:1.7;position:relative}
+.hero-wrap{margin:-18px -16px 24px;background:var(--brand);color:#fff;border-bottom:4px solid var(--amber);overflow:hidden}
+.hero-util{display:flex;align-items:center;gap:9px;padding:9px 20px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;border-bottom:1px solid rgba(255,255,255,.12);white-space:nowrap}
+.hero-util .u-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px rgba(201,112,26,.32);flex-shrink:0}
+.hero-util .u-right{margin-left:auto;color:rgba(255,255,255,.6);letter-spacing:.06em;white-space:nowrap}
+.hero-main{padding:26px 20px 28px;position:relative}
+.hero-main::before{content:"";position:absolute;right:-40px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(201,112,26,.2),transparent 68%);pointer-events:none}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.66);margin-bottom:11px;position:relative}
+.hero-main h1{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.03em;line-height:1.26;color:#fff;position:relative}
+.hero-main p{font-size:13.5px;color:rgba(255,255,255,.74);margin-top:11px;line-height:1.7;position:relative}
 .header{text-align:center;padding:26px 0 22px;border-bottom:1px solid var(--border);margin-bottom:22px}
 .store-tag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:var(--brand-tint);color:var(--brand);margin-bottom:14px}
 .header h1{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.03em;line-height:1.28;color:var(--text)}
@@ -67,18 +65,10 @@ a{color:var(--brand);text-decoration:none}
 .mat-tile{--mat:var(--tile);--mat-bg:var(--tile-bg)}
 .mat-roof{--mat:var(--roof);--mat-bg:var(--roof-bg)}
 .mat-floor{--mat:var(--floor);--mat-bg:var(--floor-bg)}
+.mat-road{--mat:var(--road);--mat-bg:var(--road-bg)}
 .mat-title{display:flex;align-items:center;gap:10px;padding:16px 18px;font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:-.02em;color:var(--mat);background:var(--mat-bg);border-bottom:1px solid var(--border)}
 .mat-title .icon{font-size:18px;line-height:1}
 .mat-title .sub{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--muted);margin-left:auto;letter-spacing:.03em;white-space:nowrap}
-.mat-title{cursor:pointer;user-select:none}
-.mat-title:hover{filter:brightness(.98)}
-.mat-hint{margin-left:auto;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:.03em;white-space:nowrap;flex-shrink:0}
-.mat-chevron{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--card);color:var(--mat);font-size:13px;line-height:1;border:1px solid var(--mat);transition:transform .28s ease}
-.mat-section.open .mat-chevron{transform:rotate(180deg)}
-.mat-body{display:none}
-.mat-section.open .mat-body{display:block;animation:matReveal .32s ease}
-@keyframes matReveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
-.mat-section{scroll-margin-top:14px}
 
 .step{padding:16px 18px;border-bottom:1px solid var(--border-2)}
 .step:last-child{border-bottom:none}
@@ -95,6 +85,7 @@ a{color:var(--brand);text-decoration:none}
 .badge-wp{background:var(--sky-bg);color:var(--sky)}
 .badge-ep{background:var(--floor-bg);color:var(--floor)}
 .badge-roof{background:var(--roof-bg);color:var(--roof)}
+.badge-road{background:var(--road-bg);color:var(--road)}
 
 .step-arrow{text-align:center;color:var(--faint);font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.02em;padding:7px 0 8px}
 
@@ -123,6 +114,7 @@ a{color:var(--brand);text-decoration:none}
 .chip-mold{background:var(--mold-bg);color:var(--mold);border-color:rgba(14,135,106,.28)}
 .chip-wp{background:var(--sky-bg);color:var(--sky);border-color:rgba(10,109,163,.28)}
 .chip-floor{background:var(--floor-bg);color:var(--floor);border-color:rgba(124,67,192,.28)}
+.chip-road{background:var(--road-bg);color:var(--road);border-color:rgba(63,84,97,.28)}
 
 .branch-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
 .branch-card{background:var(--card);border-radius:11px;padding:12px 13px;border:1px solid var(--border)}
@@ -159,6 +151,10 @@ a{color:var(--brand);text-decoration:none}
 .star-box{background:var(--accent-bg);border:1px solid var(--border-2);border-left:3px solid var(--accent);border-radius:10px;padding:11px 14px;font-size:13.5px;color:var(--brand-2);font-weight:600;margin-top:10px;line-height:1.7}
 .green-box{background:var(--primer-w-bg);border:1px solid var(--border-2);border-left:3px solid var(--primer-w);border-radius:10px;padding:11px 14px;font-size:13.5px;color:#155F3C;font-weight:600;margin-top:10px;line-height:1.7}
 
+.doc-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.doc-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:10px 14px;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--text);text-decoration:none;transition:border-color .14s,background .14s,color .14s}
+.doc-link::before{content:'PDF';font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:5px;background:var(--danger);color:#fff;flex-shrink:0}
+.doc-link:hover{border-color:var(--brand);background:var(--brand-tint);color:var(--brand)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .spec-item{background:var(--card);border-radius:10px;padding:11px 13px;border:1px solid var(--border);font-size:13.5px;line-height:1.5}
 .spec-item strong{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:600;margin-bottom:5px;letter-spacing:.04em;text-transform:uppercase}
@@ -236,6 +232,7 @@ a{color:var(--brand);text-decoration:none}
 .diag-item.dg-floor{border-left-color:var(--floor)}.diag-item.dg-floor .diag-a{color:var(--floor)}
 .diag-item.dg-tile{border-left-color:var(--tile)}.diag-item.dg-tile .diag-a{color:var(--tile)}
 .diag-item.dg-roof{border-left-color:var(--roof)}.diag-item.dg-roof .diag-a{color:var(--roof)}
+.diag-item.dg-road{border-left-color:var(--road)}.diag-item.dg-road .diag-a{color:var(--road)}
 
 .sp-banner{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#FFF6EC,#FFF0E2);border:1px solid rgba(187,73,21,.3);border-radius:12px;padding:12px 15px;text-decoration:none;cursor:pointer;transition:border-color .2s,box-shadow .2s;margin-bottom:0;box-shadow:var(--shadow)}
 .sp-banner:hover{border-color:rgba(187,73,21,.6);box-shadow:0 6px 18px rgba(187,73,21,.14)}
@@ -281,7 +278,7 @@ a{color:var(--brand);text-decoration:none}
 
 <!-- HEADER -->
 <div class="hero-wrap">
-  <div class="hero-lockup"><img src="data:image/png;base64,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" alt="형제상사" /><span class="lk-div"></span><span class="lk-store">도장 기술자료</span><span class="lk-badge">삼화페인트 대리점</span></div>
+  <div class="hero-util"><span class="u-dot"></span><span>형제상사 · 도장 기술자료</span><span class="u-right">삼화페인트 취급점</span></div>
   <div class="hero-main">
     <div class="hero-eyebrow">SAMHWA PAINT · APPLICATION GUIDE</div>
     <h1>소재별 도장 순서<br>완전 정복</h1>
@@ -300,14 +297,15 @@ a{color:var(--brand);text-decoration:none}
   <a onclick="goTo('roof')">🏠 기와·슬레이트</a>
   <a onclick="goTo('wp')">💧 옥상방수(우레탄)</a>
   <a onclick="goTo('floor')">🏭 실내방진(에폭시)</a>
+  <a onclick="goTo('road')">🛣 노면표지(차선)</a>
 </div>
 
 <!-- 증상・소재 검색 -->
 <div class="search-box">
   <div class="search-box-title">🔎 증상・소재 검색</div>
-  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시처럼 증상이나 소재를 입력해보세요.</div>
+  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시, 노면표지처럼 증상이나 소재를 입력해보세요.</div>
   <div class="search-input-row">
-    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 에폭시..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
+    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 주차라인..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
     <button class="search-btn" onclick="searchSymptom()">검색</button>
   </div>
   <div id="searchResult" class="search-result"></div>
@@ -316,7 +314,7 @@ a{color:var(--brand);text-decoration:none}
 <!-- 증상별 빠른 진단 -->
 <div class="diag-box">
   <div class="diag-box-title">🔍 우리 집은 어떤 경우일까요?</div>
-  <div class="diag-box-sub">증상을 누르면 해당 소재 가이드가 열립니다.</div>
+  <div class="diag-box-sub">증상을 누르면 해당 소재 가이드로 바로 이동합니다.</div>
   <div class="diag-list">
     <div onclick="goTo('mold')" class="diag-item dg-mold">
       <span class="diag-icon">🦠</span>
@@ -387,6 +385,14 @@ a{color:var(--brand);text-decoration:none}
       <span class="diag-text">
         <div class="diag-q">창고·주차장·작업장 바닥을 먼지 없이 깔끔하게 만들고 싶어요</div>
         <div class="diag-a">→ 실내 방진 도료(에폭시) 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('road')" class="diag-item dg-road">
+      <span class="diag-icon">🛣</span>
+      <span class="diag-text">
+        <div class="diag-q">주차선·차선·횡단보도 같은 노면 표시를 그리고 싶어요</div>
+        <div class="diag-a">→ 노면표지용 도료(차선) 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -1274,8 +1280,11 @@ a{color:var(--brand);text-decoration:none}
       </div>
     </div>
 
-    <!-- 옥상방수 영상 -->
-    <div class="yt-section">
+  </div>
+</div>
+
+<!-- 옥상방수 영상 -->
+<div class="yt-section" style="background:var(--card); border:1.5px solid rgba(5,112,172,0.3); border-radius:14px; margin-bottom:28px; padding:14px 16px; box-shadow:var(--shadow);">
   <div class="yt-section-label">우레탄방수 참고영상</div>
   <div class="yt-list">
     <a class="yt-item" href="https://www.youtube.com/watch?v=eKdvjkhsfwY" target="_blank">
@@ -1290,8 +1299,6 @@ a{color:var(--brand);text-decoration:none}
       <img class="yt-thumb" src="https://img.youtube.com/vi/Pe_orlaC4yE/mqdefault.jpg" alt="우레탄방수 참고영상 3" loading="lazy">
       <div class="yt-play"><div class="yt-play-btn"></div></div>
     </a>
-  </div>
-</div>
   </div>
 </div>
 
@@ -1450,6 +1457,141 @@ a{color:var(--brand);text-decoration:none}
   </div>
 </div>
 
+<!-- ══ 10. 노면표지용 도료 (차선·주차선) ══ -->
+<div class="mat-section mat-road" id="road">
+  <div class="mat-title">
+    <span class="icon">🛣</span>
+    <span>노면표지용 도료 (차선·주차선)</span>
+    <span class="sub">아스팔트·시멘트 노면</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리 · 양생 확인</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        노면의 <b>흙·모래·레이턴스·유분·시멘트가루</b>를 완전히 제거하고 <b>충분히 건조</b>시킵니다.<br>
+        신규 콘크리트는 <b>28일 이상 양생</b>(25℃·상대습도 80% 이하 기준, 기온이 낮으면 더 길어짐).<br>
+        표면 함수율 <span class="hi-acc">6% 이하</span>, pH <span class="hi-acc">7~9</span> 확인.
+        <div class="warn-box">
+          ⚠️ 고강도 콘크리트(260 kgf/㎠ 이상)는 그라인딩 시 부착력 불량이 생길 수 있어 <span class="wr">블라스팅</span>으로 표면처리 후 부착성능을 확인하세요.<br>
+          ⚠️ 심한 균열이 있는 노면에는 도장하지 마십시오.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 하도 없음 (바로 상도)</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">KSM6080 1종 상온건조형 노면표지용도료</span><span class="step-badge badge-road">상도 · 1액형</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-road">KSM6080 1종 노면표지용도료</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          아크릴 수지 1액형 상온건조 도료. <b>별도의 하도가 필요 없습니다.</b><br>
+          아스팔트·시멘트 노면 부착력, 내마모·내후·내수·내알칼리성 우수.
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>색상 / 광택</strong><span class="val">흰색, 노란색 / 무광</span></div>
+          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
+          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">100㎛</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">노면표지용 신나 5% 이내</span></div>
+          <div class="spec-item"><strong>이론도포면적</strong><span class="val">약 5.2㎡/ℓ (100㎛ 기준)</span></div>
+          <div class="spec-item"><strong>이론 소요량</strong><span class="val">약 0.193 ℓ/㎡ (2회 도장)</span></div>
+          <div class="spec-item"><strong>도장기구</strong><span class="val">붓 · 로라 · 스프레이</span></div>
+          <div class="spec-item"><strong>부피고형분</strong><span class="val">약 52% (1액형)</span></div>
+          <div class="spec-item"><strong>포장단위</strong><span class="val">18ℓ · 4ℓ</span></div>
+          <div class="spec-item"><strong>저장기간</strong><span class="val">12개월 (5~35℃ 실내보관)</span></div>
+        </div>
+        <div class="warn-box">
+          ⚠️ 과도한 희석(5% 초과)은 은폐력·살오름성·도막강도를 떨어뜨립니다. <span class="wr">반드시 5% 이내</span>.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 건조 · 재도장</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">건조시간 (25℃ 기준)</span><span class="step-badge badge-recoat">재도장</span></div>
+      <div class="step-content">
+        <div class="spec-grid">
+          <div class="spec-item"><strong>불점착 건조</strong><span class="val">20분</span></div>
+          <div class="spec-item"><strong>고화 건조</strong><span class="val">30분</span></div>
+          <div class="spec-item full"><strong>재도장 간격</strong><span class="val">1시간 경과 후</span></div>
+        </div>
+        <div class="info-box">
+          💡 기온이 낮거나 습도가 높으면 건조가 느려집니다. 표기된 시간은 25℃ 기준입니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 선택 사양</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">유리알(글라스비드) 살포</span><span class="step-badge badge-road">옵션 · 야간 반사</span></div>
+      <div class="step-content">
+        야간 시인성이 필요한 차선·횡단보도에는 유리알을 살포합니다.
+        <div class="spec-grid">
+          <div class="spec-item"><strong>살포량</strong><span class="val">도료 1ℓ 당 약 800g</span></div>
+          <div class="spec-item"><strong>살포 시점</strong><span class="val">도장 직후, 도막 건조 전</span></div>
+        </div>
+        <div class="danger-box">
+          ⚠️ 도막이 건조된 뒤에 뿌리면 유리알이 고정되지 않고 <b>바로 떨어집니다</b>. 반드시 도장 직후 살포하세요.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 작업 조건</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">작업 기상 조건</span><span class="step-badge badge-prep">확인</span></div>
+      <div class="step-content">
+        <div class="spec-grid">
+          <div class="spec-item"><strong>대기온도</strong><span class="val">5 ~ 35℃</span></div>
+          <div class="spec-item"><strong>상대습도</strong><span class="val">80% 이하</span></div>
+          <div class="spec-item"><strong>표면온도</strong><span class="val">40℃ 이하</span></div>
+          <div class="spec-item"><strong>피도면 온도</strong><span class="val">이슬점보다 최소 3℃ 이상</span></div>
+        </div>
+        <div class="danger-box">
+          🚫 <b>도장 금지</b> — 비 오는 날 / 습도 80% 이상 / 기온 5℃ 이하 / 표면온도 40℃ 이상<br>
+          → 도막 균열, 부착 불량, 기포 발생의 원인이 됩니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 현장 주의사항</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">6</span><span class="step-label">꼭 알아둘 주의사항</span><span class="step-badge badge-prep">중요</span></div>
+      <div class="step-content">
+        <div class="warn-box">
+          ⚠️ <b>실내 시멘트면 바닥재용으로 사용 금지</b> — 실내 바닥은 <span class="hi-floor">에폭시(에포코트)</span> 가이드를 참고하세요.<br>
+          ⚠️ 에폭시계 도료에 비해 <b>내마모성이 떨어질 수 있습니다</b>.<br>
+          ⚠️ 두껍게(후도막) 도장하면 내부 용제가 빠지지 않아 <b>바퀴자국·발자국</b>이 남을 수 있습니다.<br>
+          ⚠️ 신축·거친 콘크리트나 기포꽈리 우려 부위는 <b>아크릴 플로아코트를 1회</b> 도장해 기공을 막은 뒤 재도장하세요.<br>
+          ⚠️ 마스킹 테이프로 도장 외 구역 오염을 막고, 구도막 보수 시에는 <b>시험도장 후 부착력 확인</b>.<br>
+          ⚠️ 동일 제품·색상이라도 Lot·희석비·도장기구에 따라 이색이 생길 수 있으니 <b>동일 Lot·동일 도구</b>로 작업.
+        </div>
+        <div class="danger-box">
+          🔥 인화성 제품입니다. 밀폐 장소 도장 금지, 화기 접근 금지, 보호구(방독마스크·장갑·보안경) 착용.<br>
+          작업 후 도장기구는 지정 세척제로 세척하고, 폐도료는 지정 폐기물처리업체를 통해 폐기하세요.
+        </div>
+      </div>
+    </div>
+
+    <!-- 제조사 자료 -->
+    <div class="step">
+      <div class="step-header"><span class="step-num">7</span><span class="step-label">삼화페인트 공식 자료</span><span class="step-badge badge-road">PDF</span></div>
+      <div class="step-content">
+        제품 규격·도장사양의 최종 기준은 아래 제조사 자료입니다.
+        <div class="doc-links">
+          <a class="doc-link" href="https://jh2y24-tech.github.io/paint-guide-youtube/pdf/ksm6080-road-tech.pdf" target="_blank" rel="noopener">기술자료 (제품 사양서)</a>
+          <a class="doc-link" href="https://jh2y24-tech.github.io/paint-guide-youtube/pdf/ksm6080-road-spec.pdf" target="_blank" rel="noopener">도장사양서 (일위대가)</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- SP삼화 배너 -->
 <a href="https://spsamhwa.com/paints/search" target="_blank" class="sp-banner">
     <div class="sp-banner-left">
@@ -1489,37 +1631,9 @@ function scrollToTop() {
 function goTo(id) {
   var el = document.getElementById(id);
   if (el) {
-    if (el.classList.contains('mat-section')) { openMat(el); }
-    setTimeout(function(){ el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 70);
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-
-function closeMat(sec){
-  sec.classList.remove('open');
-  var t = sec.querySelector('.mat-hint-txt');
-  if (t) t.textContent = '자세히 보기';
-}
-function openMat(sec){
-  document.querySelectorAll('.mat-section.open').forEach(function(s){ if (s !== sec) closeMat(s); });
-  sec.classList.add('open');
-  var t = sec.querySelector('.mat-hint-txt');
-  if (t) t.textContent = '접기';
-}
-function toggleMat(sec){
-  if (sec.classList.contains('open')) { closeMat(sec); }
-  else { openMat(sec); }
-}
-(function initCollapse(){
-  document.querySelectorAll('.mat-section').forEach(function(sec){
-    var title = sec.querySelector('.mat-title');
-    if (!title) return;
-    var hint = document.createElement('span');
-    hint.className = 'mat-hint';
-    hint.innerHTML = '<span class="mat-hint-txt">자세히 보기</span><span class="mat-chevron">▾</span>';
-    title.appendChild(hint);
-    title.addEventListener('click', function(){ toggleMat(sec); });
-  });
-})();
 
 /* 증상・소재 검색 — 키워드는 각 섹션 제목에 실제로 쓰인 단어를 기준으로 구성 */
 var SYMPTOM_MAP = {
@@ -1531,7 +1645,8 @@ var SYMPTOM_MAP = {
   tile:     { label: '🚿 타일・줄눈 가이드',             keywords: ['타일','줄눈','욕실','주방','방수코팅'] },
   roof:     { label: '🏠 기와・슬레이트(지붕) 가이드',    keywords: ['기와','기와지붕','슬레이트','쓰레트','석면','지붕','기와페인트','슬레이트지붕','청기와','아크릴도료'] },
   wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄'] },
-  floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] }
+  floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] },
+  road:     { label: '🛣 노면표지용 도료(차선) 가이드',  keywords: ['노면표지','노면','차선','차선도색','주차선','주차라인','횡단보도','아스팔트','도로','라인마킹','ksm6080','유리알','글라스비드','과속방지턱'] }
 };
 
 function normalizeKo(s) {
