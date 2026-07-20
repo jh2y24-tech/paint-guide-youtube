@@ -29,7 +29,7 @@
   --tile:#0E857A;--tile-bg:rgba(14,133,122,.07);
   --roof:#B03A3A;--roof-bg:rgba(176,58,58,.07);
   --twp:#8A5A10;--twp-bg:rgba(138,90,16,.07);
-  --road:#3F5461;--road-bg:rgba(63,84,97,.07);
+  --road:#B4530A;--road-bg:rgba(180,83,10,.07);
   --shadow:0 1px 2px rgba(10,40,44,.045),0 3px 10px rgba(10,40,44,.045);
   --shadow-lg:0 10px 26px rgba(0,45,50,.13);
   --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -41,15 +41,18 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-text
 a{color:var(--brand);text-decoration:none}
 .wrap{max-width:620px;margin:0 auto;padding:18px 16px 48px}
 
-.hero-wrap{margin:-18px -16px 24px;background:var(--brand);color:#fff;border-bottom:4px solid var(--amber);overflow:hidden}
-.hero-util{display:flex;align-items:center;gap:9px;padding:9px 20px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;border-bottom:1px solid rgba(255,255,255,.12);white-space:nowrap}
-.hero-util .u-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px rgba(201,112,26,.32);flex-shrink:0}
-.hero-util .u-right{margin-left:auto;color:rgba(255,255,255,.6);letter-spacing:.06em;white-space:nowrap}
-.hero-main{padding:26px 20px 28px;position:relative}
-.hero-main::before{content:"";position:absolute;right:-40px;top:-60px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(201,112,26,.2),transparent 68%);pointer-events:none}
-.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.66);margin-bottom:11px;position:relative}
-.hero-main h1{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.03em;line-height:1.26;color:#fff;position:relative}
-.hero-main p{font-size:13.5px;color:rgba(255,255,255,.74);margin-top:11px;line-height:1.7;position:relative}
+.hero-wrap{margin:4px 0 26px;background:linear-gradient(160deg,var(--brand) 0%,var(--brand-2) 100%);color:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,45,50,.5);position:relative}
+.hero-wrap::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--amber)}
+.hero-lockup{display:flex;align-items:center;gap:12px;padding:15px 20px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.hero-lockup img{height:26px;width:auto;display:block}
+.hero-lockup .lk-div{width:1px;height:18px;background:rgba(255,255,255,.22);flex-shrink:0}
+.hero-lockup .lk-store{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);white-space:nowrap}
+.hero-lockup .lk-badge{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.01em;color:#fff;background:var(--amber);padding:5px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 8px rgba(201,112,26,.4)}
+.hero-main{padding:26px 22px 30px;position:relative}
+.hero-main::before{content:"";position:absolute;right:-50px;top:-70px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(201,112,26,.22),transparent 68%);pointer-events:none}
+.hero-eyebrow{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px;position:relative}
+.hero-main h1{font-family:var(--display);font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1.24;color:#fff;position:relative}
+.hero-main p{font-size:13.5px;color:rgba(255,255,255,.76);margin-top:12px;line-height:1.7;position:relative}
 .header{text-align:center;padding:26px 0 22px;border-bottom:1px solid var(--border);margin-bottom:22px}
 .store-tag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:var(--brand-tint);color:var(--brand);margin-bottom:14px}
 .header h1{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.03em;line-height:1.28;color:var(--text)}
@@ -69,6 +72,15 @@ a{color:var(--brand);text-decoration:none}
 .mat-title{display:flex;align-items:center;gap:10px;padding:16px 18px;font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:-.02em;color:var(--mat);background:var(--mat-bg);border-bottom:1px solid var(--border)}
 .mat-title .icon{font-size:18px;line-height:1}
 .mat-title .sub{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--muted);margin-left:auto;letter-spacing:.03em;white-space:nowrap}
+.mat-title{cursor:pointer;user-select:none}
+.mat-title:hover{filter:brightness(.98)}
+.mat-hint{margin-left:auto;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--muted);letter-spacing:.03em;white-space:nowrap;flex-shrink:0}
+.mat-chevron{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;background:var(--card);color:var(--mat);font-size:13px;line-height:1;border:1px solid var(--mat);transition:transform .28s ease}
+.mat-section.open .mat-chevron{transform:rotate(180deg)}
+.mat-body{display:none}
+.mat-section.open .mat-body{display:block;animation:matReveal .32s ease}
+@keyframes matReveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
+.mat-section{scroll-margin-top:14px}
 
 .step{padding:16px 18px;border-bottom:1px solid var(--border-2)}
 .step:last-child{border-bottom:none}
@@ -85,7 +97,6 @@ a{color:var(--brand);text-decoration:none}
 .badge-wp{background:var(--sky-bg);color:var(--sky)}
 .badge-ep{background:var(--floor-bg);color:var(--floor)}
 .badge-roof{background:var(--roof-bg);color:var(--roof)}
-.badge-road{background:var(--road-bg);color:var(--road)}
 
 .step-arrow{text-align:center;color:var(--faint);font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.02em;padding:7px 0 8px}
 
@@ -114,7 +125,7 @@ a{color:var(--brand);text-decoration:none}
 .chip-mold{background:var(--mold-bg);color:var(--mold);border-color:rgba(14,135,106,.28)}
 .chip-wp{background:var(--sky-bg);color:var(--sky);border-color:rgba(10,109,163,.28)}
 .chip-floor{background:var(--floor-bg);color:var(--floor);border-color:rgba(124,67,192,.28)}
-.chip-road{background:var(--road-bg);color:var(--road);border-color:rgba(63,84,97,.28)}
+.chip-road{background:var(--road-bg);color:var(--road);border-color:rgba(180,83,10,.28)}
 
 .branch-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
 .branch-card{background:var(--card);border-radius:11px;padding:12px 13px;border:1px solid var(--border)}
@@ -151,10 +162,6 @@ a{color:var(--brand);text-decoration:none}
 .star-box{background:var(--accent-bg);border:1px solid var(--border-2);border-left:3px solid var(--accent);border-radius:10px;padding:11px 14px;font-size:13.5px;color:var(--brand-2);font-weight:600;margin-top:10px;line-height:1.7}
 .green-box{background:var(--primer-w-bg);border:1px solid var(--border-2);border-left:3px solid var(--primer-w);border-radius:10px;padding:11px 14px;font-size:13.5px;color:#155F3C;font-weight:600;margin-top:10px;line-height:1.7}
 
-.doc-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.doc-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:10px 14px;border-radius:10px;background:var(--card);border:1px solid var(--border);color:var(--text);text-decoration:none;transition:border-color .14s,background .14s,color .14s}
-.doc-link::before{content:'PDF';font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:5px;background:var(--danger);color:#fff;flex-shrink:0}
-.doc-link:hover{border-color:var(--brand);background:var(--brand-tint);color:var(--brand)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .spec-item{background:var(--card);border-radius:10px;padding:11px 13px;border:1px solid var(--border);font-size:13.5px;line-height:1.5}
 .spec-item strong{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:600;margin-bottom:5px;letter-spacing:.04em;text-transform:uppercase}
@@ -229,10 +236,15 @@ a{color:var(--brand);text-decoration:none}
 .diag-item.dg-iron{border-left-color:var(--warn)}.diag-item.dg-iron .diag-a{color:var(--warn)}
 .diag-item.dg-mold{border-left-color:var(--mold)}.diag-item.dg-mold .diag-a{color:var(--mold)}
 .diag-item.dg-wp{border-left-color:var(--sky)}.diag-item.dg-wp .diag-a{color:var(--sky)}
+.diag-item.dg-road{border-left-color:var(--road)}.diag-item.dg-road .diag-a{color:var(--road)}
+.doc-list{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+.doc-link{display:flex;align-items:center;gap:9px;background:var(--card2);border:1px solid var(--border-2);border-left:3px solid var(--mat,var(--brand));border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;color:var(--text);text-decoration:none;transition:background .15s,transform .15s}
+.doc-link:hover{background:var(--brand-tint);transform:translateX(2px)}
+.doc-link .doc-ico{font-size:15px;flex-shrink:0}
+.doc-link .doc-tag{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--faint);font-weight:700}
 .diag-item.dg-floor{border-left-color:var(--floor)}.diag-item.dg-floor .diag-a{color:var(--floor)}
 .diag-item.dg-tile{border-left-color:var(--tile)}.diag-item.dg-tile .diag-a{color:var(--tile)}
 .diag-item.dg-roof{border-left-color:var(--roof)}.diag-item.dg-roof .diag-a{color:var(--roof)}
-.diag-item.dg-road{border-left-color:var(--road)}.diag-item.dg-road .diag-a{color:var(--road)}
 
 .sp-banner{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#FFF6EC,#FFF0E2);border:1px solid rgba(187,73,21,.3);border-radius:12px;padding:12px 15px;text-decoration:none;cursor:pointer;transition:border-color .2s,box-shadow .2s;margin-bottom:0;box-shadow:var(--shadow)}
 .sp-banner:hover{border-color:rgba(187,73,21,.6);box-shadow:0 6px 18px rgba(187,73,21,.14)}
@@ -278,7 +290,7 @@ a{color:var(--brand);text-decoration:none}
 
 <!-- HEADER -->
 <div class="hero-wrap">
-  <div class="hero-util"><span class="u-dot"></span><span>형제상사 · 도장 기술자료</span><span class="u-right">삼화페인트 취급점</span></div>
+  <div class="hero-lockup"><img src="data:image/png;base64,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" alt="형제상사" /><span class="lk-div"></span><span class="lk-store">도장 기술자료</span><span class="lk-badge">삼화페인트 대리점</span></div>
   <div class="hero-main">
     <div class="hero-eyebrow">SAMHWA PAINT · APPLICATION GUIDE</div>
     <h1>소재별 도장 순서<br>완전 정복</h1>
@@ -303,9 +315,9 @@ a{color:var(--brand);text-decoration:none}
 <!-- 증상・소재 검색 -->
 <div class="search-box">
   <div class="search-box-title">🔎 증상・소재 검색</div>
-  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시, 노면표지처럼 증상이나 소재를 입력해보세요.</div>
+  <div class="search-box-sub">곰팡이, 석고보드, 실크벽지, 목재, 철재, 타일, 옥상방수, 에폭시처럼 증상이나 소재를 입력해보세요.</div>
   <div class="search-input-row">
-    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 주차라인..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
+    <input type="text" id="symptomSearch" class="search-input" placeholder="예: 곰팡이, 옥상방수, 에폭시..." inputmode="search" onkeydown="if(event.key==='Enter'){event.preventDefault();searchSymptom();}" oninput="previewSymptom();">
     <button class="search-btn" onclick="searchSymptom()">검색</button>
   </div>
   <div id="searchResult" class="search-result"></div>
@@ -314,7 +326,7 @@ a{color:var(--brand);text-decoration:none}
 <!-- 증상별 빠른 진단 -->
 <div class="diag-box">
   <div class="diag-box-title">🔍 우리 집은 어떤 경우일까요?</div>
-  <div class="diag-box-sub">증상을 누르면 해당 소재 가이드로 바로 이동합니다.</div>
+  <div class="diag-box-sub">증상을 누르면 해당 소재 가이드가 열립니다.</div>
   <div class="diag-list">
     <div onclick="goTo('mold')" class="diag-item dg-mold">
       <span class="diag-icon">🦠</span>
@@ -337,6 +349,14 @@ a{color:var(--brand);text-decoration:none}
       <span class="diag-text">
         <div class="diag-q">벽지·시트지 위에 그대로 페인트를 칠하고 싶어요</div>
         <div class="diag-a">→ 실크벽지·시트지 가이드</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('road')" class="diag-item dg-road">
+      <span class="diag-icon">🛣</span>
+      <span class="diag-text">
+        <div class="diag-q">주차장 차선·횡단보도·주차 구획선을 그리고 싶어요</div>
+        <div class="diag-a">→ 노면표지(차선) 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -385,14 +405,6 @@ a{color:var(--brand);text-decoration:none}
       <span class="diag-text">
         <div class="diag-q">창고·주차장·작업장 바닥을 먼지 없이 깔끔하게 만들고 싶어요</div>
         <div class="diag-a">→ 실내 방진 도료(에폭시) 가이드</div>
-      </span>
-      <span class="diag-arrow">▶</span>
-    </div>
-    <div onclick="goTo('road')" class="diag-item dg-road">
-      <span class="diag-icon">🛣</span>
-      <span class="diag-text">
-        <div class="diag-q">주차선·차선·횡단보도 같은 노면 표시를 그리고 싶어요</div>
-        <div class="diag-a">→ 노면표지용 도료(차선) 가이드</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -922,6 +934,102 @@ a{color:var(--brand);text-decoration:none}
       </div>
     </div>
 
+    <div class="step-arrow">↓ 결로 심한 곳 · 제품 상세</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">아이럭스결로스탑 규조토 백색</span><span class="step-badge badge-paint">KSM6010 2종1급</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-water">아이럭스결로스탑 규조토 백색</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          규조토의 <b>호흡성</b>으로 실내 표면의 결로를 흡수했다가 서서히 방출해 결로 현상을 보완하는 기능성 수성페인트입니다.
+          수분 흡수에 따른 도막 위 곰팡이 생성도 억제합니다. <b>환경마크 인증</b> 제품.
+        </div>
+
+        <div class="danger-box">
+          ⚠️ <b>이건 반드시 먼저 안내하세요 — 묻어남</b><br>
+          결로를 흡수하는 타입이라 <b>결로의 양이 많으면 도막 강도가 저하되어 문지르거나 긁으면 묻어납니다.</b><br>
+          → 결로가 심한 곳은 <b>단열 공사를 먼저</b> 하고 도장해야 합니다.<br>
+          → 주거활동으로 <b>긁힘·마찰이 잦은 부위(손 닿는 벽, 가구 뒤 등)에는 부적합</b>합니다.
+        </div>
+
+        <div data-product="ilux-condensation-stop-diatomite-white" data-render="spec"></div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 소지 조건</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">표면처리 · 하도 판단</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        <div class="spec-grid">
+          <div class="spec-item"><strong>신축 시멘트 양생</strong><span class="val">28일 이상 (25℃ · 상대습도 50% 기준)</span></div>
+          <div class="spec-item"><strong>적정 함수율</strong><span class="val">10% 이하</span></div>
+          <div class="spec-item full"><strong>적정 pH</strong><span class="val">7 ~ 9</span></div>
+        </div>
+        피도면의 레이턴스·시멘트가루·모래·흙·기름·녹·유분을 깨끗이 제거하고, 틈새나 홈은 <b>월드퍼티</b>로 메꿔 표면조정 후 도장합니다.
+
+        <div class="warn-box">
+          ⚠ <b>수성바인다 200 하도가 필요한 경우</b><br>
+          아래 중 하나라도 해당되면 부착 불량 방지·탈색 방지·소지 조정을 위해 하도를 반드시 도장하세요.<br>
+          · 콘크리트 소지 상태가 불량한 곳<br>
+          · 구도막 부위<br>
+          · 동절기 시공<br>
+          · 시멘트 견출면·미장면 등 쵸킹 소지<br>
+          · 흡수차가 심한 바탕면<br>
+          · 시멘트 용출이 심한 부위
+        </div>
+
+        <div class="spec-grid" style="margin-top:10px;">
+          <div class="spec-item"><strong>하도 · 수성바인다 200</strong><span class="val">1회 · 0.1 L/㎡ (피도체 스며듦)</span></div>
+          <div class="spec-item"><strong>상도 · 결로스탑 규조토</strong><span class="val">2~3회 · 100㎛ · 0.26 L/㎡</span></div>
+        </div>
+        <div class="info-box">
+          💡 실제 소요량은 작업조건·작업방법에 따라 가감됩니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 현장 주의사항</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">6</span><span class="step-label">이건 꼭 확인하세요</span><span class="step-badge badge-prep">체크</span></div>
+      <div class="step-content">
+        <div class="danger-box">
+          ⚠️ <b>유성도료가 도장된 목재·철재·플라스틱 부위에는 도장 금지</b> — 부착이 불량합니다.<br>
+          ⚠️ <b>가소제가 함유된 피도면, 발포벽지, 가죽소파</b> 등에 도장·접촉 시 오염·끈적거림·변색이 발생할 수 있습니다.
+        </div>
+        <div class="warn-box">
+          ⚠ <b>도장 금지 조건</b> — 비 오는 날, 습도 85% 이상, 기온 5℃ 이하. 도막 균열·부착 불량이 발생합니다.<br>
+          ⚠ <b>보관·운송 시 얼리지 마십시오.</b> 수성 제품입니다.<br>
+          ⚠ <b>캔 개봉 후 즉시 사용</b> — 외부 오염에 의한 변질 우려가 높습니다.<br>
+          ⚠ <b>타 도료와 혼합 금지.</b><br>
+          ⚠ <b>도장 전 균일하게 잘 혼합</b>하고 도장 중에도 주기적으로 교반하십시오. 믹서 교반 시 기포 발생에 유의.<br>
+          ⚠ <b>현장 조색</b>은 수성잉크 '아크로텍스잉크'로 최대 5%(부피비) 이내. 과량 사용 시 이색·건조불량·내수성불량·VOC 증가가 발생합니다.<br>
+          ⚠ <b>스프레이 도장은 연속작업</b>이 원칙입니다. 끊기면 더스트로 인한 광택 차이로 이색이 생기므로, 부득이하면 골부위나 일정 부위 경계에서 끊으십시오.<br>
+          ⚠ <b>구도막 위 보수 도장</b>은 적합성을 소비자상담실에 확인 후 진행하십시오.<br>
+          ⚠ 동일 제품·색상·LOT라도 희석비·도장기구·도장방법이 다르면 이색현상이 발생합니다.
+        </div>
+        <div class="warn-box">
+          ⚠ <b>보관 · 폐기</b><br>
+          · 화기·직사광선을 피해 상온(5~35℃) 건냉암소에 보관하고, 용기는 밀폐해 주입구가 상단을 향하도록 세워서 보관 (잔량도 동일)<br>
+          · 어린이 손이 닿지 않는 곳에 보관, 동·식물이 섭취 시 유해<br>
+          · 폐도료는 환경부 지정 폐기물처리업체를 통해 폐기<br>
+          · 유효기간(12개월) 내 사용, 경과 제품은 소비자상담실 확인 후 사용<br>
+          · 도료가 눈에 접촉되지 않도록 하고, 작업 완료 후 노출된 피부는 깨끗이 씻으십시오<br>
+          · 취급 전 물질안전보건자료(MSDS) 확인
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 자료</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">7</span><span class="step-label">공식 자료</span><span class="step-badge badge-paint">PDF</span></div>
+      <div class="step-content">
+        <div data-product="ilux-condensation-stop-diatomite-white" data-render="docs"></div>
+      </div>
+    </div>
+
 </div>
 </div>
 
@@ -1280,11 +1388,79 @@ a{color:var(--brand);text-decoration:none}
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- 옥상방수 영상 -->
-<div class="yt-section" style="background:var(--card); border:1.5px solid rgba(5,112,172,0.3); border-radius:14px; margin-bottom:28px; padding:14px 16px; box-shadow:var(--shadow);">
+    <div class="step-arrow">↓ 노출형이 아닌, 타일·몰탈로 덮이는 방수라면</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">6</span><span class="step-label">비노출 타르방수탄 — 욕실·화장실·정화조</span><span class="step-badge badge-wp">비노출형</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-wp">비노출 타르방수탄</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          위 방수에이스는 <b>노출형(옥상)</b>이고, 이 제품은 <b>비노출형</b>입니다 — 타일이나 보호몰탈로 덮이는 <b>욕실·화장실·하수종말처리장·정화조</b>용 폴리우레탄 2액형 타르 방수재입니다.
+          건조 도막이 탄성을 유지해 기온차·진동에 의한 수축·팽창에도 견디고 균열부 수분 침투를 막습니다.
+        </div>
+
+        <div class="danger-box">
+          ⚠️ <b>실내공기질관리법 대상 건물엔 사용 불가</b><br>
+          다중이용시설 및 <b>100세대 이상 공동주택의 실내</b>에는 사용할 수 없는 제품입니다. 다세대·소규모 현장 위주로 안내하세요.
+        </div>
+
+        <div data-product="non-exposed-tar-waterproofing-tan" data-render="spec"></div>
+
+        <div class="info-box" style="margin-top:10px;">
+          💡 <b>경화·건조는 기온에 따라 크게 갈립니다.</b> 5℃에서는 완전건조까지 7일, 30℃에서는 3일입니다. 가사시간도 30분→15분으로 절반 이하로 줄어드니 현장 기온을 꼭 확인하고 배합하세요.
+        </div>
+        <div data-product="non-exposed-tar-waterproofing-tan" data-render="curetable"></div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 시공 순서</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">7</span><span class="step-label">하도 → 상도 → 마감</span><span class="step-badge badge-prep">순서</span></div>
+      <div class="step-content">
+        <div class="spec-grid">
+          <div class="spec-item full"><strong>1. 표면처리</strong><span class="val">레이턴스·먼지·유분 제거, 함수율 6% 이하·pH 7~9, 28일 양생</span></div>
+          <div class="spec-item full"><strong>2. 하도</strong><span class="val">그린방수마스터하도 1회 50㎛ · 0.138 L/㎡</span></div>
+          <div class="spec-item full"><strong>3. 상도</strong><span class="val">하도 후 6~48시간 이내 · A·B부 3:1 무게비 혼합 · 1~2회 3,000㎛ · 4.02 kg/㎡</span></div>
+          <div class="spec-item full"><strong>4. 마감</strong><span class="val">시공 완료 후 1일~3일 이내 콘크리트 또는 보호몰탈로 눌러 바름</span></div>
+        </div>
+
+        <div class="warn-box">
+          ⚠ <b>V-cutting 필수</b> — 균열이 심한 부분·신축줄눈은 V-cutting 후 폴리에칠렌 백업재를 넣고 우레탄 실란트로 씰링. 벽면과 접한 가장자리도 V-cutting.<br>
+          ⚠ <b>기포 대책</b> — 콘크리트 소지 기공으로 기포가 생기기 쉬우니 0.5~0.8mm 두께로 선행도장(스크래핑) 후 본도장. 도막두께 1mm 이하로 도장할 땐 RAKE보다 흙손이 낫습니다.<br>
+          ⚠ <b>봄·가을 이른 아침, 안개다발지역 아침 작업 금지</b> — 수분응축으로 부풀음·부착불량이 생깁니다.<br>
+          ⚠ <b>하절기 폭염(대기온도 28℃ 이상) 작업 금지.</b> 불가피하면 하도 후 6~48시간 이내, 오후 4시 이후에만 상도.
+        </div>
+        <div class="danger-box">
+          ⚠️ <b>희석제 절대 금지 품목</b><br>
+          알코올 성분이 함유된 신나(에폭시신나·락카신나·사제신나)는 <b>절대 사용 금지</b> — 건조되지 않습니다. 세척은 우레탄1000신나만 사용하세요.
+        </div>
+        <div class="warn-box">
+          ⚠ <b>가사시간을 넘긴 도료는 사용 금지</b> — 퍼짐성이 나빠져 도막 외관이 불량해집니다. 경화제는 대기 중 수분과 반응해 굳으므로 남은 경화제는 즉시 밀봉해 냉암소 보관하세요.<br>
+          ⚠ 중도 도막이 비·눈·이슬에 노출되거나 후속도장기간이 지났다면 하도를 최대한 얇게 추가 도장한 뒤 후속 도장하세요.<br>
+          ⚠ 혼합 교반은 시공면 오염 방지를 위해 깔판을 쓰거나 시공면 밖에서 하세요.
+        </div>
+        <div class="info-box">
+          💡 도포 후 소포가 안 되면 우레탄1000신나를 살포해 기포를 제거합니다.<br>
+          💡 피도면이 매끄러워 하도가 안 스며들면 우레탄 하도 기술자료의 희석비를 참조하세요.
+        </div>
+
+        <div data-product="non-exposed-tar-waterproofing-tan" data-render="cautions"></div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 자료</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">8</span><span class="step-label">공식 자료</span><span class="step-badge badge-wp">PDF</span></div>
+      <div class="step-content">
+        <div data-product="non-exposed-tar-waterproofing-tan" data-render="docs"></div>
+      </div>
+    </div>
+
+    <!-- 옥상방수 영상 -->
+    <div class="yt-section">
   <div class="yt-section-label">우레탄방수 참고영상</div>
   <div class="yt-list">
     <a class="yt-item" href="https://www.youtube.com/watch?v=eKdvjkhsfwY" target="_blank">
@@ -1299,6 +1475,8 @@ a{color:var(--brand);text-decoration:none}
       <img class="yt-thumb" src="https://img.youtube.com/vi/Pe_orlaC4yE/mqdefault.jpg" alt="우레탄방수 참고영상 3" loading="lazy">
       <div class="yt-play"><div class="yt-play-btn"></div></div>
     </a>
+  </div>
+</div>
   </div>
 </div>
 
@@ -1457,92 +1635,40 @@ a{color:var(--brand);text-decoration:none}
   </div>
 </div>
 
-<!-- ══ 10. 노면표지용 도료 (차선·주차선) ══ -->
+
+<!-- ══ 10. 노면표지용 도료 (차선) ══ -->
 <div class="mat-section mat-road" id="road">
   <div class="mat-title">
     <span class="icon">🛣</span>
-    <span>노면표지용 도료 (차선·주차선)</span>
+    <span>노면표지용 도료 (차선)</span>
     <span class="sub">아스팔트·시멘트 노면</span>
   </div>
   <div class="mat-body">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">1</span><span class="step-label">전처리 · 양생 확인</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">표면처리</span><span class="step-badge badge-prep">필수</span></div>
       <div class="step-content">
-        노면의 <b>흙·모래·레이턴스·유분·시멘트가루</b>를 완전히 제거하고 <b>충분히 건조</b>시킵니다.<br>
-        신규 콘크리트는 <b>28일 이상 양생</b>(25℃·상대습도 80% 이하 기준, 기온이 낮으면 더 길어짐).<br>
-        표면 함수율 <span class="hi-acc">6% 이하</span>, pH <span class="hi-acc">7~9</span> 확인.
-        <div class="warn-box">
-          ⚠️ 고강도 콘크리트(260 kgf/㎠ 이상)는 그라인딩 시 부착력 불량이 생길 수 있어 <span class="wr">블라스팅</span>으로 표면처리 후 부착성능을 확인하세요.<br>
-          ⚠️ 심한 균열이 있는 노면에는 도장하지 마십시오.
-        </div>
-      </div>
-    </div>
-
-    <div class="step-arrow">↓ 하도 없음 (바로 상도)</div>
-
-    <div class="step">
-      <div class="step-header"><span class="step-num">2</span><span class="step-label">KSM6080 1종 상온건조형 노면표지용도료</span><span class="step-badge badge-road">상도 · 1액형</span></div>
-      <div class="step-content">
-        <span class="product-chip chip-road">KSM6080 1종 노면표지용도료</span>
-        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
-          아크릴 수지 1액형 상온건조 도료. <b>별도의 하도가 필요 없습니다.</b><br>
-          아스팔트·시멘트 노면 부착력, 내마모·내후·내수·내알칼리성 우수.
-        </div>
-        <div class="spec-grid">
-          <div class="spec-item"><strong>색상 / 광택</strong><span class="val">흰색, 노란색 / 무광</span></div>
-          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
-          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">100㎛</span></div>
-          <div class="spec-item"><strong>희석</strong><span class="val">노면표지용 신나 5% 이내</span></div>
-          <div class="spec-item"><strong>이론도포면적</strong><span class="val">약 5.2㎡/ℓ (100㎛ 기준)</span></div>
-          <div class="spec-item"><strong>이론 소요량</strong><span class="val">약 0.193 ℓ/㎡ (2회 도장)</span></div>
-          <div class="spec-item"><strong>도장기구</strong><span class="val">붓 · 로라 · 스프레이</span></div>
-          <div class="spec-item"><strong>부피고형분</strong><span class="val">약 52% (1액형)</span></div>
-          <div class="spec-item"><strong>포장단위</strong><span class="val">18ℓ · 4ℓ</span></div>
-          <div class="spec-item"><strong>저장기간</strong><span class="val">12개월 (5~35℃ 실내보관)</span></div>
+        피도면의 <b>흙·자갈·모래·시멘트가루·유분·레이턴스</b>를 완전히 제거하고 충분히 건조시킵니다.<br>
+        제거 방법은 샌드블라스팅, 다이아몬드 휠 그라인딩, 10% HCL 산세척 등.
+        <div class="spec-grid" style="margin-top:10px;">
+          <div class="spec-item"><strong>콘크리트 양생</strong><span class="val">28일 이상 (25℃ · 상대습도 80% 이하 기준)</span></div>
+          <div class="spec-item"><strong>표면 함수율</strong><span class="val">6% 이하</span></div>
+          <div class="spec-item full"><strong>표면 pH</strong><span class="val">7 ~ 9</span></div>
         </div>
         <div class="warn-box">
-          ⚠️ 과도한 희석(5% 초과)은 은폐력·살오름성·도막강도를 떨어뜨립니다. <span class="wr">반드시 5% 이내</span>.
-        </div>
-      </div>
-    </div>
-
-    <div class="step-arrow">↓ 건조 · 재도장</div>
-
-    <div class="step">
-      <div class="step-header"><span class="step-num">3</span><span class="step-label">건조시간 (25℃ 기준)</span><span class="step-badge badge-recoat">재도장</span></div>
-      <div class="step-content">
-        <div class="spec-grid">
-          <div class="spec-item"><strong>불점착 건조</strong><span class="val">20분</span></div>
-          <div class="spec-item"><strong>고화 건조</strong><span class="val">30분</span></div>
-          <div class="spec-item full"><strong>재도장 간격</strong><span class="val">1시간 경과 후</span></div>
+          ⚠ <b>고강도 콘크리트(260 kgf/㎠ 이상)</b>는 그라인딩 처리 시 부착력 불량이 발생할 수 있습니다.<br>
+          → <b>블라스팅</b>으로 표면처리하고 부착성능을 확인한 뒤 도장하십시오.
         </div>
         <div class="info-box">
-          💡 기온이 낮거나 습도가 높으면 건조가 느려집니다. 표기된 시간은 25℃ 기준입니다.
+          💡 기온이 25℃보다 낮으면 양생 기간이 28일보다 더 길어질 수 있습니다.
         </div>
       </div>
     </div>
 
-    <div class="step-arrow">↓ 선택 사양</div>
+    <div class="step-arrow">↓</div>
 
     <div class="step">
-      <div class="step-header"><span class="step-num">4</span><span class="step-label">유리알(글라스비드) 살포</span><span class="step-badge badge-road">옵션 · 야간 반사</span></div>
-      <div class="step-content">
-        야간 시인성이 필요한 차선·횡단보도에는 유리알을 살포합니다.
-        <div class="spec-grid">
-          <div class="spec-item"><strong>살포량</strong><span class="val">도료 1ℓ 당 약 800g</span></div>
-          <div class="spec-item"><strong>살포 시점</strong><span class="val">도장 직후, 도막 건조 전</span></div>
-        </div>
-        <div class="danger-box">
-          ⚠️ 도막이 건조된 뒤에 뿌리면 유리알이 고정되지 않고 <b>바로 떨어집니다</b>. 반드시 도장 직후 살포하세요.
-        </div>
-      </div>
-    </div>
-
-    <div class="step-arrow">↓ 작업 조건</div>
-
-    <div class="step">
-      <div class="step-header"><span class="step-num">5</span><span class="step-label">작업 기상 조건</span><span class="step-badge badge-prep">확인</span></div>
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">작업 기상조건</span><span class="step-badge badge-prep">확인</span></div>
       <div class="step-content">
         <div class="spec-grid">
           <div class="spec-item"><strong>대기온도</strong><span class="val">5 ~ 35℃</span></div>
@@ -1550,9 +1676,61 @@ a{color:var(--brand);text-decoration:none}
           <div class="spec-item"><strong>표면온도</strong><span class="val">40℃ 이하</span></div>
           <div class="spec-item"><strong>피도면 온도</strong><span class="val">이슬점보다 최소 3℃ 이상</span></div>
         </div>
-        <div class="danger-box">
-          🚫 <b>도장 금지</b> — 비 오는 날 / 습도 80% 이상 / 기온 5℃ 이하 / 표면온도 40℃ 이상<br>
+        <div class="warn-box">
+          ⚠ <b>도장을 피해야 하는 날</b><br>
+          · 비 오는 날 / 습도 80% 이상<br>
+          · 기온이 낮은 날 (5℃ 이하 · 겨울철은 피도면 동결 여부 확인)<br>
+          · 표면온도 40℃ 이상<br>
           → 도막 균열, 부착 불량, 기포 발생의 원인이 됩니다.
+        </div>
+        <div class="info-box">
+          💡 <b>기술자료와 도장사양서의 기준이 조금 다릅니다.</b><br>
+          · 상대습도 : 80%(기술자료) / 85%(도장사양서)<br>
+          · 회피 기온 : 5℃ 이하(기술자료) / 10℃ 이하(도장사양서)<br>
+          · 평형함수율 : 6%(기술자료) / 8%(도장사양서)<br>
+          → 현장 안내는 <b>보수적인 쪽(습도 80%·기온 10℃·함수율 6%)</b>으로 잡는 게 안전합니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 하도 없음 · 바로 상도</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">KSM6080 1종 상온건조형</span><span class="step-badge badge-ep">상도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-road">KSM6080 1종 상온건조형 노면표지용도료</span>
+        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">
+          아크릴 수지를 전색제로 한 1액형. 아스팔트면·시멘트 노면에 부착력이 뛰어나고 내마모성이 우수하며 내후성·내충격성·내수성·내알칼리성이 좋습니다.<br>
+          <b>별도의 하도가 필요 없습니다.</b> 도구는 붓·로라·스프레이 모두 가능.
+        </div>
+        <div data-product="ksm6080-type1-air-drying-traffic-paint" data-render="spec"></div>
+        <div class="info-box">
+          💡 건조가 빨라 도장 후 차량 통과 대기시간이 짧은 것이 이 제품의 가장 큰 장점입니다. 25℃ 기준 20분이면 손에 묻지 않습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 소요량 산출</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">일위대가 (2회 도장 · 100㎛)</span><span class="step-badge badge-ep">견적</span></div>
+      <div class="step-content">
+        <div data-product="ksm6080-type1-air-drying-traffic-paint" data-render="estimate"></div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 선택 사양</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">유리알 살포 (야간 반사)</span><span class="step-badge badge-ep">옵션</span></div>
+      <div class="step-content">
+        야간 재귀반사 성능이 필요한 현장은 도장 직후 유리알을 살포합니다.
+        <div class="spec-grid" style="margin-top:10px;">
+          <div class="spec-item full"><strong>살포량</strong><span class="val">도료 1L당 약 800g</span></div>
+        </div>
+        <div class="danger-box">
+          ⚠️ <b>타이밍이 전부입니다.</b> 도장 후 <b>도막이 건조되기 전에</b> 살포해야 합니다.<br>
+          25℃에서 불점착시간이 20분이므로 도장조와 살포조가 붙어서 움직여야 합니다. 건조 후에는 유리알이 부착되지 않습니다.
         </div>
       </div>
     </div>
@@ -1560,32 +1738,73 @@ a{color:var(--brand);text-decoration:none}
     <div class="step-arrow">↓ 현장 주의사항</div>
 
     <div class="step">
-      <div class="step-header"><span class="step-num">6</span><span class="step-label">꼭 알아둘 주의사항</span><span class="step-badge badge-prep">중요</span></div>
+      <div class="step-header"><span class="step-num">6</span><span class="step-label">이건 꼭 확인하세요</span><span class="step-badge badge-prep">체크</span></div>
       <div class="step-content">
-        <div class="warn-box">
-          ⚠️ <b>실내 시멘트면 바닥재용으로 사용 금지</b> — 실내 바닥은 <span class="hi-floor">에폭시(에포코트)</span> 가이드를 참고하세요.<br>
-          ⚠️ 에폭시계 도료에 비해 <b>내마모성이 떨어질 수 있습니다</b>.<br>
-          ⚠️ 두껍게(후도막) 도장하면 내부 용제가 빠지지 않아 <b>바퀴자국·발자국</b>이 남을 수 있습니다.<br>
-          ⚠️ 신축·거친 콘크리트나 기포꽈리 우려 부위는 <b>아크릴 플로아코트를 1회</b> 도장해 기공을 막은 뒤 재도장하세요.<br>
-          ⚠️ 마스킹 테이프로 도장 외 구역 오염을 막고, 구도막 보수 시에는 <b>시험도장 후 부착력 확인</b>.<br>
-          ⚠️ 동일 제품·색상이라도 Lot·희석비·도장기구에 따라 이색이 생길 수 있으니 <b>동일 Lot·동일 도구</b>로 작업.
+        <div class="danger-box">
+          ⚠️ <b>실내 시멘트면의 바닥재용으로 사용 금지</b><br>
+          차선·표시선 전용입니다. 실내 바닥 전면 도장에는 사용하지 마십시오.<br>
+          → 실내 바닥 전면은 <b>에포코트(에폭시)</b> 계열로 안내하세요.
         </div>
         <div class="danger-box">
-          🔥 인화성 제품입니다. 밀폐 장소 도장 금지, 화기 접근 금지, 보호구(방독마스크·장갑·보안경) 착용.<br>
-          작업 후 도장기구는 지정 세척제로 세척하고, 폐도료는 지정 폐기물처리업체를 통해 폐기하세요.
+          ⚠️ <b>밀폐된 장소에서 절대 도장 금지</b><br>
+          인화성 제품입니다. 환기가 부족하면 질식·화재 위험이 있으므로 강제 배기하거나 충분히 환기하며 작업해야 합니다.<br>
+          피도면 온도가 높거나 습도가 낮은 날은 붓·로라 작업 시 정전기·스파크로 화재 위험이 있으니, 기온이 낮은 아침이나 늦은 오후에 작업하고 화재 위험성이 낮은 재질의 도장기구를 사용하십시오.
+        </div>
+        <div class="warn-box">
+          ⚠ <b>후도막 도장 금지</b> — 한 번에 두껍게 올리면 도막 내부 용제가 휘발되지 못해 물성이 저하되고 <b>바퀴자국·발자국</b>이 남습니다.<br>
+          ⚠ <b>과도한 희석 금지</b> — 5%를 넘기면 은폐력·살오름성·도막강도가 모두 떨어집니다.<br>
+          ⚠ <b>심한 균열이 있는 노면에는 도장하지 마십시오.</b><br>
+          ⚠ <b>에폭시계 도료에 비해 내마모성이 떨어집니다.</b> 하중·마모가 심한 구간은 사전에 안내가 필요합니다.<br>
+          ⚠ <b>구도막 위 보수 도장</b>은 사전에 시험도장 후 부착력 등 이상이 없을 때만 진행하십시오.<br>
+          ⚠ <b>타 도료와 혼합 금지 · 가열 금지.</b><br>
+          ⚠ 마스킹 테이프로 도장 이외 지역의 오염을 방지하십시오.<br>
+          ⚠ <b>작업 후 모든 도장기구는 지정 세척제로 세척</b>하십시오.<br>
+          ⚠ <b>개봉 후 남은 잔량은 건조피막·굳음 현상이 발생</b>하므로 즉시 전량 사용하십시오.
+        </div>
+        <div class="info-box">
+          💡 <b>신축·거친 콘크리트 소지면이나 기포꽈리 우려가 있는 곳</b>은 <b>아크릴 플로아코트</b>를 1회 도장해 기공을 막은 뒤, 재도장 간격을 지켜 도장하십시오.
+        </div>
+        <div class="info-box">
+          💡 동일 제품·동일 색상·동일 Lot라도 희석비·도장기구·도장방법이 다르면 이색현상이 발생합니다. 같은 현장은 조건을 통일해서 작업하세요.
         </div>
       </div>
     </div>
 
-    <!-- 제조사 자료 -->
+    <div class="step-arrow">↓ 안전 · 보관</div>
+
     <div class="step">
-      <div class="step-header"><span class="step-num">7</span><span class="step-label">삼화페인트 공식 자료</span><span class="step-badge badge-road">PDF</span></div>
+      <div class="step-header"><span class="step-num">7</span><span class="step-label">취급 · 보관 · 폐기</span><span class="step-badge badge-prep">안전</span></div>
       <div class="step-content">
-        제품 규격·도장사양의 최종 기준은 아래 제조사 자료입니다.
-        <div class="doc-links">
-          <a class="doc-link" href="https://jh2y24-tech.github.io/paint-guide-youtube/pdf/ksm6080-road-tech.pdf" target="_blank" rel="noopener">기술자료 (제품 사양서)</a>
-          <a class="doc-link" href="https://jh2y24-tech.github.io/paint-guide-youtube/pdf/ksm6080-road-spec.pdf" target="_blank" rel="noopener">도장사양서 (일위대가)</a>
+        <div class="danger-box">
+          ⚠️ <b>보호장비 착용</b><br>
+          작업 중에는 방독마스크·보호장갑·보호안경을 착용해 도료의 피부 접촉과 냄새 흡입을 피하십시오.<br>
+          · 눈·피부에 접촉된 경우 흐르는 물에 충분히 씻어내고 전문의의 진료를 받으십시오.<br>
+          · 흡입·섭취한 경우 용기 측면의 산업안전보건법 경고표기에 따라 응급조치 후 즉시 전문의의 진료를 받으십시오.
         </div>
+        <div class="danger-box">
+          ⚠️ <b>자연발화 위험</b><br>
+          도료가 묻은 헝겊 등을 가연성 물질과 함께 보관하면 자연발화 위험이 있습니다.<br>
+          → 반드시 <b>불연성 용기</b>에 담아 폐기하십시오.
+        </div>
+        <div class="warn-box">
+          ⚠ <b>보관</b> — 인화성 물질입니다. 직사광선과 화기를 피해 상온(5~35℃)의 건냉암소에 보관하고, 용기는 반드시 밀폐하여 <b>주입구가 상단을 향하도록 세워서</b> 보관하십시오.<br>
+          ⚠ <b>유아·어린이의 손이 닿지 않는 곳</b>에 보관하고, 유아·아동용 용구나 식품저장용기 등에는 절대 도장하지 마십시오.<br>
+          ⚠ <b>용도 이외의 사용을 금합니다.</b><br>
+          ⚠ <b>폐도료</b>는 환경부에서 지정한 폐기물처리업체를 통해 폐기하십시오.<br>
+          ⚠ 화학제품이므로 장기간 보관 시 변질될 수 있습니다. <b>유효기간(12개월) 내에 사용</b>하고, 경과한 제품은 고객센터 확인 후 사용하십시오.
+        </div>
+        <div class="info-box">
+          💡 기타 문의는 삼화페인트 고객센터 또는 홈페이지의 물질안전보건자료(GHS-MSDS)·기술자료·도장사양서를 참조하세요.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 자료</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">8</span><span class="step-label">공식 자료</span><span class="step-badge badge-ep">PDF</span></div>
+      <div class="step-content">
+        <div data-product="ksm6080-type1-air-drying-traffic-paint" data-render="docs"></div>
       </div>
     </div>
 
@@ -1631,22 +1850,50 @@ function scrollToTop() {
 function goTo(id) {
   var el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el.classList.contains('mat-section')) { openMat(el); }
+    setTimeout(function(){ el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 70);
   }
 }
 
+function closeMat(sec){
+  sec.classList.remove('open');
+  var t = sec.querySelector('.mat-hint-txt');
+  if (t) t.textContent = '자세히 보기';
+}
+function openMat(sec){
+  document.querySelectorAll('.mat-section.open').forEach(function(s){ if (s !== sec) closeMat(s); });
+  sec.classList.add('open');
+  var t = sec.querySelector('.mat-hint-txt');
+  if (t) t.textContent = '접기';
+}
+function toggleMat(sec){
+  if (sec.classList.contains('open')) { closeMat(sec); }
+  else { openMat(sec); }
+}
+(function initCollapse(){
+  document.querySelectorAll('.mat-section').forEach(function(sec){
+    var title = sec.querySelector('.mat-title');
+    if (!title) return;
+    var hint = document.createElement('span');
+    hint.className = 'mat-hint';
+    hint.innerHTML = '<span class="mat-hint-txt">자세히 보기</span><span class="mat-chevron">▾</span>';
+    title.appendChild(hint);
+    title.addEventListener('click', function(){ toggleMat(sec); });
+  });
+})();
+
 /* 증상・소재 검색 — 키워드는 각 섹션 제목에 실제로 쓰인 단어를 기준으로 구성 */
 var SYMPTOM_MAP = {
-  mold:     { label: '🦠 곰팡이・결로 가이드',          keywords: ['곰팡이','결로','이끼'] },
+  mold:     { label: '🦠 곰팡이・결로 가이드',          keywords: ['곰팡이','결로','이끼','규조토','결로스탑','아이럭스','수성바인다','단열','습기','물맺힘','ksm6010'] },
   concrete: { label: '🧱 콘크리트・석고보드 가이드',     keywords: ['콘크리트','시멘트','몰탈','석고보드','내벽','외벽','수성페인트'] },
   silk:     { label: '🖼 실크벽지・시트지 가이드',       keywords: ['실크벽지','벽지','시트지','mdf','플라스틱'] },
   wood:     { label: '🪑 목재 가이드',                  keywords: ['목재','데크','원목','합판','오일스테인','수성스테인','스테인'] },
   iron:     { label: '⚙️ 철재・비철재 가이드',          keywords: ['철재','비철재','스텐','frp','철대문','철재난간','아연각관','유성페인트'] },
   tile:     { label: '🚿 타일・줄눈 가이드',             keywords: ['타일','줄눈','욕실','주방','방수코팅'] },
   roof:     { label: '🏠 기와・슬레이트(지붕) 가이드',    keywords: ['기와','기와지붕','슬레이트','쓰레트','석면','지붕','기와페인트','슬레이트지붕','청기와','아크릴도료'] },
-  wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄'] },
+  wp:       { label: '💧 옥상 방수(우레탄) 가이드',      keywords: ['옥상방수','옥상누수','베란다방수','베란다','옥상','방수페인트','우레탄방수','우레탄','비노출','타르방수탄','욕실방수','화장실방수','정화조','하수처리장','비노출방수'] },
   floor:    { label: '🏭 실내 방진 도료(에폭시) 가이드', keywords: ['방진','에폭시','바닥에폭시','창고','지하주차장','주차장','매장'] },
-  road:     { label: '🛣 노면표지용 도료(차선) 가이드',  keywords: ['노면표지','노면','차선','차선도색','주차선','주차라인','횡단보도','아스팔트','도로','라인마킹','ksm6080','유리알','글라스비드','과속방지턱'] }
+  road:     { label: '🛣 노면표지(차선) 가이드',         keywords: ['노면표지','차선','차선도색','주차선','주차구획선','횡단보도','아스팔트','도로','ksm6080','6080','노면','과속방지턱','안전선','도로표지'] }
 };
 
 function normalizeKo(s) {
@@ -1700,5 +1947,6 @@ function searchSymptom() {
   }
 }
 </script>
+<script src="products.js"></script>
 </body>
 </html>
