@@ -59,7 +59,19 @@ a{color:var(--brand);text-decoration:none}
 .header h1{font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.03em;line-height:1.28;color:var(--text)}
 .header p{font-size:13.5px;color:var(--muted);margin-top:10px;font-weight:500}
 
-.mat-section{margin-bottom:24px;background:var(--card);border:1px solid var(--border);border-left:3px solid var(--mat);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.mat-section{margin-bottom:24px;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.mat-section::before{content:"";display:block;height:22px;background:var(--mat) center/cover no-repeat;box-shadow:inset 0 -1px 0 rgba(0,0,0,.14)}
+#concrete::before{background-image:url(textures/concrete.png)}
+#silk::before{background-image:url(textures/wallpaper.png)}
+#coated::before{background-image:url(textures/steel-plate.png)}
+#iron::before{background-image:url(textures/stainless.png)}
+#wood::before{background-image:url(textures/wood.png)}
+#mold::before{background-image:url(textures/mold.png)}
+#tile::before{background-image:url(textures/tile.png)}
+#roof::before{background-image:url(textures/roof.png)}
+#wp::before{background-image:url(textures/rooftop-green.png)}
+#road::before{background:repeating-linear-gradient(45deg,#1a1a1a 0 14px,#f2c200 14px 28px)}
+#floor::before{background:linear-gradient(100deg,#8b9298 0%,#b9bfc4 30%,#9aa1a7 55%,#c3c9cd 78%,#a4abb0 100%);background-image:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 60%)}
 .mat-concrete{--mat:var(--water);--mat-bg:var(--water-bg)}
 .mat-silk{--mat:var(--primer-o);--mat-bg:var(--primer-o-bg)}
 .mat-wood{--mat:var(--oil);--mat-bg:var(--oil-bg)}
@@ -180,7 +192,7 @@ a{color:var(--brand);text-decoration:none}
   .why-box p{font-size:15.5px}
   .why-kicker{font-size:18px;padding:15px}
 }
-.why-box{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:14px;padding:18px 18px 20px}
+.why-box{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:14px;padding:18px 18px 20px}
 .why-eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--brand-2);margin-bottom:5px}
 .why-title{font-size:20px;font-weight:800;color:var(--text);line-height:1.35;margin-bottom:12px}
 .why-box p{font-size:14.5px;line-height:1.78;color:var(--text);margin:0 0 12px}
@@ -242,15 +254,15 @@ a{color:var(--brand);text-decoration:none}
 .common-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 16px;margin-bottom:22px;box-shadow:var(--shadow)}
 .common-box-title{font-family:var(--display);font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:8px;color:var(--text)}
 .cond-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cond-item{background:var(--card2);border-radius:10px;padding:11px 12px;border:1px solid var(--border-2);border-left:3px solid var(--border);font-size:12.5px;line-height:1.6}
+.cond-item{background:var(--card2);border-radius:10px;padding:11px 12px;border:1px solid var(--border-2);border-top:3px solid var(--border);font-size:12.5px;line-height:1.6}
 .cond-item strong{display:block;font-size:12px;font-weight:700;margin-bottom:3px}
-.cond-item.danger{border-left-color:var(--danger)}
+.cond-item.danger{border-top-color:var(--danger)}
 .cond-item.danger strong{color:var(--danger)}
-.cond-item.ok{border-left-color:var(--primer-w)}
+.cond-item.ok{border-top-color:var(--primer-w)}
 .cond-item.ok strong{color:var(--primer-w)}
-.cond-item.note{border-left-color:var(--warn)}
+.cond-item.note{border-top-color:var(--warn)}
 .cond-item.note strong{color:var(--warn)}
-.cond-item.tool{border-left-color:var(--accent)}
+.cond-item.tool{border-top-color:var(--accent)}
 .cond-item.tool strong{color:var(--accent)}
 
 .mat-nav{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
@@ -277,7 +289,7 @@ a{color:var(--brand);text-decoration:none}
 .diag-box-title{font-family:var(--display);font-size:14.5px;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px;color:var(--text)}
 .diag-box-sub{font-size:13.5px;color:var(--muted);margin-bottom:13px;line-height:1.6}
 .diag-list{display:flex;flex-direction:column;gap:8px}
-.diag-item{display:flex;align-items:center;gap:11px;background:var(--card2);border:1px solid var(--border-2);border-left:3px solid var(--border);border-radius:11px;padding:11px 13px;text-decoration:none;transition:border-color .15s,background .15s,transform .15s;cursor:pointer}
+.diag-item{display:flex;align-items:center;gap:11px;background:var(--card2);border:1px solid var(--border-2);border-top:3px solid var(--border);border-radius:11px;padding:11px 13px;text-decoration:none;transition:border-color .15s,background .15s,transform .15s;cursor:pointer}
 .diag-item:hover{transform:translateX(2px)}
 .diag-item:active{background:rgba(10,40,44,.05)}
 .diag-icon{font-size:18px;flex-shrink:0;width:26px;text-align:center}
@@ -285,21 +297,21 @@ a{color:var(--brand);text-decoration:none}
 .diag-q{font-size:13px;font-weight:700;color:var(--text);line-height:1.45}
 .diag-a{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4;font-weight:600}
 .diag-arrow{font-size:11px;color:var(--faint);flex-shrink:0}
-.diag-item.dg-concrete{border-left-color:var(--water)}.diag-item.dg-concrete .diag-a{color:var(--water)}
-.diag-item.dg-silk{border-left-color:var(--primer-o)}.diag-item.dg-silk .diag-a{color:var(--primer-o)}
-.diag-item.dg-wood{border-left-color:var(--oil)}.diag-item.dg-wood .diag-a{color:var(--oil)}
-.diag-item.dg-iron{border-left-color:var(--warn)}.diag-item.dg-iron .diag-a{color:var(--warn)}
-.diag-item.dg-mold{border-left-color:var(--mold)}.diag-item.dg-mold .diag-a{color:var(--mold)}
-.diag-item.dg-wp{border-left-color:var(--sky)}.diag-item.dg-wp .diag-a{color:var(--sky)}
-.diag-item.dg-road{border-left-color:var(--road)}.diag-item.dg-road .diag-a{color:var(--road)}
+.diag-item.dg-concrete{border-top-color:var(--water)}.diag-item.dg-concrete .diag-a{color:var(--water)}
+.diag-item.dg-silk{border-top-color:var(--primer-o)}.diag-item.dg-silk .diag-a{color:var(--primer-o)}
+.diag-item.dg-wood{border-top-color:var(--oil)}.diag-item.dg-wood .diag-a{color:var(--oil)}
+.diag-item.dg-iron{border-top-color:var(--warn)}.diag-item.dg-iron .diag-a{color:var(--warn)}
+.diag-item.dg-mold{border-top-color:var(--mold)}.diag-item.dg-mold .diag-a{color:var(--mold)}
+.diag-item.dg-wp{border-top-color:var(--sky)}.diag-item.dg-wp .diag-a{color:var(--sky)}
+.diag-item.dg-road{border-top-color:var(--road)}.diag-item.dg-road .diag-a{color:var(--road)}
 .doc-list{display:flex;flex-direction:column;gap:7px;margin-top:12px}
 .doc-link{display:flex;align-items:center;gap:9px;background:var(--card2);border:1px solid var(--border-2);border-left:3px solid var(--mat,var(--brand));border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;color:var(--text);text-decoration:none;transition:background .15s,transform .15s}
 .doc-link:hover{background:var(--brand-tint);transform:translateX(2px)}
 .doc-link .doc-ico{font-size:15px;flex-shrink:0}
 .doc-link .doc-tag{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--faint);font-weight:700}
-.diag-item.dg-floor{border-left-color:var(--floor)}.diag-item.dg-floor .diag-a{color:var(--floor)}
-.diag-item.dg-tile{border-left-color:var(--tile)}.diag-item.dg-tile .diag-a{color:var(--tile)}
-.diag-item.dg-roof{border-left-color:var(--roof)}.diag-item.dg-roof .diag-a{color:var(--roof)}
+.diag-item.dg-floor{border-top-color:var(--floor)}.diag-item.dg-floor .diag-a{color:var(--floor)}
+.diag-item.dg-tile{border-top-color:var(--tile)}.diag-item.dg-tile .diag-a{color:var(--tile)}
+.diag-item.dg-roof{border-top-color:var(--roof)}.diag-item.dg-roof .diag-a{color:var(--roof)}
 
 .sp-banner{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#FFF6EC,#FFF0E2);border:1px solid rgba(187,73,21,.3);border-radius:12px;padding:12px 15px;text-decoration:none;cursor:pointer;transition:border-color .2s,box-shadow .2s;margin-bottom:0;box-shadow:var(--shadow)}
 .sp-banner:hover{border-color:rgba(187,73,21,.6);box-shadow:0 6px 18px rgba(187,73,21,.14)}
@@ -714,33 +726,192 @@ a{color:var(--brand);text-decoration:none}
     <div class="step">
       <div class="step-header"><span class="step-num">5</span><span class="step-label">보호 도장 (선택) — 오염 방지 마감</span><span class="step-badge badge-paint">수성크리어PLUS</span></div>
       <div class="step-content">
-        수성페인트 상도 위에 <b>오염방지·광택 보강</b>을 원할 경우, 투명 보호코팅인 <b>수성크리어PLUS</b>를 추가로 도장합니다. 다채무늬 도료 마감 후 보호용 상도로도 사용하는 제품으로, <span class="hi-blue">생략 가능한 선택 공정</span>입니다.<br><br>
+        수성페인트 상도 위에 <b>오염방지·광택 보강</b>을 원할 경우, 투명 보호코팅인 <b>수성크리어PLUS</b>를 추가로 도장합니다. 다채무늬 도료 마감 후 보호용 상도로도 사용하는 제품으로, <span class="hi-blue">생략 가능한 선택 공정</span>입니다. 실내용과 외부용(드라이비트·스톤계 도료·외부벽화)이 각각 유광·무광으로 나뉩니다.<br><br>
 
-        <div style="font-size:13px; font-weight:800; color:var(--water); margin-bottom:8px;">✨ 수성크리어PLUS 유광</div>
-        <span class="product-chip chip-water">수성크리어PLUS 유광</span>
-        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 유광 마감 — 다채무늬 도료·수성 내부도료 오염방지 상도용</div>
-        <div class="spec-grid">
-          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
-          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
-          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
-          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
-          <div class="spec-item"><strong>부피고형분</strong><span class="val">33%</span></div>
-          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
-          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 16.5㎡/ℓ</span></div>
+        <!-- ── 유광 계열 ── -->
+        <div style="font-size:13px; font-weight:800; color:var(--water); margin-bottom:8px;">✨ 유광 계열</div>
+        <div class="vcard-list">
+
+          <!-- 수성크리어PLUS 유광 (실내) -->
+          <div class="vcard">
+            <div class="vcard-head">
+              <span class="vcard-title">수성크리어PLUS 유광</span>
+              <span class="vcard-tag">수성 · 투명</span>
+              <span class="vcard-tag">실내용</span>
+              <span class="vcard-tag">18L · 4L</span>
+            </div>
+            <div style="margin:2px 0 8px; font-size:13.5px; color:var(--muted);">투명 유광 마감 — 다채무늬 도료·수성 내부도료 오염방지 상도용</div>
+            <dl class="vcard-dl">
+              <dt>희석비</dt><dd>물 10% 이내</dd>
+              <dt>재도장간격</dt><dd>25℃ 기준 3시간 이후</dd>
+              <dt>이론도포면적</dt><dd>16.5㎡/L (20㎛ 기준)</dd>
+            </dl>
+            <div class="vcard-actions">
+              <button type="button" class="vcard-more" onclick="toggleVCard(this)">상세 보기 <span class="vc-chev">▾</span></button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3050975.pdf','수성크리어PLUS 유광 제품안내서')">📄 제품안내서 (PDF)</button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1pntg3050975.pdf','수성크리어PLUS 유광 시방서')">📄 시방서 (PDF)</button>
+            </div>
+            <div class="vcard-detail">
+              <dl class="vcard-dl">
+                <dt>마감 · 색상</dt><dd>유광 · 투명</dd>
+                <dt>피도면</dt><dd>다채무늬 도료 및 수성 내부도료</dd>
+                <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
+                <dt>도장횟수</dt><dd>1~2회</dd>
+                <dt>추천 건조도막두께</dt><dd>20㎛</dd>
+                <dt>부피고형분</dt><dd>33%</dd>
+                <dt>이론 소요량</dt><dd>0.06L/㎡ (규격번호 SB-T-150)</dd>
+                <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
+                <dt>희석제</dt><dd>물</dd>
+                <dt>저장기간</dt><dd>12개월</dd>
+                <dt>용도</dt><dd>유치원·병원·학교 등 친환경이 요구되는 곳의 수성 내부도료 상도용</dd>
+              </dl>
+              <div class="warn-box">콘크리트 소지 불량·쵸킹·흡수차가 심한 면은 <b>수성바인다200</b>을 하도로 먼저 도장해야 합니다.<br>목재·철재·플라스틱에 <b>유성도료가 도장된 부위는 부착 불량</b>이므로 도장을 금합니다.<br>스프레이 도장 시 연속 작업이 끊기면 광택 차이로 이색현상이 생길 수 있습니다.<br>개봉 후에는 외부 오염으로 변질 우려가 있으니 즉시 사용하세요.</div>
+            </div>
+          </div>
+
+          <!-- 수성크리어PLUS 외부용 유광 -->
+          <div class="vcard">
+            <div class="vcard-head">
+              <span class="vcard-title">수성크리어PLUS 외부용 유광</span>
+              <span class="vcard-tag">수성 · 투명</span>
+              <span class="vcard-tag">외부용</span>
+              <span class="vcard-tag">18L · 4L</span>
+            </div>
+            <div style="margin:2px 0 8px; font-size:13.5px; color:var(--muted);">외부 투명 유광 마감 — 드라이비트·스톤계 도료·외부벽화 상도용</div>
+            <dl class="vcard-dl">
+              <dt>희석비</dt><dd>물 10% 이내</dd>
+              <dt>재도장간격</dt><dd>25℃ 기준 3시간 이후</dd>
+              <dt>이론도포면적</dt><dd>13.79㎡/L (20㎛ 기준)</dd>
+            </dl>
+            <div class="vcard-actions">
+              <button type="button" class="vcard-more" onclick="toggleVCard(this)">상세 보기 <span class="vc-chev">▾</span></button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3051494.pdf','수성크리어PLUS 외부용 유광 제품안내서')">📄 제품안내서 (PDF)</button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1pntg3051494.pdf','수성크리어PLUS 외부용 유광 시방서')">📄 시방서 (PDF)</button>
+            </div>
+            <div class="vcard-detail">
+              <dl class="vcard-dl">
+                <dt>마감 · 색상</dt><dd>유광 · 투명</dd>
+                <dt>피도면</dt><dd>드라이비트 · 스톤계 도료 · 외부벽화</dd>
+                <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
+                <dt>도장횟수</dt><dd>1~2회</dd>
+                <dt>추천 건조도막두께</dt><dd>20㎛</dd>
+                <dt>부피고형분</dt><dd>27.58%</dd>
+                <dt>이론 소요량</dt><dd>0.07L/㎡</dd>
+                <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
+                <dt>희석제</dt><dd>물</dd>
+                <dt>저장기간</dt><dd>12개월</dd>
+                <dt>용도</dt><dd>드라이비트, 스톤계 도료, 외부벽화 상도용</dd>
+              </dl>
+              <div class="warn-box">신축 시멘트 소지는 <b>28일 이상 양생</b> 후, 함수율 10% 이하·pH 7~9에서 도장합니다.<br>소지 불량·쵸킹·흡수차가 심한 면은 <b>수성바인다200</b>을 하도로 먼저 도장하세요.<br>과도한 희석은 도막 성능 저하 및 작업성 불량을 초래합니다.<br>유성도료가 도장된 목재·철재·플라스틱 부위에는 부착이 불량하므로 도장을 금합니다.</div>
+            </div>
+          </div>
         </div>
 
-        <div style="margin:16px 0 8px; font-size:13px; font-weight:800; color:var(--water);">🌫 수성크리어PLUS 무광</div>
-        <span class="product-chip chip-water">수성크리어PLUS 무광</span>
-        <div style="margin:8px 0 10px; font-size:13.5px; color:var(--muted);">투명 무광 마감 — 원래 도장면의 무광 질감을 살리며 보호</div>
-        <div class="spec-grid">
-          <div class="spec-item"><strong>도장 횟수</strong><span class="val">1~2회</span></div>
-          <div class="spec-item"><strong>추천 건조도막두께</strong><span class="val">20㎛</span></div>
-          <div class="spec-item"><strong>희석</strong><span class="val hi-blue">물 10% 이내</span></div>
-          <div class="spec-item"><strong>재도장 간격 (25℃)</strong><span class="val">3시간 이후</span></div>
-          <div class="spec-item"><strong>부피고형분</strong><span class="val">29.2%</span></div>
-          <div class="spec-item"><strong>포장단위</strong><span class="val">4L · 18L</span></div>
-          <div class="spec-item full"><strong>이론도포면적</strong><span class="val">약 15㎡/ℓ</span></div>
+        <div style="margin:14px 0 6px; font-size:12.5px; font-weight:800; color:var(--muted);">📋 유광 요약표</div>
+        <table class="recoat-table">
+          <tr><th>항목</th><th>수성크리어PLUS 유광 (실내)</th><th>외부용 유광</th></tr>
+          <tr><td>적용 소지</td><td>다채무늬 도료 · 수성 내부도료</td><td>드라이비트 · 스톤계 도료 · 외부벽화</td></tr>
+          <tr><td>부피고형분</td><td>33%</td><td>27.58%</td></tr>
+          <tr><td>이론도포면적</td><td>16.5㎡/L</td><td>13.79㎡/L</td></tr>
+          <tr><td>이론 소요량</td><td>0.06L/㎡</td><td>0.07L/㎡</td></tr>
+          <tr><td>도장횟수 · 도막두께</td><td>1~2회 · 20㎛</td><td>1~2회 · 20㎛</td></tr>
+          <tr><td>희석</td><td>물 10% 이내</td><td>물 10% 이내</td></tr>
+          <tr><td>재도장간격 (25℃)</td><td>3시간 이후</td><td>3시간 이후</td></tr>
+          <tr><td>포장단위</td><td>18L · 4L</td><td>18L · 4L</td></tr>
+        </table>
+
+        <!-- ── 무광 계열 ── -->
+        <div style="margin:20px 0 8px; font-size:13px; font-weight:800; color:var(--water);">🌫 무광 계열</div>
+        <div class="vcard-list">
+
+          <!-- 수성크리어PLUS 무광 (실내) -->
+          <div class="vcard">
+            <div class="vcard-head">
+              <span class="vcard-title">수성크리어PLUS 무광</span>
+              <span class="vcard-tag">수성 · 투명</span>
+              <span class="vcard-tag">실내용</span>
+              <span class="vcard-tag">친환경 인증</span>
+              <span class="vcard-tag">18L · 4L</span>
+            </div>
+            <div style="margin:2px 0 8px; font-size:13.5px; color:var(--muted);">투명 무광 마감 — 원래 도장면의 무광 질감을 살리며 보호</div>
+            <dl class="vcard-dl">
+              <dt>희석비</dt><dd>물 10% 이내 (도료 부피비)</dd>
+              <dt>재도장간격</dt><dd>25℃ 기준 3시간 이후</dd>
+              <dt>이론도포면적</dt><dd>15㎡/L (20㎛ 기준)</dd>
+            </dl>
+            <div class="vcard-actions">
+              <button type="button" class="vcard-more" onclick="toggleVCard(this)">상세 보기 <span class="vc-chev">▾</span></button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3050976.pdf','수성크리어PLUS 무광 제품안내서')">📄 제품안내서 (PDF)</button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1pntg3050976.pdf','수성크리어PLUS 무광 시방서')">📄 시방서 (PDF)</button>
+            </div>
+            <div class="vcard-detail">
+              <dl class="vcard-dl">
+                <dt>마감 · 색상</dt><dd>무광 · 투명</dd>
+                <dt>피도면</dt><dd>다채무늬 및 일반수성 내부도료</dd>
+                <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
+                <dt>도장횟수</dt><dd>1~2회</dd>
+                <dt>추천 건조도막두께</dt><dd>20㎛</dd>
+                <dt>부피고형분</dt><dd>29.2%</dd>
+                <dt>이론 소요량</dt><dd>0.05L/㎡ (규격번호 SB-T-150)</dd>
+                <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
+                <dt>희석제</dt><dd>물</dd>
+                <dt>저장기간</dt><dd>12개월 (5~35℃ 실내보관)</dd>
+                <dt>인증</dt><dd>환경마크 — 지역 환경오염 감소 · 유해물질 감소 · 생활 환경오염 감소</dd>
+              </dl>
+              <div class="warn-box">과도막 형성 시 <b>백탁 현상</b>이 생길 수 있으니 추천 도막두께를 지키고 가급적 <b>단모 로울러</b>로 도장하세요.<br>과도한 희석 시 얼룩이 생기고 도막이 제대로 형성되지 않습니다.<br>가소제가 포함된 발포벽지·가죽소파 등에 묻지 않도록 주의하세요.</div>
+            </div>
+          </div>
+
+          <!-- 수성크리어PLUS 외부용 무광 -->
+          <div class="vcard">
+            <div class="vcard-head">
+              <span class="vcard-title">수성크리어PLUS 외부용 무광</span>
+              <span class="vcard-tag">수성 · 투명</span>
+              <span class="vcard-tag">외부용</span>
+              <span class="vcard-tag">18L · 4L</span>
+            </div>
+            <div style="margin:2px 0 8px; font-size:13.5px; color:var(--muted);">외부 투명 무광 마감 — 드라이비트·스톤계 도료·외부벽화 상도용</div>
+            <dl class="vcard-dl">
+              <dt>희석비</dt><dd>물 10% 이내 (도료 부피비)</dd>
+              <dt>재도장간격</dt><dd>25℃ 기준 3시간 이후</dd>
+              <dt>이론도포면적</dt><dd>12.21㎡/L (20㎛ 기준)</dd>
+            </dl>
+            <div class="vcard-actions">
+              <button type="button" class="vcard-more" onclick="toggleVCard(this)">상세 보기 <span class="vc-chev">▾</span></button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3051493.pdf','수성크리어PLUS 외부용 무광 제품안내서')">📄 제품안내서 (PDF)</button>
+              <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1pntg3051493.pdf','수성크리어PLUS 외부용 무광 시방서')">📄 시방서 (PDF)</button>
+            </div>
+            <div class="vcard-detail">
+              <dl class="vcard-dl">
+                <dt>마감 · 색상</dt><dd>무광 · 투명</dd>
+                <dt>피도면</dt><dd>드라이비트 · 스톤계 도료 · 외부벽화</dd>
+                <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
+                <dt>도장횟수</dt><dd>1~2회</dd>
+                <dt>추천 건조도막두께</dt><dd>20㎛</dd>
+                <dt>부피고형분</dt><dd>24.42%</dd>
+                <dt>이론 소요량</dt><dd>0.08L/㎡</dd>
+                <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
+                <dt>희석제</dt><dd>물</dd>
+                <dt>저장기간</dt><dd>12개월 (5~35℃ 실내보관)</dd>
+                <dt>용도</dt><dd>드라이비트, 스톤계 도료, 외부벽화 상도용</dd>
+              </dl>
+              <div class="warn-box">신축 시멘트 소지는 <b>28일 이상 양생</b> 후, 함수율 10% 이하·pH 7~9에서 도장합니다.<br>과도막 형성 시 <b>백탁 현상</b>이 생길 수 있으니 추천 도막두께를 지키고 단모 로울러 사용을 권장합니다.<br>소지 불량·쵸킹·흡수차가 심한 면은 <b>수성바인다200</b>을 하도로 먼저 도장하세요.</div>
+            </div>
+          </div>
         </div>
+
+        <div style="margin:14px 0 6px; font-size:12.5px; font-weight:800; color:var(--muted);">📋 무광 요약표</div>
+        <table class="recoat-table">
+          <tr><th>항목</th><th>수성크리어PLUS 무광 (실내)</th><th>외부용 무광</th></tr>
+          <tr><td>적용 소지</td><td>다채무늬 · 일반수성 내부도료</td><td>드라이비트 · 스톤계 도료 · 외부벽화</td></tr>
+          <tr><td>부피고형분</td><td>29.2%</td><td>24.42%</td></tr>
+          <tr><td>이론도포면적</td><td>15㎡/L</td><td>12.21㎡/L</td></tr>
+          <tr><td>이론 소요량</td><td>0.05L/㎡</td><td>0.08L/㎡</td></tr>
+          <tr><td>도장횟수 · 도막두께</td><td>1~2회 · 20㎛</td><td>1~2회 · 20㎛</td></tr>
+          <tr><td>희석</td><td>물 10% 이내</td><td>물 10% 이내</td></tr>
+          <tr><td>재도장간격 (25℃)</td><td>3시간 이후</td><td>3시간 이후</td></tr>
+          <tr><td>포장단위</td><td>18L · 4L</td><td>18L · 4L</td></tr>
+        </table>
 
         <div class="info-box">
           💡 <b>유광 vs 무광 선택 기준</b><br>
