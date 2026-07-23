@@ -429,6 +429,11 @@ a{color:var(--brand);text-decoration:none}
 #pdfViewer .pv-title{flex:1; font-size:14.5px; font-weight:800; color:var(--text,#111); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 #pdfViewer .pv-close{flex:none; width:34px; height:34px; border-radius:8px; border:1px solid var(--border-2,#e5e7eb); background:var(--card,#fff); font-size:20px; line-height:1; cursor:pointer; color:var(--muted,#667);}
 #pdfViewer .pv-close:hover{background:#f4f5f6;}
+#pdfViewer .pv-open{flex:none; font-size:12.5px; font-weight:800; color:#b91c1c; background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:7px 10px; text-decoration:none; white-space:nowrap;}
+#pdfViewer .pv-open:active{transform:translateY(1px);}
+#pdfViewer .pv-fallback{display:none; padding:22px 16px; text-align:center; font-size:13.5px; line-height:1.7; color:var(--muted,#667); background:var(--card,#fff);}
+#pdfViewer.mobile .pv-frame{display:none;}
+#pdfViewer.mobile .pv-fallback{display:block;}
 #pdfViewer .pv-frame{flex:1; width:100%; border:0; background:#525659;}
 
 </style>
@@ -758,8 +763,6 @@ a{color:var(--brand);text-decoration:none}
                 <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
                 <dt>도장횟수</dt><dd>1~2회</dd>
                 <dt>추천 건조도막두께</dt><dd>20㎛</dd>
-                <dt>부피고형분</dt><dd>33%</dd>
-                <dt>이론 소요량</dt><dd>0.06L/㎡ (규격번호 SB-T-150)</dd>
                 <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
                 <dt>희석제</dt><dd>물</dd>
                 <dt>저장기간</dt><dd>12개월</dd>
@@ -795,8 +798,6 @@ a{color:var(--brand);text-decoration:none}
                 <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
                 <dt>도장횟수</dt><dd>1~2회</dd>
                 <dt>추천 건조도막두께</dt><dd>20㎛</dd>
-                <dt>부피고형분</dt><dd>27.58%</dd>
-                <dt>이론 소요량</dt><dd>0.07L/㎡</dd>
                 <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
                 <dt>희석제</dt><dd>물</dd>
                 <dt>저장기간</dt><dd>12개월</dd>
@@ -811,9 +812,7 @@ a{color:var(--brand);text-decoration:none}
         <table class="recoat-table">
           <tr><th>항목</th><th>수성크리어PLUS 유광 (실내)</th><th>외부용 유광</th></tr>
           <tr><td>적용 소지</td><td>다채무늬 도료 · 수성 내부도료</td><td>드라이비트 · 스톤계 도료 · 외부벽화</td></tr>
-          <tr><td>부피고형분</td><td>33%</td><td>27.58%</td></tr>
           <tr><td>이론도포면적</td><td>16.5㎡/L</td><td>13.79㎡/L</td></tr>
-          <tr><td>이론 소요량</td><td>0.06L/㎡</td><td>0.07L/㎡</td></tr>
           <tr><td>도장횟수 · 도막두께</td><td>1~2회 · 20㎛</td><td>1~2회 · 20㎛</td></tr>
           <tr><td>희석</td><td>물 10% 이내</td><td>물 10% 이내</td></tr>
           <tr><td>재도장간격 (25℃)</td><td>3시간 이후</td><td>3시간 이후</td></tr>
@@ -851,8 +850,6 @@ a{color:var(--brand);text-decoration:none}
                 <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
                 <dt>도장횟수</dt><dd>1~2회</dd>
                 <dt>추천 건조도막두께</dt><dd>20㎛</dd>
-                <dt>부피고형분</dt><dd>29.2%</dd>
-                <dt>이론 소요량</dt><dd>0.05L/㎡ (규격번호 SB-T-150)</dd>
                 <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
                 <dt>희석제</dt><dd>물</dd>
                 <dt>저장기간</dt><dd>12개월 (5~35℃ 실내보관)</dd>
@@ -888,8 +885,6 @@ a{color:var(--brand);text-decoration:none}
                 <dt>조성</dt><dd>1액형 (수용성 아크릴)</dd>
                 <dt>도장횟수</dt><dd>1~2회</dd>
                 <dt>추천 건조도막두께</dt><dd>20㎛</dd>
-                <dt>부피고형분</dt><dd>24.42%</dd>
-                <dt>이론 소요량</dt><dd>0.08L/㎡</dd>
                 <dt>건조시간</dt><dd>고화건조 2시간 이내 (25℃)</dd>
                 <dt>희석제</dt><dd>물</dd>
                 <dt>저장기간</dt><dd>12개월 (5~35℃ 실내보관)</dd>
@@ -904,9 +899,7 @@ a{color:var(--brand);text-decoration:none}
         <table class="recoat-table">
           <tr><th>항목</th><th>수성크리어PLUS 무광 (실내)</th><th>외부용 무광</th></tr>
           <tr><td>적용 소지</td><td>다채무늬 · 일반수성 내부도료</td><td>드라이비트 · 스톤계 도료 · 외부벽화</td></tr>
-          <tr><td>부피고형분</td><td>29.2%</td><td>24.42%</td></tr>
           <tr><td>이론도포면적</td><td>15㎡/L</td><td>12.21㎡/L</td></tr>
-          <tr><td>이론 소요량</td><td>0.05L/㎡</td><td>0.08L/㎡</td></tr>
           <tr><td>도장횟수 · 도막두께</td><td>1~2회 · 20㎛</td><td>1~2회 · 20㎛</td></tr>
           <tr><td>희석</td><td>물 10% 이내</td><td>물 10% 이내</td></tr>
           <tr><td>재도장간격 (25℃)</td><td>3시간 이후</td><td>3시간 이후</td></tr>
@@ -958,7 +951,10 @@ a{color:var(--brand);text-decoration:none}
           적용 소지: <span class="hi-green">실크벽지 · 코팅/오염·낙서 있는 합지 위</span> <span class="hi-orange">(깨끗한 일반 합지는 생략 가능)</span><br>
           희석: 물 10% 이내<br>
           재도장 간격: 25℃ 기준 <b>3시간 이후</b> 상도 도장 가능<br>
-          이론도포면적: 약 10~12㎡/ℓ
+          이론도포면적: 12.05㎡/L (건조도막두께 30㎛ 기준)
+        </div>
+        <div class="vcard-actions" style="margin-top:10px;">
+          <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3051970.pdf','아이럭스파워젯소 제품안내서')">📄 제품안내서 (PDF)</button>
         </div>
       </div>
     </div>
@@ -989,9 +985,6 @@ a{color:var(--brand);text-decoration:none}
               <li>결로스탑규조토 백색 <span class="hi-green">(젯소 생략 가능)</span></li>
             </ul>
           </div>
-        </div>
-        <div class="info-box" style="margin-top:10px;">
-          💡 <b>아이럭스 올코팅</b>은 콘크리트는 물론 철재, 목재, 유성 도막 위에 사용 가능하며 젯소를 바르지 않아도 접착력이 뛰어난 제품입니다.
         </div>
         <div class="note-small">기존 벽지의 디자인·색상 위에 그대로 도장 가능 · 1회 칠 후 25℃ 기준 3시간 이후 재도장 가능</div>
       </div>
@@ -1028,7 +1021,10 @@ a{color:var(--brand);text-decoration:none}
           적용 소지: <span class="hi-green">철재 · 비철재 · 목재 · 시트지 · 유성도막 위</span><br>
           희석: 물 10% 이내<br>
           재도장 간격: 25℃ 기준 <b>3시간 이후</b> 상도 도장 가능<br>
-          이론도포면적: 약 10~12㎡/ℓ
+          이론도포면적: 12.05㎡/L (건조도막두께 30㎛ 기준)
+        </div>
+        <div class="vcard-actions" style="margin-top:10px;">
+          <button type="button" class="pm-pdf-btn" onclick="openPdf('pdf/1tech3051970.pdf','아이럭스파워젯소 제품안내서')">📄 제품안내서 (PDF)</button>
         </div>
       </div>
     </div>
@@ -2633,9 +2629,14 @@ function searchSymptom() {
   <div class="pv-card">
     <div class="pv-head">
       <div id="pdfTitle" class="pv-title"></div>
+      <a id="pdfOpenNew" class="pv-open" href="#" target="_blank" rel="noopener">새 탭에서 열기</a>
       <button class="pv-close" onclick="closePdf()" aria-label="닫기">×</button>
     </div>
     <iframe id="pdfFrame" class="pv-frame" title="PDF 문서" src="about:blank"></iframe>
+    <div class="pv-fallback">
+      📄 휴대폰 브라우저는 PDF를 화면 안에서 바로 열지 못합니다.<br>
+      위의 <b>새 탭에서 열기</b>를 눌러 확인하세요.
+    </div>
   </div>
 </div>
 
@@ -2662,7 +2663,7 @@ Object.assign(window.PRODUCT_DB, {
     category: "하도 · 수성 젯소",
     desc: "접착이 어려운 소지의 전처리용 다용도 내부 수성 프라이머. 상도의 부착력·은폐력·발색을 높여줍니다.",
     uses: "시트지 · 철재 · 비철재 · 목재 · 실크벽지 · 유성도막 위 등",
-    spec: "희석: 물 10% 이내\n재도장: 25℃ 기준 3시간 이후 상도 가능\n이론도포면적: 약 10~12㎡/ℓ"
+    spec: "희석: 물 10% 이내(도료부피비)\n재도장: 25℃ 기준 3시간 이후 상도 가능\n고화건조: 1시간 이내 (25℃)\n이론도포면적: 12.05㎡/L (30㎛ 기준)\n마감 무광 · 색상 백색 · 조성 1액형 · 포장단위 1L\n저장기간: 12개월 (5~35℃ 실내보관)"
   },
   "아이럭스 올코팅": {
     category: "상도 · 친환경 수성",
@@ -2996,10 +2997,21 @@ function closeProduct(){
   document.body.style.overflow = '';
 }
 
+function isMobileUA(){
+  return /Android|iPhone|iPad|iPod|Mobile|Silk/i.test(navigator.userAgent) ||
+         (navigator.maxTouchPoints > 1 && /Mac/i.test(navigator.platform));
+}
 function openPdf(url, title){
   var v = document.getElementById('pdfViewer');
   document.getElementById('pdfTitle').textContent = title || 'PDF 문서';
-  document.getElementById('pdfFrame').src = url;
+  document.getElementById('pdfOpenNew').href = url;
+  if (isMobileUA()){
+    v.classList.add('mobile');
+    document.getElementById('pdfFrame').src = 'about:blank';
+  } else {
+    v.classList.remove('mobile');
+    document.getElementById('pdfFrame').src = url;
+  }
   v.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
