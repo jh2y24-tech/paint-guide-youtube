@@ -160,6 +160,11 @@ a{color:var(--brand);text-decoration:none}
 .warn-box .wr{color:var(--danger);font-weight:700}
 .info-box{background:var(--water-bg);border:1px solid var(--border-2);border-left:3px solid var(--water);border-radius:10px;padding:11px 14px;font-size:13.5px;color:#1B4E7C;font-weight:600;margin-top:10px;line-height:1.7}
 .danger-box{background:rgba(203,42,32,.06);border:1px solid var(--border-2);border-left:3px solid var(--danger);border-radius:10px;padding:11px 14px;font-size:13.5px;color:#A62A22;font-weight:600;margin-top:10px;line-height:1.7}
+/* ── 제품 팝업 시공 영상 ── */
+.pm-videos{display:flex;flex-direction:column;gap:10px}
+.pm-vid{margin:0}
+.pm-vid video{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--border);background:#000}
+.pm-vid figcaption{margin-top:5px;font-size:12.5px;color:var(--muted);font-weight:600}
 /* ── 유성 바니시 제품 카드 (한 줄에 하나씩) ── */
 .vcard-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .vcard{display:block;width:100%;background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:11px;padding:12px 14px}
@@ -2509,6 +2514,10 @@ Object.assign(window.PRODUCT_DB, {
       "밝은 원색은 백색으로 초벌 후 상도 도장 권장",
       "건조 전 비를 맞으면 외관·물성 불량 발생 가능"
     ],
+    videos: [
+      { src: "video/vid3052141_1.mp4", caption: "로라 도장 — 1회 도장으로 은폐" },
+      { src: "video/vid3052141_2.mp4", caption: "도장 완료면" }
+    ],
     pdfs: [
       { label: "제품안내서 (PDF)", url: "pdf/1tech3052141.pdf" },
       { label: "시방서 (PDF)", url: "pdf/1pntg3052141.pdf" }
@@ -2711,6 +2720,19 @@ function openProduct(name){
     }
     if (Array.isArray(p.detailImages)){
       p.detailImages.forEach(function(u){ html += '<img class="pm-detimg" src="'+u+'" alt="'+name+' 상세" onerror="this.style.display=\'none\'">'; });
+    }
+    if (Array.isArray(p.videos) && p.videos.length){
+      html += '<div class="pm-field"><div class="pm-label">시공 영상</div><div class="pm-videos">';
+      p.videos.forEach(function(v){
+        var src = (typeof v === 'string') ? v : (v.src || '');
+        var cap = (typeof v === 'object' && v.caption) ? v.caption : '';
+        if (!src) return;
+        html += '<figure class="pm-vid">' +
+                '<video src="' + src + '" autoplay muted loop playsinline preload="metadata"></video>' +
+                (cap ? '<figcaption>' + cap + '</figcaption>' : '') +
+                '</figure>';
+      });
+      html += '</div></div>';
     }
     if (Array.isArray(p.pdfs) && p.pdfs.length){
       html += '<div class="pm-field"><div class="pm-label">첨부 자료</div><div class="pm-pdfs">';
